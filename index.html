@@ -27,6 +27,11 @@
       font-size: 1.1rem;
       color: #cbd5e1;
     }
+    .hero-sub {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #94a3b8;
+    }
     .container {
       max-width: 1000px;
       margin: 40px auto;
@@ -52,6 +57,17 @@
       border-top: none;
       padding-top: 0;
       margin-top: 0;
+    }
+    .skills-group {
+      margin-top: 20px;
+    }
+    .skills-group:first-of-type {
+      margin-top: 0;
+    }
+    .skills-group h3 {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+      color: #0f172a;
     }
     a {
       color: #2563eb;
@@ -81,46 +97,28 @@
   <header>
     <h1>Taylan Daldal</h1>
     <p>Mechanical Engineer | Mechanical Design & CAE</p>
+    <p class="hero-sub">FEA, SolidWorks, ANSYS, optimization, automation, and robotics</p>
   </header>
 
   <div class="container">
-    <div class="section">
-      <h2>About</h2>
-      <p>
-        Mechanical engineer focused on mechanical design, CAE, and engineering analysis.
-This portfolio presents selected projects in FEA, simulation, optimization, and design iteration, with applications related to manufacturing, automation, and robotics.
-      </p>
-    </div>
 
     <div class="section">
-      <h2>Skills</h2>
-      <span class="tag">SolidWorks</span>
-      <span class="tag">ANSYS Mechanical</span>
-      <span class="tag">FEA</span>
-      <span class="tag">Mechanical Design</span>
-      <span class="tag">Technical Drawings</span>
-      <span class="tag">Robotics</span>
-      <span class="tag">Automation</span>
-    </div>
-
-    <div class="section">
-      <h2>Projects</h2>
+      <h2>Featured Projects</h2>
 
       <div class="project">
         <h3>Project 1 – Structural Optimization of a Robotic Gripper Finger Using Static and Fatigue FEA</h3>
         <p>
           Designed a robotic gripper concept in SolidWorks and evaluated critical load-bearing regions using finite element analysis.
           The study focused on stress concentration zones, deformation behavior, and geometry improvement potential.
-          <img src="project1/Final.PNG" alt="Main project image" style="width:100%; max-width:100%; height:auto; border-radius:12px; margin-top:16px; display:block;">
-          </p>
-        
-         <h3>1. Project Overview</h3>
+        </p>
+
+        <img src="project1/Final.PNG" alt="Main project image" style="width:100%; max-width:100%; height:auto; border-radius:12px; margin-top:16px; display:block;">
+
+        <h3>Project Overview</h3>
         <p>
           This project focused on the structural optimization of a robotic gripper finger using static and fatigue finite element analysis. The baseline geometry was evaluated under a 300 N load, and the highest stress concentration was identified at the inner load-path root region. A second design iteration introduced local slot-corner relief fillets and increased the critical root fillet radius to smooth the stress flow. Compared with the baseline, the final design reduced peak von Mises stress by 13.5%, equivalent elastic strain by 13.9%, and total deformation by 3.2%. Fatigue analysis under zero-based cyclic loading (0–300 N) showed that both designs remained in the high-cycle regime, but the optimized version improved the minimum fatigue safety factor by 15.7%. The study demonstrates how small local geometry refinements can meaningfully improve structural response without changing the overall load case.
-          
-          </p>
-          
-        
+        </p>
+
         <p><strong>Tools:</strong> SolidWorks, ANSYS Mechanical</p>
         <p><a href="#">Add project PDF / images here</a></p>
       </div>
@@ -134,14 +132,51 @@ This portfolio presents selected projects in FEA, simulation, optimization, and 
         <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
         <p><a href="#">Add project PDF / images here</a></p>
       </div>
-
     </div>
 
     <div class="section">
-      <h2>Contact</h2>
-      <p>Email: yourmail@example.com</p>
-      <p>LinkedIn: <a href="#">Add your LinkedIn link</a></p>
+      <h2>About</h2>
+      <p>
+        Mechanical engineer focused on mechanical design, CAE, and engineering analysis.
+        This portfolio presents selected projects in FEA, simulation, optimization, and design iteration, with applications related to manufacturing, automation, and robotics.
+      </p>
     </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+
+      <div class="skills-group">
+        <h3>Tools</h3>
+        <span class="tag">SolidWorks</span>
+        <span class="tag">ANSYS Mechanical</span>
+        <span class="tag">MATLAB/Python</span>
+        <span class="tag">Arduino</span>
+      </div>
+
+      <div class="skills-group">
+        <h3>Core Areas</h3>
+        <span class="tag">Mechanical Design</span>
+        <span class="tag">CAE</span>
+        <span class="tag">FEA</span>
+        <span class="tag">Engineering Analysis</span>
+        <span class="tag">Optimization</span>
+      </div>
+
+      <div class="skills-group">
+        <h3>Related Areas</h3>
+        <span class="tag">Automation</span>
+        <span class="tag">Robotics</span>
+        <span class="tag">AI Applications</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Resume / LinkedIn / Contact</h2>
+      <p><strong>Email:</strong> daldaltaylan@gmail.com</p>
+      <p><strong>LinkedIn:</strong> <a href="#">https://www.linkedin.com/in/taylandaldal/</a></p>
+      <p><strong>Resume:</strong> <a href="#">Taylan Daldal</a></p>
+    </div>
+
   </div>
 
   <footer>
