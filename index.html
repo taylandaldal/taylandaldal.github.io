@@ -76,17 +76,25 @@
       margin-top: 18px;
     }
     .project-top-row img,
-    .project-full-stack img {
+    .project-full-stack img,
+    .project-hero-image img {
       width: 100%;
       height: auto;
       display: block;
       border-radius: 12px;
+    }
+    .project-hero-image {
+      margin-top: 16px;
     }
     .project-full-stack {
       margin-top: 16px;
     }
     .project-full-stack img + img {
       margin-top: 16px;
+    }
+    .tools-line {
+      margin-top: 4px;
+      margin-bottom: 12px;
     }
     a {
       color: #2563eb;
@@ -136,7 +144,12 @@
           The study focused on stress concentration zones, deformation behavior, and geometry improvement potential.
         </p>
 
+        <div class="project-hero-image">
+          <img src="project1/Final.PNG" alt="Final optimized gripper design">
+        </div>
+
         <h3>Project Overview</h3>
+        <p class="tools-line"><strong>Tools:</strong> SolidWorks, ANSYS Mechanical</p>
         <p>
           This project focused on the structural optimization of a robotic gripper finger using static and fatigue finite element analysis. The baseline geometry was evaluated under a 300 N load, and the highest stress concentration was identified at the inner load-path root region. A second design iteration introduced local slot-corner relief fillets and increased the critical root fillet radius to smooth the stress flow. Compared with the baseline, the final design reduced peak von Mises stress by 13.5%, equivalent elastic strain by 13.9%, and total deformation by 3.2%. Fatigue analysis under zero-based cyclic loading (0–300 N) showed that both designs remained in the high-cycle regime, but the optimized version improved the minimum fatigue safety factor by 15.7%. The study demonstrates how small local geometry refinements can meaningfully improve structural response without changing the overall load case.
         </p>
@@ -150,9 +163,6 @@
           <img src="project1/v1stress.png" alt="Version 1 stress analysis">
           <img src="project1/v2stress.png" alt="Version 2 stress analysis">
         </div>
-
-        <p><strong>Tools:</strong> SolidWorks, ANSYS Mechanical</p>
-        <p><a href="#">Add project PDF / images here</a></p>
       </div>
 
       <div class="project">
@@ -161,8 +171,6 @@
           Created a mechanical part model and assessed its performance under load conditions.
           The project included CAD modelling, simulation setup, result interpretation, and design evaluation based on stress distribution.
         </p>
-        <p><strong>Tools:</strong> SolidWorks, ANSYS</p>
-        <p><a href="#">Add project PDF / images here</a></p>
       </div>
     </div>
 
