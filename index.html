@@ -281,24 +281,81 @@ The final V2 redesign reduced peak von Mises stress and equivalent elastic strai
 
       <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong>V1 Baseline Equivalent (von-Mises) Stress Result</strong></p>
 
-<img src="project1/v1stress.png" alt="Version 1 force and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+<img src="project1/v1stress.png" alt="Version 1 stress" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
 
 <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong>V2 Final Equivalent (von-Mises) Stress Result</strong></p>
 
-<img src="project1/v2stress.png" alt="Version 1 force and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+<img src="project1/v2stress.png" alt="Version 2 stress" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
 
 
 
   <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong>V1 Baseline Equivalent Elastic Strain Result</strong></p>
 
-<img src="project1/v1strain.png" alt="Version 1 force and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+<img src="project1/v1strain.png" alt="Version 1 strain" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
 
 <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong>V2 Final Elastic Strain Result</strong></p>
 
-<img src="project1/v2strain.png" alt="Version 1 force and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+<img src="project1/v2strain.png" alt="Version 2 strain" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
 
 
-      
+      <h3>Fatigue Analysis Results</h3>
+ <p>
+      Fatigue behaviour was evaluated using zero-based cyclic loading between 0 N and 300 N. Both versions remained in the high-cycle regime, so the difference between them did not appear strongly in the life and damage plots. The clearer distinction appeared in the fatigue safety factor.
+ </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong>Fatigue Results Table</strong></p>
+
+<table style="width:100%; border-collapse:collapse; margin-top:8px;">
+  <thead>
+    <tr>
+      <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;">Metric</th>
+      <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;">V1</th>
+      <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;">V2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Estimated Life</td>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1e8 cycles</td>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1e8 cycles</td>
+    </tr>
+    <tr>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Damage @ 1e6 cycles</td>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.01</td>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.01</td>
+    </tr>
+    <tr>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Damage @ 1e8 cycles</td>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1.0</td>
+      <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1.0</td>
+    </tr>
+    <tr>
+      <td style="padding:10px;">Minimum Fatigue Safety Factor</td>
+      <td style="padding:10px;">7.1958</td>
+      <td style="padding:10px;">8.3224</td>
+    </tr>
+  </tbody>
+</table>
+
+      <p>
+      The fatigue results indicate that both geometries operate in a high-cycle regime at the selected load level. However, the final design improved the minimum fatigue safety factor by approximately 15.66%, which supports the structural improvements already observed in the static analysis.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong>V1 Baseline Fatigue Safety Factor Result</strong></p>
+
+<img src="project1/v1safety.png" alt="Version 1 safety" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+<p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong>V2 Final Fatigue Safety Factor Result</strong></p>
+
+<img src="project1/v2safety.png" alt="Version 2 safety" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+
+
+
+
+
+
+
 
       
       <div class="project">
