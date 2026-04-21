@@ -6,51 +6,61 @@
   <title>Taylan Daldal | CAE & Mechanical Design Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-page="index">
   <header>
-    <h1>Taylan Daldal</h1>
-    <p>Mechanical Engineer | Mechanical Design & CAE</p>
-    <p class="hero-sub">FEA | SolidWorks | Ansys | Optimization | Automation | Robotics</p>
+    <div class="lang-switch">
+      <button class="lang-btn" id="langBtn" type="button">
+        🌐 <span id="currentLang">EN</span>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-option" type="button" data-lang="en">English</button>
+        <button class="lang-option" type="button" data-lang="de">Deutsch</button>
+      </div>
+    </div>
+
+    <h1 data-i18n="heroTitle">Taylan Daldal</h1>
+    <p data-i18n="heroRole">Mechanical Engineer | Mechanical Design & CAE</p>
+    <p class="hero-sub" data-i18n="heroSub">FEA | SolidWorks | Ansys | Optimization | Automation | Robotics</p>
   </header>
 
   <div class="container">
 
     <div class="section">
-      <h2>Featured Projects</h2>
+      <h2 data-i18n="featuredTitle">Featured Projects</h2>
 
       <div class="project-cards">
         <a href="project1.html" class="project-card">
           <img src="project1/Final.PNG" alt="Project 1 hero image">
           <div class="project-card-overlay">
             <div>
-              <h3 class="project-card-title">Structural Optimization of a Robotic Gripper Finger Using Static and Fatigue FEA</h3>
-              <p class="project-card-subtitle">View project</p>
+              <h3 class="project-card-title" data-i18n="card1Title">Structural Optimization of a Robotic Gripper Finger Using Static and Fatigue FEA</h3>
+              <p class="project-card-subtitle" data-i18n="card1Subtitle">View project</p>
             </div>
           </div>
         </a>
 
         <a href="project2.html" class="project-card-empty">
           <div>
-            <h3 class="project-card-title">Project 2</h3>
-            <p class="project-card-subtitle">Will be added soon</p>
+            <h3 class="project-card-title" data-i18n="card2Title">Project 2</h3>
+            <p class="project-card-subtitle" data-i18n="card2Subtitle">Will be added soon</p>
           </div>
         </a>
       </div>
     </div>
 
     <div class="section">
-      <h2>About</h2>
-      <p>
+      <h2 data-i18n="aboutTitle">About</h2>
+      <p data-i18n="aboutText">
         Mechanical engineer focused on mechanical design, CAE, and engineering analysis.
         This portfolio showcases selected projects in FEA, simulation, optimization, and design iteration, with applications in manufacturing, automation, and robotics.
       </p>
     </div>
 
     <div class="section">
-      <h2>Skills</h2>
+      <h2 data-i18n="skillsTitle">Skills</h2>
 
       <div class="skills-group">
-        <h3>Tools</h3>
+        <h3 data-i18n="toolsTitle">Tools</h3>
         <span class="tag">SolidWorks</span>
         <span class="tag">ANSYS Simulation</span>
         <span class="tag">Python</span>
@@ -59,7 +69,7 @@
       </div>
 
       <div class="skills-group">
-        <h3>Core Areas</h3>
+        <h3 data-i18n="coreTitle">Core Areas</h3>
         <span class="tag">Mechanical Design</span>
         <span class="tag">CAE</span>
         <span class="tag">FEA</span>
@@ -68,7 +78,7 @@
       </div>
 
       <div class="skills-group">
-        <h3>Related Areas</h3>
+        <h3 data-i18n="relatedTitle">Related Areas</h3>
         <span class="tag">Automation</span>
         <span class="tag">AI Applications</span>
         <span class="tag">Robotics</span>
@@ -76,10 +86,10 @@
     </div>
 
     <div class="section">
-      <h2>Resume / LinkedIn / Contact</h2>
-      <p><strong>Resume:</strong> <a href="#">Add your resume PDF link</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/taylandaldal/" target="_blank">linkedin.com/in/taylandaldal</a></p>
-      <p><strong>Email:</strong> daldaltaylan@gmail.com</p>
+      <h2 data-i18n="contactTitle">Resume / LinkedIn / Contact</h2>
+      <p><strong data-i18n="resumeLabel">Resume:</strong> <a href="#">Add your resume PDF link</a></p>
+      <p><strong data-i18n="linkedinLabel">LinkedIn:</strong> <a href="https://www.linkedin.com/in/taylandaldal/" target="_blank">linkedin.com/in/taylandaldal</a></p>
+      <p><strong data-i18n="emailLabel">Email:</strong> daldaltaylan@gmail.com</p>
     </div>
 
   </div>
@@ -87,5 +97,7 @@
   <footer>
     © 2026 Taylan Daldal
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
