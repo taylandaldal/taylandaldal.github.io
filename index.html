@@ -93,7 +93,7 @@
       margin-top: 16px;
     }
     .tools-line {
-      margin-top: 4px;
+      margin-top: 16px;
       margin-bottom: 12px;
     }
     a {
@@ -139,73 +139,65 @@
 
       <div class="project">
         <h3>Project 1 – Structural Optimization of a Robotic Gripper Finger Using Static and Fatigue FEA</h3>
-        <p>
-          
-        </p>
 
         <div class="project-hero-image">
           <img src="project1/Final.PNG" alt="Final optimized gripper design">
         </div>
 
         <h3>Project Overview</h3>
-       
         <p>
           This project focused on the structural optimization of a robotic gripper finger using static and fatigue finite element analysis. The baseline geometry was evaluated under a 300 N load, and the highest stress concentration was identified at the inner load-path root region. A second design iteration introduced local slot-corner relief fillets and increased the critical root fillet radius to smooth the stress flow. Compared with the baseline, the final design reduced peak von Mises stress by 13.5%, equivalent elastic strain by 13.9%, and total deformation by 3.2%. Fatigue analysis under zero-based cyclic loading (0–300 N) showed that both designs remained in the high-cycle regime, but the optimized version improved the minimum fatigue safety factor by 15.7%. The study shows how small local geometry refinements can improve structural response without changing the overall load case.
         </p>
-        
+
         <div class="project-top-row">
-          <img src="project1/v1main.PNG" alt="Version 1 main design view">
-          <img src="project1/v2main.PNG" alt="Version 2 main design view">
+          <div>
+            <img src="project1/v1main.PNG" alt="Version 1 main design view" style="width:100%; height:auto; display:block; border-radius:12px;">
+            <p style="text-align:center; margin-top:8px; font-size:0.95rem;"><strong>V1 Baseline</strong></p>
+          </div>
+
+          <div>
+            <img src="project1/v2main.PNG" alt="Version 2 main design view" style="width:100%; height:auto; display:block; border-radius:12px;">
+            <p style="text-align:center; margin-top:8px; font-size:0.95rem;"><strong>V2 Final Iteration</strong></p>
+          </div>
         </div>
 
         <div class="project-full-stack">
           <img src="project1/v1stress.png" alt="Version 1 stress analysis">
           <img src="project1/v2stress.png" alt="Version 2 stress analysis">
         </div>
-      </div>
-<p><strong>Tools:</strong> SolidWorks, ANSYS Mechanical</p>
 
-<h3>Objective</h3>
-       
+        <p class="tools-line"><strong>Tools:</strong> SolidWorks, ANSYS Mechanical</p>
+
+        <h3>Objective</h3>
         <p>
-          The aim of the study was to reduce stress concentration in the critical root region of the gripper finger, lower elastic strain, and improve fatigue behaviour under the same loading and boundary conditions. 
+          The aim of the study was to reduce stress concentration in the critical root region of the gripper finger, lower elastic strain, and improve fatigue behaviour under the same loading and boundary conditions.
           The focus was not on changing the global form of the part, but on refining a few local geometric transitions along the load path.
         </p>
+
         <div style="width:75%; margin:16px auto 0;">
-  <img src="project1/Note2.PNG" alt="Project note" style="width:100%; height:auto; display:block; border-radius:12px;">
-</div>
+          <img src="project1/Note2.PNG" alt="Project note" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
 
-<h3>Scope and Limitation</h3>
-
+        <h3>Scope and Limitation</h3>
         <p>
           The study focused on the primary load-bearing finger body. Mating components were not fully reworked in this iteration, since the scope of the study was limited to comparative structural and fatigue response of the main part under identical boundary conditions.
         </p>
 
-<div style="width:75%; margin:16px auto 0;">
-  <img src="project1/cb.PNG" alt="Project note" style="width:100%; height:auto; display:block; border-radius:12px;">
-</div>
+        <div style="width:75%; margin:16px auto 0;">
+          <img src="project1/cb.PNG" alt="Project note" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
 
-
-<h3>Model and Analysis Setup</h3>
-
+        <h3>Model and Analysis Setup</h3>
         <p>
-The part material was defined as Aluminum 6061-T6. Structural performance was evaluated in ANSYS using both Static Structural and Stress-Life Fatigue analysis. A 300 N load case was applied to the finger, and fatigue was assessed using zero-based cyclic loading (0 → 300 N → 0) with Goodman mean stress correction and Equivalent (von-Mises) stress as the fatigue stress component.      
+          The part material was defined as Aluminum 6061-T6. Structural performance was evaluated in ANSYS using both Static Structural and Stress-Life Fatigue analysis. A 300 N load case was applied to the finger, and fatigue was assessed using zero-based cyclic loading (0 → 300 N → 0) with Goodman mean stress correction and Equivalent (von-Mises) stress as the fatigue stress component.
         </p>
 
-<img src="project1/v1force.png" alt="Version 1 force and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+        <img src="project1/v1force.png" alt="Version 1 force and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+      </div>
 
-
-      
-      
       <div class="project">
         <h3>Project 2 – Will be added soon</h3>
-        <p>
-
-
-
-
-          
-        </p>
+        <p></p>
       </div>
     </div>
 
