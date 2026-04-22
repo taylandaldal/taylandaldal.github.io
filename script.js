@@ -12,7 +12,7 @@ const translations = {
       card2Subtitle: "Will be added soon",
 
       aboutTitle: "About",
-      aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and design iteration, with applications in manufacturing, automation, and robotics.",
+      aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
 
       skillsTitle: "Skills",
       toolsTitle: "Tools",
@@ -36,7 +36,7 @@ const translations = {
       card2Subtitle: "Wird bald hinzugefügt",
 
       aboutTitle: "Über mich",
-      aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und Design-Iteration mit Anwendungen in Fertigung, Automatisierung und Robotik.",
+      aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
 
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
@@ -61,7 +61,7 @@ const translations = {
       project2Text: "Will be added soon.",
 
       aboutTitle: "About",
-      aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and design iteration, with applications in manufacturing, automation, and robotics.",
+      aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
 
       skillsTitle: "Skills",
       toolsTitle: "Tools",
@@ -83,7 +83,7 @@ const translations = {
       project2Text: "Wird bald hinzugefügt.",
 
       aboutTitle: "Über mich",
-      aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und Design-Iteration mit Anwendungen in Fertigung, Automatisierung und Robotik.",
+      aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
 
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
@@ -160,7 +160,7 @@ const translations = {
       finalConclusionText: "Small local geometry changes improved the structural response under the same load, reducing stress, strain, and deformation while increasing the fatigue safety factor.",
 
       aboutTitle: "About",
-      aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and design iteration, with applications in manufacturing, automation, and robotics.",
+      aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
 
       skillsTitle: "Skills",
       toolsTitle: "Tools",
@@ -234,7 +234,7 @@ const translations = {
       finalConclusionText: "Kleine lokale Geometrieänderungen verbesserten das strukturelle Verhalten unter derselben Last, reduzierten Spannung, Dehnung und Verformung und erhöhten gleichzeitig den Ermüdungssicherheitsfaktor.",
 
       aboutTitle: "Über mich",
-      aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und Design-Iteration mit Anwendungen in Fertigung, Automatisierung und Robotik.",
+      aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
 
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
