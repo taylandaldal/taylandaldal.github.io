@@ -8,8 +8,10 @@ const translations = {
       featuredTitle: "Featured Projects",
       card1Title: "Structural Optimization of a Robotic Gripper Finger Using Static and Fatigue FEA",
       card1Subtitle: "View project",
-      card2Title: "Project 2",
-      card2Subtitle: "Will be added soon",
+      card2Title: "Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis",
+      card2Subtitle: "View project",
+      card3Title: "Project 3",
+      card3Subtitle: "Will be added soon",
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
@@ -32,8 +34,57 @@ const translations = {
       featuredTitle: "Ausgewählte Projekte",
       card1Title: "Strukturelle Optimierung eines Roboter-Greiffingers mit statischer und Ermüdungs-FEA",
       card1Subtitle: "Projekt ansehen",
-      card2Title: "Projekt 2",
-      card2Subtitle: "Wird bald hinzugefügt",
+      card2Title: "Leichtbau-Designiteration einer On-Arm-Kamerahalterung für ein Machine-Vision-System mit statischer und modaler Analyse",
+      card2Subtitle: "Projekt ansehen",
+      card3Title: "Projekt 3",
+      card3Subtitle: "Wird bald hinzugefügt",
+
+      aboutTitle: "Über mich",
+      aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
+
+      skillsTitle: "Fähigkeiten",
+      toolsTitle: "Tools",
+      coreTitle: "Kernbereiche",
+      relatedTitle: "Verwandte Bereiche",
+
+      contactTitle: "Lebenslauf / LinkedIn / Kontakt",
+      resumeLabel: "Lebenslauf:",
+      linkedinLabel: "LinkedIn:",
+      emailLabel: "E-Mail:"
+    }
+  },
+
+  project3: {
+    en: {
+      heroTitle: "Taylan Daldal",
+      heroRole: "Mechanical Engineer | Mechanical Design & CAE",
+      heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
+
+      backLink: "← Back to Featured Projects",
+      project3Title: "Project 3",
+      project3Text: "Will be added soon.",
+
+      aboutTitle: "About",
+      aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
+
+      skillsTitle: "Skills",
+      toolsTitle: "Tools",
+      coreTitle: "Core Areas",
+      relatedTitle: "Related Areas",
+
+      contactTitle: "Resume / LinkedIn / Contact",
+      resumeLabel: "Resume:",
+      linkedinLabel: "LinkedIn:",
+      emailLabel: "Email:"
+    },
+    de: {
+      heroTitle: "Taylan Daldal",
+      heroRole: "Maschinenbauingenieur | Mechanisches Design & CAE",
+      heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
+
+      backLink: "← Zurück zu den Projekten",
+      project3Title: "Projekt 3",
+      project3Text: "Wird bald hinzugefügt.",
 
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
@@ -202,8 +253,8 @@ const translations = {
 
       modalFreqTableTitle: "Erste drei Eigenfrequenzen",
       tableMode: "Modus",
-      v1ModalTitle: "V1 Ergebnis der modalen Analyse",
-      v2ModalTitle: "V2 Finale Iteration Ergebnis der modalen Analyse",
+      v1ModalTitle: "V1 Modal Analysis Result",
+      v2ModalTitle: "V2 Final Modal Analysis Result",
 
       finalConclusionTitle: "Abschließende technische Schlussfolgerung",
       finalConclusionText: "Das finale V2-Design reduzierte die Masse des Roboteradapters um 7,35 %, während Spannung, Verformung und die erste Eigenfrequenz sehr nahe an der Ausgangsversion blieben. Das Spannungsniveau blieb niedrig, die Verformung änderte sich nur geringfügig, und die modale Antwort blieb im gleichen Bereich. Auf Grundlage dieses Vergleichs verbesserte die Leichtbauiteration die Masseneffizienz, ohne das gesamte strukturelle Verhalten zu verändern.",
