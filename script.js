@@ -58,7 +58,70 @@ const translations = {
 
       backLink: "← Back to Featured Projects",
       project2Title: "Project 2",
-      project2Text: "Will be added soon.",
+      project2MainTitle: "Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis",
+
+      overviewTitle: "Project Overview",
+      overviewText: "This project focused on a camera on-arm mount used to connect a machine vision camera to a robot arm. The study included the robot adapter and camera bracket assembly. A baseline model V1 was analysed first, and then a lighter version of the robot adapter V2 was developed and checked again with the same analysis approach. The aim was to reduce mass without creating a clear penalty in stress, deformation, or modal behaviour.",
+
+      toolsLabel: "Tools:",
+      referenceModelLabel: "Reference Model:",
+
+      objectiveTitle: "Objective",
+      objectiveText: "The main goal was to check whether the mount was structurally safe under the camera load and whether a lighter adapter could keep similar performance. The design change was limited to the robot adapter. The camera bracket was kept unchanged.",
+
+      v1Baseline: "V1 Baseline",
+      v2FinalIteration: "V2 Final Iteration",
+
+      modelSetupTitle: "Model and Analysis Setup",
+      modelSetupText: "The model was analysed in ANSYS Mechanical using a concept-level setup. The camera mass was defined as 1 kg based on the Zivid 2+ M60 manufacturer datasheet and applied as a point mass at the camera mounting region. The robot-side mounting interface was fixed, and the contact between the adapter and the bracket was modelled as bonded. Static structural and modal analyses were used to compare the baseline and the final iteration.",
+
+      analysisSetupTableTitle: "Analysis Setup",
+      tableItem: "Item",
+      tableValue: "Value",
+      analysisItemMaterial: "Material",
+      analysisItemAnalysedParts: "Analysed parts",
+      analysisValueAnalysedParts: "Robot Adapter + Camera Bracket",
+      analysisItemOptimisedPart: "Optimised part",
+      analysisValueOptimisedPart: "Robot Adapter only",
+      analysisItemCameraRepresentation: "Camera representation",
+      analysisValueCameraRepresentation: "1 kg point mass",
+      analysisItemSupportCondition: "Support condition",
+      analysisValueSupportCondition: "Fixed support at robot-side interface",
+      analysisItemContact: "Contact",
+      analysisValueContact: "Bonded contact between adapter and bracket",
+      analysisItemAnalyses: "Analyses",
+      analysisValueAnalyses: "Static Structural + Modal",
+      analysisItemMeshStrategy: "Mesh strategy",
+      analysisValueMeshStrategy: "2 mm global mesh, 1 mm local sizing at support and contact regions",
+
+      designIterationTitle: "Design Iteration",
+      designIterationText: "The iteration focused on removing material from low-stress regions of the robot adapter while keeping the mounting features, support region, and bracket interface. In the final V2 geometry, the wall thickness of the main outer circular section was reduced from 5.5 mm to 4.5 mm. In the upper cutout region, the spacing between the central rectangular cutout and the two side cutouts was reduced from 8 mm to 5 mm. As a result, the widths of the left and right cutouts were increased from 12 mm to 15 mm, allowing more material to be removed from that area. These changes increased the size of existing cutouts and reduced mass without changing the overall mounting concept. The final V2 model was then solved again in static and modal analyses and compared directly with the V1 baseline.",
+
+      staticStructuralResultsTitle: "Static Structural Results",
+      staticStructuralResultsIntro: "Both versions showed very low stress and very small deformation under the applied load case. The highest stress stayed in the upper transition region of the mount, but the values remained low in both models. The final V2 design reduced adapter mass while keeping the static response almost unchanged.",
+
+      massStaticTableTitle: "Mass and Static Results",
+      tableMetric: "Metric",
+      tableV1Baseline: "V1 Baseline",
+      tableV2Final: "V2 Final",
+      tableChange: "Change",
+      metricAdapterMass: "Robot Adapter Mass",
+      metricMaxStress: "Max von Mises Stress",
+      metricMaxDeformation: "Max Total Deformation",
+
+      v1StressResultTitle: "V1 Baseline Equivalent (von-Mises) Stress Result",
+      v2StressResultTitle: "V2 Final Equivalent (von-Mises) Stress Result",
+
+      modalResultsTitle: "Modal Results",
+      modalResultsIntro: "The first three natural frequencies stayed close after the iteration. The first mode remained above 187 Hz, and the general mode shapes stayed similar to the baseline. This means the lighter adapter kept the main dynamic behaviour of the original design.",
+
+      modalFreqTableTitle: "First Three Natural Frequencies",
+      tableMode: "Mode",
+      v1ModalTitle: "V1 Modal Analysis Result",
+      v2ModalTitle: "V2 Final Modal Analysis Result",
+
+      finalConclusionTitle: "Final Technical Conclusion",
+      finalConclusionText: "The final V2 design reduced the robot adapter mass by 7.35% while keeping stress, deformation, and the first natural frequency very close to the baseline. The stress level remained low, deformation changed only slightly, and the modal response stayed in the same range. Based on this comparison, the lightweight iteration improved mass efficiency without changing the overall structural behaviour.",
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
@@ -80,7 +143,70 @@ const translations = {
 
       backLink: "← Zurück zu den Projekten",
       project2Title: "Projekt 2",
-      project2Text: "Wird bald hinzugefügt.",
+      project2MainTitle: "Leichtbau-Designiteration einer On-Arm-Kamerahalterung für ein Machine-Vision-System mit statischer und modaler Analyse",
+
+      overviewTitle: "Projektübersicht",
+      overviewText: "Dieses Projekt konzentrierte sich auf eine On-Arm-Kamerahalterung, die verwendet wird, um eine Machine-Vision-Kamera mit einem Roboterarm zu verbinden. Die Studie umfasste die Baugruppe aus Roboteradapter und Kamerahalter. Zunächst wurde ein Ausgangsmodell V1 analysiert, danach wurde eine leichtere Version des Roboteradapters V2 entwickelt und mit demselben Analyseansatz erneut geprüft. Ziel war es, die Masse zu reduzieren, ohne eine klare Verschlechterung bei Spannung, Verformung oder modalem Verhalten zu erzeugen.",
+
+      toolsLabel: "Tools:",
+      referenceModelLabel: "Referenzmodell:",
+
+      objectiveTitle: "Ziel",
+      objectiveText: "Das Hauptziel war zu prüfen, ob die Halterung unter der Kameralast strukturell sicher ist und ob ein leichterer Adapter eine ähnliche Leistung beibehalten kann. Die Designänderung war auf den Roboteradapter begrenzt. Der Kamerahalter blieb unverändert.",
+
+      v1Baseline: "V1 Ausgangsversion",
+      v2FinalIteration: "V2 Finale Iteration",
+
+      modelSetupTitle: "Modell- und Analyseaufbau",
+      modelSetupText: "Das Modell wurde in ANSYS Mechanical mit einem Konzept-Setup analysiert. Die Kameramasse wurde auf Grundlage des Herstellerdatenblatts der Zivid 2+ M60 mit 1 kg definiert und als Punktmasse im Kamerabefestigungsbereich aufgebracht. Die roboterseitige Befestigungsschnittstelle wurde fixiert, und der Kontakt zwischen Adapter und Halter wurde als bonded modelliert. Zur Gegenüberstellung der Ausgangsversion und der finalen Iteration wurden statische und modale Analysen verwendet.",
+
+      analysisSetupTableTitle: "Analyse-Setup",
+      tableItem: "Eintrag",
+      tableValue: "Wert",
+      analysisItemMaterial: "Material",
+      analysisItemAnalysedParts: "Analysierte Teile",
+      analysisValueAnalysedParts: "Roboteradapter + Kamerahalter",
+      analysisItemOptimisedPart: "Optimiertes Teil",
+      analysisValueOptimisedPart: "Nur Roboteradapter",
+      analysisItemCameraRepresentation: "Kameradarstellung",
+      analysisValueCameraRepresentation: "1 kg Punktmasse",
+      analysisItemSupportCondition: "Randbedingung",
+      analysisValueSupportCondition: "Feste Lagerung an der roboterseitigen Schnittstelle",
+      analysisItemContact: "Kontakt",
+      analysisValueContact: "Bonded-Kontakt zwischen Adapter und Halter",
+      analysisItemAnalyses: "Analysen",
+      analysisValueAnalyses: "Static Structural + Modal",
+      analysisItemMeshStrategy: "Vernetzungsstrategie",
+      analysisValueMeshStrategy: "2 mm globales Netz, 1 mm lokale Netzgröße an Lager- und Kontaktbereichen",
+
+      designIterationTitle: "Designiteration",
+      designIterationText: "Die Iteration konzentrierte sich darauf, Material aus Bereichen mit niedriger Spannung im Roboteradapter zu entfernen, während die Befestigungsmerkmale, der Lagerbereich und die Schnittstelle zum Halter beibehalten wurden. In der finalen V2-Geometrie wurde die Wandstärke des äußeren Hauptkreisbereichs von 5,5 mm auf 4,5 mm reduziert. Im oberen Ausschnittsbereich wurde der Abstand zwischen dem mittleren rechteckigen Ausschnitt und den beiden seitlichen Ausschnitten von 8 mm auf 5 mm reduziert. Dadurch wurden die Breiten der linken und rechten Ausschnitte von 12 mm auf 15 mm vergrößert, wodurch in diesem Bereich mehr Material entfernt werden konnte. Diese Änderungen vergrößerten bestehende Ausschnitte und reduzierten die Masse, ohne das grundlegende Befestigungskonzept zu verändern. Das finale V2-Modell wurde anschließend erneut in statischen und modalen Analysen gelöst und direkt mit der V1-Ausgangsversion verglichen.",
+
+      staticStructuralResultsTitle: "Ergebnisse der statischen Strukturanalyse",
+      staticStructuralResultsIntro: "Beide Versionen zeigten unter dem aufgebrachten Lastfall sehr geringe Spannungen und sehr kleine Verformungen. Die höchste Spannung blieb im oberen Übergangsbereich der Halterung, die Werte blieben jedoch in beiden Modellen niedrig. Das finale V2-Design reduzierte die Adaptermasse, während die statische Antwort nahezu unverändert blieb.",
+
+      massStaticTableTitle: "Masse und statische Ergebnisse",
+      tableMetric: "Kennwert",
+      tableV1Baseline: "V1 Ausgangsversion",
+      tableV2Final: "V2 Finale Version",
+      tableChange: "Änderung",
+      metricAdapterMass: "Masse des Roboteradapters",
+      metricMaxStress: "Max. von-Mises-Spannung",
+      metricMaxDeformation: "Max. Gesamtverformung",
+
+      v1StressResultTitle: "V1 Ausgangsversion Äquivalente (von-Mises-)Spannung Ergebnis",
+      v2StressResultTitle: "V2 Finale Version Äquivalente (von-Mises-)Spannung Ergebnis",
+
+      modalResultsTitle: "Modale Ergebnisse",
+      modalResultsIntro: "Die ersten drei Eigenfrequenzen blieben nach der Iteration nahe beieinander. Die erste Eigenform blieb über 187 Hz, und die allgemeinen Eigenformen blieben der Ausgangsversion ähnlich. Das bedeutet, dass der leichtere Adapter das wesentliche dynamische Verhalten des ursprünglichen Designs beibehielt.",
+
+      modalFreqTableTitle: "Erste drei Eigenfrequenzen",
+      tableMode: "Modus",
+      v1ModalTitle: "V1 Ergebnis der modalen Analyse",
+      v2ModalTitle: "V2 Finale Iteration Ergebnis der modalen Analyse",
+
+      finalConclusionTitle: "Abschließende technische Schlussfolgerung",
+      finalConclusionText: "Das finale V2-Design reduzierte die Masse des Roboteradapters um 7,35 %, während Spannung, Verformung und die erste Eigenfrequenz sehr nahe an der Ausgangsversion blieben. Das Spannungsniveau blieb niedrig, die Verformung änderte sich nur geringfügig, und die modale Antwort blieb im gleichen Bereich. Auf Grundlage dieses Vergleichs verbesserte die Leichtbauiteration die Masseneffizienz, ohne das gesamte strukturelle Verhalten zu verändern.",
 
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
