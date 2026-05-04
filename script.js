@@ -112,7 +112,7 @@ const translations = {
       project2MainTitle: "Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis",
 
       overviewTitle: "Project Overview",
-      overviewText: "This project focused on a camera on-arm mount used to connect a machine vision camera to a robot arm. The study included the robot adapter and camera bracket assembly. A baseline model V1 was analysed first, and then a lighter version of the robot adapter V2 was developed and checked again with the same analysis approach. The aim was to reduce mass without creating a clear penalty in stress, deformation, or modal behaviour.",
+      overviewText: "This project focused on a camera on-arm mount used to connect a machine vision camera to a robot arm. The study included the robot adapter and camera bracket assembly. A baseline model V1 was analyzed first, and then a lighter version of the robot adapter V2 was developed and checked again with the same analysis approach. The aim was to reduce mass without creating a clear penalty in stress, deformation, or modal behavior.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Reference Model:",
@@ -124,15 +124,15 @@ const translations = {
       v2FinalIteration: "V2 Final Iteration",
 
       modelSetupTitle: "Model and Analysis Setup",
-      modelSetupText: "The model was analysed in ANSYS Mechanical using a concept-level setup. The camera mass was defined as 1 kg based on the Zivid 2+ M60 manufacturer datasheet and applied as a point mass at the camera mounting region. The robot-side mounting interface was fixed, and the contact between the adapter and the bracket was modelled as bonded. Static structural and modal analyses were used to compare the baseline and the final iteration.",
+      modelSetupText: "The model was analyzed in ANSYS Mechanical using a concept-level setup. The camera mass was defined as 1 kg based on the Zivid 2+ M60 manufacturer datasheet and applied as a point mass at the camera mounting region. The robot-side mounting interface was fixed, and the contact between the adapter and the bracket was modeled as bonded. Static structural and modal analyses were used to compare the baseline and the final iteration.",
 
       analysisSetupTableTitle: "Analysis Setup",
       tableItem: "Item",
       tableValue: "Value",
       analysisItemMaterial: "Material",
-      analysisItemAnalysedParts: "Analysed parts",
+      analysisItemAnalysedParts: "Analyzed parts",
       analysisValueAnalysedParts: "Robot Adapter + Camera Bracket",
-      analysisItemOptimisedPart: "Optimised part",
+      analysisItemOptimisedPart: "Optimized part",
       analysisValueOptimisedPart: "Robot Adapter only",
       analysisItemCameraRepresentation: "Camera representation",
       analysisValueCameraRepresentation: "1 kg point mass",
@@ -164,7 +164,7 @@ const translations = {
       v2StressResultTitle: "V2 Final Equivalent (von-Mises) Stress Result",
 
       modalResultsTitle: "Modal Results",
-      modalResultsIntro: "The first three natural frequencies stayed close after the iteration. The first mode remained above 187 Hz, and the general mode shapes stayed similar to the baseline. This means the lighter adapter kept the main dynamic behaviour of the original design.",
+      modalResultsIntro: "The first three natural frequencies stayed close after the iteration. The first mode remained above 187 Hz, and the general mode shapes stayed similar to the baseline. This means the lighter adapter kept the main dynamic behavior of the original design.",
 
       modalFreqTableTitle: "First Three Natural Frequencies",
       tableMode: "Mode",
@@ -172,7 +172,7 @@ const translations = {
       v2ModalTitle: "V2 Final Modal Analysis Result",
 
       finalConclusionTitle: "Final Technical Conclusion",
-      finalConclusionText: "The final V2 design reduced the robot adapter mass by 7.35% while keeping stress, deformation, and the first natural frequency very close to the baseline. The stress level remained low, deformation changed only slightly, and the modal response stayed in the same range. Based on this comparison, the lightweight iteration improved mass efficiency without changing the overall structural behaviour.",
+      finalConclusionText: "The final V2 design reduced the robot adapter mass by 7.35% while keeping stress, deformation, and the first natural frequency very close to the baseline. The stress level remained low, deformation changed only slightly, and the modal response stayed in the same range. Based on this comparison, the lightweight iteration improved mass efficiency without changing the overall structural behavior.",
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
