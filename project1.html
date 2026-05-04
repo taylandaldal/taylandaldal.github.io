@@ -58,6 +58,7 @@
       </div>
 
       <p class="tools-line"><strong data-i18n="toolsLabel">Tools:</strong> SolidWorks, ANSYS Mechanical</p>
+      <p class="tools-line"><strong data-i18n="referenceModelLabel">Reference Model:</strong> KUKA KR16</p>
 
       <h3 data-i18n="objectiveTitle">Objective</h3>
       <p data-i18n="objectiveText">
@@ -83,6 +84,51 @@
       </p>
 
       <img src="project1/v1force.png" alt="Version 1 force and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="analysisSetupTableTitle">Analysis Setup</strong></p>
+
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableItem">Item</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableValue">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemMaterial">Material</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Aluminum 6061-T6</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemAnalyzedPart">Analyzed part</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueAnalyzedPart">Robotic gripper finger main body</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemOptimizedPart">Optimized part</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueOptimizedPart">Main finger body only</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemSupportCondition">Support condition</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueSupportCondition">Fixed support at the base interface</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemLoadCondition">Load condition</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueLoadCondition">300 N static load</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemLoadApplication">Load application</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueLoadApplication">Inner slot load-face region</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemAnalyses">Analyses</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueAnalyses">Static Structural + Fatigue</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="analysisItemMeshStrategy">Mesh strategy</td>
+            <td style="padding:10px;" data-i18n="analysisValueMeshStrategy">2 mm global mesh, 1 mm local sizing at critical regions</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h3 data-i18n="designVersionsTitle">Design Versions</h3>
 
@@ -292,6 +338,6 @@
     © 2026 Taylan Daldal
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
