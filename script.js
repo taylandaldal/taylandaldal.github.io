@@ -4,19 +4,23 @@ const translations = {
       heroTitle: "Taylan Daldal",
       heroRole: "Mechanical Engineer | Mechanical Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
+
       featuredTitle: "Featured Projects",
-      card1Title: "Structural Optimization of a Robotic Gripper Finger Using Static and Fatigue FEA",
+      card1Title: "Local Stress Reduction of a Robotic Gripper Finger Using Static and Fatigue FEA",
       card1Subtitle: "View project",
       card2Title: "Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis",
       card2Subtitle: "View project",
       card3Title: "Project 3",
       card3Subtitle: "Will be added soon",
+
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
+
       skillsTitle: "Skills",
       toolsTitle: "Tools",
       coreTitle: "Core Areas",
       relatedTitle: "Related Areas",
+
       contactTitle: "Resume / LinkedIn / Contact",
       resumeLabel: "Resume:",
       linkedinLabel: "LinkedIn:",
@@ -26,19 +30,23 @@ const translations = {
       heroTitle: "Taylan Daldal",
       heroRole: "Maschinenbauingenieur | Mechanisches Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
+
       featuredTitle: "Ausgewählte Projekte",
-      card1Title: "Strukturelle Optimierung eines Roboter-Greiffingers mit statischer und Ermüdungs-FEA",
+      card1Title: "Lokale Spannungsreduzierung eines Roboter-Greiffingers mit statischer und Ermüdungs-FEA",
       card1Subtitle: "Projekt ansehen",
       card2Title: "Leichtbau-Designiteration einer On-Arm-Kamerahalterung für ein Machine-Vision-System mit statischer und modaler Analyse",
       card2Subtitle: "Projekt ansehen",
       card3Title: "Projekt 3",
       card3Subtitle: "Wird bald hinzugefügt",
+
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
+
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
       coreTitle: "Kernbereiche",
       relatedTitle: "Verwandte Bereiche",
+
       contactTitle: "Lebenslauf / LinkedIn / Kontakt",
       resumeLabel: "Lebenslauf:",
       linkedinLabel: "LinkedIn:",
@@ -51,15 +59,19 @@ const translations = {
       heroTitle: "Taylan Daldal",
       heroRole: "Mechanical Engineer | Mechanical Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
+
       backLink: "← Back to Featured Projects",
       project3Title: "Project 3",
       project3Text: "Will be added soon.",
+
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
+
       skillsTitle: "Skills",
       toolsTitle: "Tools",
       coreTitle: "Core Areas",
       relatedTitle: "Related Areas",
+
       contactTitle: "Resume / LinkedIn / Contact",
       resumeLabel: "Resume:",
       linkedinLabel: "LinkedIn:",
@@ -69,15 +81,19 @@ const translations = {
       heroTitle: "Taylan Daldal",
       heroRole: "Maschinenbauingenieur | Mechanisches Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
+
       backLink: "← Zurück zu den Projekten",
       project3Title: "Projekt 3",
       project3Text: "Wird bald hinzugefügt.",
+
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
+
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
       coreTitle: "Kernbereiche",
       relatedTitle: "Verwandte Bereiche",
+
       contactTitle: "Lebenslauf / LinkedIn / Kontakt",
       resumeLabel: "Lebenslauf:",
       linkedinLabel: "LinkedIn:",
@@ -90,6 +106,7 @@ const translations = {
       heroTitle: "Taylan Daldal",
       heroRole: "Mechanical Engineer | Mechanical Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
+
       backLink: "← Back to Featured Projects",
       project2Title: "Project 2",
       project2MainTitle: "Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis",
@@ -133,7 +150,7 @@ const translations = {
       meshTableColMesh: "Mesh",
       meshTableColGlobalLocalSize: "Global / Local Size",
       meshTableColPeakStress: "Peak Stress",
-      meshTableColTotalDeformation: "Total Deformation",
+      meshTableColTotalDef: "Total Deformation",
       meshTableColMode1: "Mode 1",
       meshTableColMode2: "Mode 2",
       meshTableColMode3: "Mode 3",
@@ -161,42 +178,44 @@ const translations = {
 
       modalResultsTitle: "Modal Results",
       modalResultsIntro: "The first three natural frequencies stayed close after the iteration. The first mode remained above 187 Hz, and the general mode shapes stayed similar to the baseline. This means the lighter adapter kept the main dynamic behavior of the original design. The modal analysis was used as a design validation check to confirm that the first natural frequency remained in the same range after mass reduction. No specific operational excitation frequency was available for this concept-level study, so the modal check was used to verify that the lightweight iteration did not introduce a significant dynamic penalty relative to the baseline.",
+
       modalFreqTableTitle: "First Three Natural Frequencies",
       tableMode: "Mode",
       v1ModalTitle: "V1 Modal Analysis Result",
       v2ModalTitle: "V2 Final Modal Analysis Result",
 
-      inertialLoadStudyTitle: "Inertial Load Study",
-      inertialLoadStudyIntroText: "To extend the concept-level validation, an additional combined gravity and inertial load check was performed on the final V2 design. Standard Earth gravity was kept active, and a 3g acceleration input (29,419.8 mm/s²) was applied in selected global directions as a conservative assumption representing rapid robot motion during operation. Equivalent stress and total deformation were evaluated for each case. Among the investigated cases, the +Y input direction produced the highest stress and deformation and was therefore treated as the worst-case inertial loading condition in this study.",
-      inertialLoadTableTitle: "Combined Gravity and 3g Inertial Load Results",
-      inertialTableLoadCase: "Load Case",
-      inertialTableDirection: "Direction",
-      inertialTableMaxStress: "Max Stress",
-      inertialTableMaxTotalDeformation: "Max Total Deformation",
-      inertialGravityOnly: "Gravity only",
-      inertialGravity3g: "Gravity + 3g",
-      inertialWorstCase: "Worst case",
-      inertialLoadConclusionText: "The additional inertial load check showed that the final V2 design remained well below the 276 MPa yield strength of Aluminum 6061-T6 in all investigated cases. While the inertial load cases produced a higher response than the gravity-only baseline, the stress level remained low and the part retained a large structural margin. These results support the use of the lightweight V2 design as a concept-level camera adapter iteration under combined gravity and inertial loading conditions.",
+      inertialStudyTitle: "Inertial Load Study",
+      inertialStudyIntroText: "To extend the concept-level validation, an additional combined gravity and inertial load check was performed on the final V2 design. Standard Earth gravity was kept active, and a 3g acceleration input (29,419.8 mm/s²) was applied in selected global directions as a conservative assumption representing rapid robot motion during operation. Equivalent stress and total deformation were evaluated for each case. Among the investigated cases, the +Y input direction produced the highest stress and deformation and was therefore treated as the worst-case inertial loading condition in this study.",
+      inertialTableColLoadCase: "Load Case",
+      inertialTableColDirection: "Direction",
+      inertialTableColMaxStress: "Max Stress",
+      inertialTableColMaxDeformation: "Max Total Deformation",
+      inertialRowGravityOnly: "Gravity only",
+      inertialRowGravity3g: "Gravity + 3g",
+      inertialRowWorstCase: "Worst case",
+      inertialStudyConclusionText: "The additional inertial load check showed that the final V2 design remained well below the 276 MPa yield strength of Aluminum 6061-T6 in all investigated cases. While the inertial load cases produced a higher response than the gravity-only baseline, the stress level remained low and the part retained a large structural margin. These results support the use of the lightweight V2 design as a concept-level camera adapter iteration under combined gravity and inertial loading conditions.",
 
       finalConclusionTitle: "Final Technical Conclusion",
       finalConclusionText: "The final V2 design reduced the robot adapter mass by 7.35% while keeping stress, deformation, and the first natural frequency very close to the baseline. The stress level remained low, deformation changed only slightly, and the modal response stayed in the same range. Based on this comparison, the lightweight iteration improved mass efficiency without changing the overall structural behavior.",
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
+
       skillsTitle: "Skills",
       toolsTitle: "Tools",
       coreTitle: "Core Areas",
       relatedTitle: "Related Areas",
+
       contactTitle: "Resume / LinkedIn / Contact",
       resumeLabel: "Resume:",
       linkedinLabel: "LinkedIn:",
       emailLabel: "Email:"
     },
-
     de: {
       heroTitle: "Taylan Daldal",
       heroRole: "Maschinenbauingenieur | Mechanisches Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
+
       backLink: "← Zurück zu den Projekten",
       project2Title: "Projekt 2",
       project2MainTitle: "Leichtbau-Designiteration einer On-Arm-Kamerahalterung für ein Machine-Vision-System mit statischer und modaler Analyse",
@@ -236,11 +255,11 @@ const translations = {
       analysisValueMeshStrategy: "2 mm globales Netz, 1 mm lokale Netzgröße in kritischen Bereichen, Span Angle Center: Fine, Smoothing: High",
 
       meshStudyTitle: "Netzkonvergenzstudie",
-      meshStudyIntroText: "Zur Beurteilung der Netzempfindlichkeit des finalen V2-Designs wurden drei Netzkonfigurationen sowohl für die statische als auch für die modale Analyse getestet. Maximale Spannung, Gesamtverformung und die ersten drei Eigenfrequenzen blieben über das grobe, mittlere und feine Netz hinweg nahe beieinander. Zwischen dem mittleren und feinen Netz lag der Spannungsunterschied bei etwa 1,1 %, die Gesamtverformung änderte sich um etwa 0,5 %, und die erste Eigenfrequenz änderte sich um weniger als 0,5 %. Diese Ergebnisse zeigen, dass die gewählte Netzstrategie eine stabile numerische Grundlage für die angegebenen statischen und modalen Ergebnisse bietet.",
+      meshStudyIntroText: "Zur Beurteilung der Netzeempfindlichkeit des finalen V2-Designs wurden drei Netzkonfigurationen sowohl für die statische als auch für die modale Analyse getestet. Maximale Spannung, Gesamtverformung und die ersten drei Eigenfrequenzen blieben über grobe, mittlere und feine Netze hinweg nahe beieinander. Zwischen dem mittleren und dem feinen Netz lag die Spannungsdifferenz bei etwa 1,1 %, die Gesamtverformung änderte sich um etwa 0,5 %, und die erste Eigenfrequenz änderte sich um weniger als 0,5 %. Diese Ergebnisse zeigen, dass die gewählte Netzstrategie eine stabile numerische Grundlage für die berichteten statischen und modalen Ergebnisse liefert.",
       meshTableColMesh: "Netz",
       meshTableColGlobalLocalSize: "Globale / lokale Größe",
       meshTableColPeakStress: "Maximale Spannung",
-      meshTableColTotalDeformation: "Gesamtverformung",
+      meshTableColTotalDef: "Gesamtverformung",
       meshTableColMode1: "Modus 1",
       meshTableColMode2: "Modus 2",
       meshTableColMode3: "Modus 3",
@@ -267,33 +286,35 @@ const translations = {
       v2StressResultTitle: "V2 Finale Version Äquivalente (von-Mises-)Spannung Ergebnis",
 
       modalResultsTitle: "Modale Ergebnisse",
-      modalResultsIntro: "Die ersten drei Eigenfrequenzen blieben nach der Iteration nahe beieinander. Die erste Eigenform blieb über 187 Hz, und die allgemeinen Eigenformen blieben der Ausgangsversion ähnlich. Das bedeutet, dass der leichtere Adapter das wesentliche dynamische Verhalten des ursprünglichen Designs beibehielt. Die modale Analyse wurde als Designvalidierungsprüfung verwendet, um zu bestätigen, dass die erste Eigenfrequenz nach der Massenreduzierung im gleichen Bereich blieb. Für diese Konzeptstudie war keine spezifische betriebliche Anregungsfrequenz verfügbar, daher wurde die modale Prüfung genutzt, um sicherzustellen, dass die Leichtbauiteration keine deutliche dynamische Verschlechterung im Vergleich zur Ausgangsversion verursacht.",
+      modalResultsIntro: "Die ersten drei Eigenfrequenzen blieben nach der Iteration nahe beieinander. Die erste Eigenform blieb über 187 Hz, und die allgemeinen Eigenformen blieben der Ausgangsversion ähnlich. Das bedeutet, dass der leichtere Adapter das wesentliche dynamische Verhalten des ursprünglichen Designs beibehielt. Die modale Analyse wurde als Design-Validierungsprüfung verwendet, um zu bestätigen, dass die erste Eigenfrequenz nach der Massenreduzierung im gleichen Bereich blieb. Für diese konzeptbezogene Studie lag keine spezifische betriebliche Anregungsfrequenz vor, daher wurde die modale Prüfung genutzt, um zu verifizieren, dass die Leichtbauiteration im Vergleich zur Ausgangsversion keinen signifikanten dynamischen Nachteil einführte.",
+
       modalFreqTableTitle: "Erste drei Eigenfrequenzen",
       tableMode: "Modus",
       v1ModalTitle: "V1 Modal Analysis Result",
       v2ModalTitle: "V2 Final Modal Analysis Result",
 
-      inertialLoadStudyTitle: "Inertiallaststudie",
-      inertialLoadStudyIntroText: "Zur Erweiterung der Konzeptvalidierung wurde eine zusätzliche Prüfung mit kombinierter Schwerkraft- und Inertialbelastung am finalen V2-Design durchgeführt. Die Standard-Erdgravitation blieb aktiv, und eine 3g-Beschleunigungseingabe (29.419,8 mm/s²) wurde in ausgewählten globalen Richtungen als konservative Annahme für schnelle Roboterbewegungen während des Betriebs angesetzt. Äquivalente Spannung und Gesamtverformung wurden für jeden Fall ausgewertet. Unter den untersuchten Fällen erzeugte die +Y-Eingaberichtung die höchste Spannung und Verformung und wurde daher in dieser Studie als ungünstigster Inertiallastfall behandelt.",
-      inertialLoadTableTitle: "Ergebnisse der kombinierten Schwerkraft- und 3g-Inertialbelastung",
-      inertialTableLoadCase: "Lastfall",
-      inertialTableDirection: "Richtung",
-      inertialTableMaxStress: "Max. Spannung",
-      inertialTableMaxTotalDeformation: "Max. Gesamtverformung",
-      inertialGravityOnly: "Nur Schwerkraft",
-      inertialGravity3g: "Schwerkraft + 3g",
-      inertialWorstCase: "Ungünstigster Fall",
-      inertialLoadConclusionText: "Die zusätzliche Inertiallastprüfung zeigte, dass das finale V2-Design in allen untersuchten Fällen deutlich unter der Streckgrenze von 276 MPa für Aluminium 6061-T6 blieb. Obwohl die Inertiallastfälle eine höhere Antwort als der reine Schwerkraftfall erzeugten, blieb das Spannungsniveau niedrig und das Bauteil behielt eine große strukturelle Reserve. Diese Ergebnisse unterstützen die Verwendung des leichten V2-Designs als Konzeptiteration eines Kameraadapters unter kombinierten Schwerkraft- und Inertialbelastungsbedingungen.",
+      inertialStudyTitle: "Trägheitslaststudie",
+      inertialStudyIntroText: "Zur Erweiterung der konzeptbezogenen Validierung wurde eine zusätzliche kombinierte Schwerkraft- und Trägheitslastprüfung am finalen V2-Design durchgeführt. Die Standard-Erdschwerkraft blieb aktiv, und ein 3g-Beschleunigungseingang (29.419,8 mm/s²) wurde in ausgewählten globalen Richtungen als konservative Annahme für schnelle Roboterbewegungen im Betrieb aufgebracht. Für jeden Fall wurden äquivalente Spannung und Gesamtverformung ausgewertet. Unter den untersuchten Fällen erzeugte die +Y-Eingangsrichtung die höchste Spannung und Verformung und wurde daher in dieser Studie als Worst-Case-Trägheitslastbedingung behandelt.",
+      inertialTableColLoadCase: "Lastfall",
+      inertialTableColDirection: "Richtung",
+      inertialTableColMaxStress: "Max. Spannung",
+      inertialTableColMaxDeformation: "Max. Gesamtverformung",
+      inertialRowGravityOnly: "Nur Schwerkraft",
+      inertialRowGravity3g: "Schwerkraft + 3g",
+      inertialRowWorstCase: "Worst Case",
+      inertialStudyConclusionText: "Die zusätzliche Trägheitslastprüfung zeigte, dass das finale V2-Design in allen untersuchten Fällen deutlich unter der Streckgrenze von 276 MPa für Aluminum 6061-T6 blieb. Obwohl die Trägheitslastfälle eine höhere Antwort als die reine Schwerkraft-Basis erzeugten, blieb das Spannungsniveau niedrig und das Bauteil behielt eine große strukturelle Reserve. Diese Ergebnisse unterstützen die Verwendung des leichten V2-Designs als konzeptbezogene Kameraadapter-Iteration unter kombinierten Schwerkraft- und Trägheitslastbedingungen.",
 
       finalConclusionTitle: "Abschließende technische Schlussfolgerung",
       finalConclusionText: "Das finale V2-Design reduzierte die Masse des Roboteradapters um 7,35 %, während Spannung, Verformung und die erste Eigenfrequenz sehr nahe an der Ausgangsversion blieben. Das Spannungsniveau blieb niedrig, die Verformung änderte sich nur geringfügig, und die modale Antwort blieb im gleichen Bereich. Auf Grundlage dieses Vergleichs verbesserte die Leichtbauiteration die Masseneffizienz, ohne das gesamte strukturelle Verhalten zu verändern.",
 
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
+
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
       coreTitle: "Kernbereiche",
       relatedTitle: "Verwandte Bereiche",
+
       contactTitle: "Lebenslauf / LinkedIn / Kontakt",
       resumeLabel: "Lebenslauf:",
       linkedinLabel: "LinkedIn:",
@@ -306,6 +327,7 @@ const translations = {
       heroTitle: "Taylan Daldal",
       heroRole: "Mechanical Engineer | Mechanical Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
+
       backLink: "← Back to Featured Projects",
       project1Title: "Project 1",
       project1MainTitle: "Local Stress Reduction of a Robotic Gripper Finger Using Static and Fatigue FEA",
@@ -396,6 +418,7 @@ const translations = {
       metricDamage1e8: "Damage @ 1e8 cycles",
       metricMinSafetyFactor: "Minimum Fatigue Safety Factor",
       fatigueResultsConclusion: "The fatigue results indicate that both geometries operate in a high-cycle regime at the selected load level. However, the final design improved the minimum fatigue safety factor by approximately 15.66%, which supports the structural improvements already observed in the static analysis.",
+
       v1SafetyTitle: "V1 Baseline Fatigue Safety Factor Result",
       v2SafetyTitle: "V2 Final Fatigue Safety Factor Result",
 
@@ -411,20 +434,22 @@ const translations = {
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
+
       skillsTitle: "Skills",
       toolsTitle: "Tools",
       coreTitle: "Core Areas",
       relatedTitle: "Related Areas",
+
       contactTitle: "Resume / LinkedIn / Contact",
       resumeLabel: "Resume:",
       linkedinLabel: "LinkedIn:",
       emailLabel: "Email:"
     },
-
     de: {
       heroTitle: "Taylan Daldal",
       heroRole: "Maschinenbauingenieur | Mechanisches Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
+
       backLink: "← Zurück zu den Projekten",
       project1Title: "Projekt 1",
       project1MainTitle: "Lokale Spannungsreduzierung eines Roboter-Greiffingers mit statischer und Ermüdungs-FEA",
@@ -515,6 +540,7 @@ const translations = {
       metricDamage1e8: "Schaden bei 1e8 Zyklen",
       metricMinSafetyFactor: "Minimaler Ermüdungssicherheitsfaktor",
       fatigueResultsConclusion: "Die Ermüdungsergebnisse zeigen, dass beide Geometrien beim gewählten Lastniveau in einem High-Cycle-Bereich arbeiten. Die finale Version verbesserte jedoch den minimalen Ermüdungssicherheitsfaktor um ungefähr 15,66 %, was die bereits in der statischen Analyse beobachteten strukturellen Verbesserungen unterstützt.",
+
       v1SafetyTitle: "V1 Ausgangsversion Ermüdungssicherheitsfaktor Ergebnis",
       v2SafetyTitle: "V2 Finale Version Ermüdungssicherheitsfaktor Ergebnis",
 
@@ -530,10 +556,12 @@ const translations = {
 
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
+
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
       coreTitle: "Kernbereiche",
       relatedTitle: "Verwandte Bereiche",
+
       contactTitle: "Lebenslauf / LinkedIn / Kontakt",
       resumeLabel: "Lebenslauf:",
       linkedinLabel: "LinkedIn:",
@@ -545,22 +573,17 @@ const translations = {
 function setLanguage(lang) {
   const page = document.body.dataset.page;
   const pageTranslations = translations[page]?.[lang];
-
   if (!pageTranslations) return;
 
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
-
     if (pageTranslations[key]) {
       el.textContent = pageTranslations[key];
     }
   });
 
   const currentLang = document.getElementById("currentLang");
-
-  if (currentLang) {
-    currentLang.textContent = lang.toUpperCase();
-  }
+  if (currentLang) currentLang.textContent = lang.toUpperCase();
 
   localStorage.setItem("siteLang", lang);
 }
