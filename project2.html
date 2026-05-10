@@ -6,7 +6,6 @@
   <title>Project 2 | Taylan Daldal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body data-page="project2">
   <header>
     <div class="lang-switch">
@@ -25,6 +24,7 @@
   </header>
 
   <div class="container">
+
     <div class="section">
       <a href="index.html" class="back-link" data-i18n="backLink">← Back to Featured Projects</a>
 
@@ -58,6 +58,7 @@
           <img src="project2/v1main.PNG" alt="Version 1 main design view" style="width:100%; height:auto; display:block; border-radius:12px;">
           <p style="text-align:center; margin-top:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
         </div>
+
         <div>
           <img src="project2/v2main.PNG" alt="Version 2 main design view" style="width:100%; height:auto; display:block; border-radius:12px;">
           <p style="text-align:center; margin-top:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
@@ -72,6 +73,7 @@
       <img src="project2/v1support.png" alt="Version 1 point mass, contact, and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
 
       <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="analysisSetupTableTitle">Analysis Setup</strong></p>
+
       <table style="width:100%; border-collapse:collapse; margin-top:8px;">
         <thead>
           <tr>
@@ -115,19 +117,19 @@
         </tbody>
       </table>
 
-      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="meshStudyTitle">Mesh Convergence Study</strong></p>
+      <h3 data-i18n="meshStudyTitle">Mesh Convergence Study</h3>
       <p data-i18n="meshStudyIntroText">
         To assess the mesh sensitivity of the final V2 design, three mesh configurations were tested for both static and modal analysis. Peak stress, total deformation, and the first three natural frequencies remained close across the coarse, medium, and fine meshes. Between the medium and fine meshes, the stress difference stayed around 1.1%, total deformation changed by about 0.5%, and the first natural frequency changed by less than 0.5%. These results indicate that the selected mesh strategy provides a stable numerical basis for the reported static and modal results.
       </p>
 
-      <div class="table-scroll wide">
-        <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+      <div class="table-scroll">
+        <table style="width:100%; border-collapse:collapse;">
           <thead>
             <tr>
               <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMesh">Mesh</th>
               <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColGlobalLocalSize">Global / Local Size</th>
               <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColPeakStress">Peak Stress</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColTotalDeformation">Total Deformation</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColTotalDef">Total Deformation</th>
               <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMode1">Mode 1</th>
               <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMode2">Mode 2</th>
               <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMode3">Mode 3</th>
@@ -175,6 +177,7 @@
           <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
           <img src="project2/f11.png" alt="Version 1 comparison view" style="width:100%; height:auto; display:block; border-radius:12px;">
         </div>
+
         <div>
           <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
           <img src="project2/f22.png" alt="Version 2 comparison view" style="width:100%; height:auto; display:block; border-radius:12px;">
@@ -187,6 +190,7 @@
       </p>
 
       <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="massStaticTableTitle">Mass and Static Results</strong></p>
+
       <table style="width:100%; border-collapse:collapse; margin-top:8px;">
         <thead>
           <tr>
@@ -230,6 +234,7 @@
       </p>
 
       <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="modalFreqTableTitle">First Three Natural Frequencies</strong></p>
+
       <table style="width:100%; border-collapse:collapse; margin-top:8px;">
         <thead>
           <tr>
@@ -267,55 +272,54 @@
       <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2ModalTitle">V2 Final Modal Analysis Result</strong></p>
       <img src="project2/v2modal.png" alt="Version 2 modal" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
 
-      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="inertialLoadStudyTitle">Inertial Load Study</strong></p>
-      <p data-i18n="inertialLoadStudyIntroText">
+      <h3 data-i18n="inertialStudyTitle">Inertial Load Study</h3>
+      <p data-i18n="inertialStudyIntroText">
         To extend the concept-level validation, an additional combined gravity and inertial load check was performed on the final V2 design. Standard Earth gravity was kept active, and a 3g acceleration input (29,419.8 mm/s²) was applied in selected global directions as a conservative assumption representing rapid robot motion during operation. Equivalent stress and total deformation were evaluated for each case. Among the investigated cases, the +Y input direction produced the highest stress and deformation and was therefore treated as the worst-case inertial loading condition in this study.
       </p>
 
-      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="inertialLoadTableTitle">Combined Gravity and 3g Inertial Load Results</strong></p>
       <div class="table-scroll">
-        <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <table style="width:100%; border-collapse:collapse;">
           <thead>
             <tr>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableLoadCase">Load Case</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableDirection">Direction</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableMaxStress">Max Stress</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableMaxTotalDeformation">Max Total Deformation</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColLoadCase">Load Case</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColDirection">Direction</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColMaxStress">Max Stress</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColMaxDeformation">Max Total Deformation</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialGravityOnly">Gravity only</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravityOnly">Gravity only</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-Y (1g)</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">5.1388 MPa</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.012354 mm</td>
             </tr>
             <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialGravity3g">Gravity + 3g</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+X</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">20.094 MPa</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.026079 mm</td>
             </tr>
             <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialGravity3g">Gravity + 3g</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+Y</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">20.555 MPa</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.049416 mm</td>
             </tr>
             <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialGravity3g">Gravity + 3g</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-Y</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">10.278 MPa</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.024708 mm</td>
             </tr>
             <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialGravity3g">Gravity + 3g</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+Z</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">12.813 MPa</td>
               <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.013458 mm</td>
             </tr>
             <tr>
-              <td style="padding:10px;" data-i18n="inertialWorstCase">Worst case</td>
+              <td style="padding:10px;" data-i18n="inertialRowWorstCase">Worst case</td>
               <td style="padding:10px;">+Y</td>
               <td style="padding:10px;">20.555 MPa</td>
               <td style="padding:10px;">0.049416 mm</td>
@@ -324,7 +328,7 @@
         </table>
       </div>
 
-      <p data-i18n="inertialLoadConclusionText">
+      <p data-i18n="inertialStudyConclusionText">
         The additional inertial load check showed that the final V2 design remained well below the 276 MPa yield strength of Aluminum 6061-T6 in all investigated cases. While the inertial load cases produced a higher response than the gravity-only baseline, the stress level remained low and the part retained a large structural margin. These results support the use of the lightweight V2 design as a concept-level camera adapter iteration under combined gravity and inertial loading conditions.
       </p>
 
@@ -341,7 +345,8 @@
     <div class="section">
       <h2 data-i18n="aboutTitle">About</h2>
       <p data-i18n="aboutText">
-        Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.
+        Mechanical engineer focused on mechanical design, CAE, and engineering analysis.
+        This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.
       </p>
     </div>
 
@@ -380,6 +385,7 @@
       <p><strong data-i18n="linkedinLabel">LinkedIn:</strong> <a href="https://www.linkedin.com/in/taylandaldal/" target="_blank">linkedin.com/in/taylandaldal</a></p>
       <p><strong data-i18n="emailLabel">Email:</strong> daldaltaylan@gmail.com</p>
     </div>
+
   </div>
 
   <footer>
