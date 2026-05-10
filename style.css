@@ -268,21 +268,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.table-scroll {
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 8px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.table-scroll table {
-  min-width: 760px;
-}
-
-.table-scroll.wide table {
-  min-width: 980px;
-}
-
 .tag {
   display: inline-block;
   background: #e2e8f0;
@@ -291,6 +276,17 @@ a:hover {
   border-radius: 999px;
   font-size: 0.85rem;
   margin: 4px 6px 0 0;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
+}
+
+.table-scroll table {
+  min-width: 1100px;
 }
 
 footer {
