@@ -7,8 +7,10 @@ const translations = {
 
       featuredTitle: "Featured Projects",
       card1Title: "Local Stress Reduction of a Robotic Gripper Finger Using Static and Fatigue FEA",
+      card1Metric: "Peak stress reduced by 13.5%, fatigue safety factor improved by 15.7%",
       card1Subtitle: "View project",
       card2Title: "Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis",
+      card2Metric: "7.35% mass reduction with <1% change in stress and modal response",
       card2Subtitle: "View project",
       card3Title: "Project 3",
       card3Subtitle: "Will be added soon",
@@ -33,8 +35,10 @@ const translations = {
 
       featuredTitle: "Ausgewählte Projekte",
       card1Title: "Lokale Spannungsreduzierung eines Roboter-Greiffingers mit statischer und Ermüdungs-FEA",
+      card1Metric: "Maximale Spannung um 13,5 % reduziert, Ermüdungssicherheitsfaktor um 15,7 % verbessert",
       card1Subtitle: "Projekt ansehen",
       card2Title: "Leichtbau-Designiteration einer On-Arm-Kamerahalterung für ein Machine-Vision-System mit statischer und modaler Analyse",
+      card2Metric: "7,35 % Massenreduzierung bei <1 % Änderung von Spannung und modalem Verhalten",
       card2Subtitle: "Projekt ansehen",
       card3Title: "Projekt 3",
       card3Subtitle: "Wird bald hinzugefügt",
