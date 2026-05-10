@@ -278,6 +278,22 @@ a:hover {
   margin: 4px 6px 0 0;
 }
 
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
+}
+
+.table-scroll table {
+  min-width: 980px;
+}
+
+.table-scroll th,
+.table-scroll td {
+  white-space: nowrap;
+}
+
 footer {
   text-align: center;
   padding: 30px 20px;
