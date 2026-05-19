@@ -26,7 +26,10 @@
   <div class="container">
 
     <div class="section">
-      <a href="index.html" class="back-link" data-i18n="backLink">← Back to Featured Projects</a>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:16px; flex-wrap:wrap;">
+        <a href="index.html" class="back-link" data-i18n="backLink" style="margin-bottom:0;">← Back to Featured Projects</a>
+        <a href="project1.html" class="back-link" style="margin-bottom:0;">Next Project →</a>
+      </div>
 
       <h2 data-i18n="project2Title">Project 2</h2>
       <h3 data-i18n="project2MainTitle">Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis</h3>
@@ -97,6 +100,10 @@
           <tr>
             <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemCameraRepresentation">Camera representation</td>
             <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueCameraRepresentation">1 kg point mass</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Gravity</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Standard Earth gravity included</td>
           </tr>
           <tr>
             <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemSupportCondition">Support condition</td>
@@ -277,56 +284,54 @@
         To extend the concept-level validation, an additional combined gravity and inertial load check was performed on the final V2 design. Standard Earth gravity was kept active, and a 3g acceleration input (29,419.8 mm/s²) was applied in selected global directions as a conservative assumption representing rapid robot motion during operation. Equivalent stress and total deformation were evaluated for each case. Among the investigated cases, the +Y input direction produced the highest stress and deformation and was therefore treated as the worst-case inertial loading condition in this study.
       </p>
 
-      
-        <table style="width:100%; border-collapse:collapse;">
-          <thead>
-            <tr>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColLoadCase">Load Case</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColDirection">Direction</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColMaxStress">Max Stress</th>
-              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColMaxDeformation">Max Total Deformation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravityOnly">Gravity only</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-Y (1g)</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">5.1388 MPa</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.012354 mm</td>
-            </tr>
-            <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+X</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">20.094 MPa</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.026079 mm</td>
-            </tr>
-            <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+Y</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">20.555 MPa</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.049416 mm</td>
-            </tr>
-            <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-Y</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">10.278 MPa</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.024708 mm</td>
-            </tr>
-            <tr>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+Z</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">12.813 MPa</td>
-              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.013458 mm</td>
-            </tr>
-            <tr>
-              <td style="padding:10px;" data-i18n="inertialRowWorstCase">Worst case</td>
-              <td style="padding:10px;">+Y</td>
-              <td style="padding:10px;">20.555 MPa</td>
-              <td style="padding:10px;">0.049416 mm</td>
-            </tr>
-          </tbody>
-        </table>
- 
+      <table style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColLoadCase">Load Case</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColDirection">Direction</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColMaxStress">Max Stress</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="inertialTableColMaxDeformation">Max Total Deformation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravityOnly">Gravity only</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-Y (1g)</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">5.1388 MPa</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.012354 mm</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+X</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">20.094 MPa</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.026079 mm</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+Y</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">20.555 MPa</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.049416 mm</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-Y</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">10.278 MPa</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.024708 mm</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="inertialRowGravity3g">Gravity + 3g</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+Z</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">12.813 MPa</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.013458 mm</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="inertialRowWorstCase">Worst case</td>
+            <td style="padding:10px;">+Y</td>
+            <td style="padding:10px;">20.555 MPa</td>
+            <td style="padding:10px;">0.049416 mm</td>
+          </tr>
+        </tbody>
+      </table>
 
       <p data-i18n="inertialStudyConclusionText">
         The additional inertial load check showed that the final V2 design remained well below the 276 MPa yield strength of Aluminum 6061-T6 in all investigated cases. While the inertial load cases produced a higher response than the gravity-only baseline, the stress level remained low and the part retained a large structural margin. These results support the use of the lightweight V2 design as a concept-level camera adapter iteration under combined gravity and inertial loading conditions.
@@ -381,7 +386,7 @@
 
     <div class="section">
       <h2 data-i18n="contactTitle">Resume / LinkedIn / Contact</h2>
-      <p><strong>Resume:</strong> <a href="Taylan-Daldal-Resume.pdf" target="_blank">Taylan Daldal</a></p>
+      <p><strong data-i18n="resumeLabel">Resume:</strong> <a href="Taylan-Daldal-Resume.pdf" target="_blank">Taylan Daldal</a></p>
       <p><strong data-i18n="linkedinLabel">LinkedIn:</strong> <a href="https://www.linkedin.com/in/taylandaldal/" target="_blank">linkedin.com/in/taylandaldal</a></p>
       <p><strong data-i18n="emailLabel">Email:</strong> daldaltaylan@gmail.com</p>
     </div>
@@ -392,6 +397,6 @@
     © 2026 Taylan Daldal
   </footer>
 
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=17"></script>
 </body>
 </html>
