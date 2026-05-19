@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3 | Taylan Daldal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="project3">
+  <header>
+    <div class="lang-switch">
+      <button class="lang-btn" id="langBtn" type="button">
+        🌐 <span id="currentLang">EN</span>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-option" type="button" data-lang="en">English</button>
+        <button class="lang-option" type="button" data-lang="de">Deutsch</button>
+      </div>
+    </div>
+
+    <h1 data-i18n="heroTitle">Taylan Daldal</h1>
+    <p data-i18n="heroRole">Mechanical Engineer | Mechanical Design & CAE</p>
+    <p class="hero-sub" data-i18n="heroSub">FEA | SolidWorks | Ansys | Optimization | Automation | Robotics</p>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <a href="index.html" class="back-link" data-i18n="backLink">← Back to Featured Projects</a>
+
+      <h2 data-i18n="project3Title">Project 3</h2>
+      <h3 data-i18n="project3MainTitle">Topology-Based Lightweight Redesign of a Robotic Arm Link Using Static and Buckling FEA</h3>
+
+      <div class="project-hero-image">
+        <img src="project3/v1main.PNG" alt="V1 baseline robotic arm link hero image">
+      </div>
+
+      <h3 data-i18n="overviewTitle">Project Overview</h3>
+      <p data-i18n="overviewText">
+        This project focused on the lightweight redesign of a robot arm link using static structural analysis, eigenvalue buckling analysis, and topology optimization. The original V1 geometry was first evaluated under the selected loading and boundary conditions. After the baseline analysis, topology optimization was used to identify the main load-transfer regions and the lower-density areas where material could be removed.
+      </p>
+
+      <p data-i18n="overviewText2">
+        The final V2 design was created based on the topology result. The topology output was not used directly as the final CAD geometry because it produced an irregular mesh-based shape. Instead, it was used as a load-path guide to create a cleaner and manufacturable redesign with controlled cutouts and preserved interface regions.
+      </p>
+
+      <p class="tools-line"><strong data-i18n="toolsLabel">Tools:</strong> SolidWorks, ANSYS Mechanical</p>
+      <p class="tools-line"><strong data-i18n="referenceModelLabel">Reference Model:</strong> KUKA KR16-Type Robot Arm Link</p>
+
+      <div class="project-full-stack">
+        <img src="project3/v1topologyiso.png" alt="Topology optimization result isometric view">
+      </div>
+
+      <h3 data-i18n="objectiveTitle">Objective</h3>
+      <p data-i18n="objectiveText">
+        The main goal was to reduce the mass of the robot arm link while keeping the static response and buckling stability within a safe range. The redesign focused on removing material from low-density regions suggested by topology optimization, while keeping the main hub, wrist-end interface, support region, and load-transfer paths intact.
+      </p>
+
+      <div class="project-top-row">
+        <div>
+          <img src="project3/v1main.PNG" alt="V1 baseline main design view" style="width:100%; height:auto; display:block; border-radius:12px;">
+          <p style="text-align:center; margin-top:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+        </div>
+
+        <div>
+          <img src="project3/v2main.PNG" alt="V2 final iteration main design view" style="width:100%; height:auto; display:block; border-radius:12px;">
+          <p style="text-align:center; margin-top:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+        </div>
+      </div>
+
+      <h3 data-i18n="scopeTitle">Scope and Limitation</h3>
+      <p data-i18n="scopeText">
+        The study focused on the main robot arm link body. The surrounding robot assembly, bearings, bolts, and detailed contact behavior were not fully modeled in this iteration. The purpose was to compare the original and redesigned arm link under identical boundary conditions and evaluate whether the V2 geometry could reduce mass without creating an unacceptable penalty in static stress, deformation, or buckling stability.
+      </p>
+
+      <p data-i18n="scopeText2">
+        Eigenvalue buckling was used as a stability check. The buckling result was interpreted as a comparative indicator between V1 and V2 rather than as a full nonlinear collapse prediction.
+      </p>
+
+      <h3 data-i18n="modelSetupTitle">Model and Analysis Setup</h3>
+      <p data-i18n="modelSetupText">
+        The model was analyzed in ANSYS Mechanical using Static Structural, Topology Optimization, and Eigenvalue Buckling analyses. Standard Earth gravity was included. A 2g dynamic load factor was applied to all inertial loads to account for operational accelerations. The wrist-side remote force was calculated from the combined mass of the wrist, revolver, and maximum payload package. The wrist mass was 5.168 kg, the revolver mass was 6.744 kg, and the maximum payload package was taken as 20 kg based on the KUKA datasheet, giving a total supported mass of 31.912 kg. This resulted in 31.912 kg × 9.81 m/s² × 2 ≈ 626 N. Servo motor masses were estimated from manufacturer datasheets and converted in the same way, resulting in remote forces of 491 N for the large servo, 274 N for 2 standard servos mounted in the same area, and 137 N for 1 standard servo mounted separately.
+      </p>
+
+      <img src="project3/v1setup.png" alt="V1 analysis setup with supports and remote forces" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="analysisSetupTableTitle">Analysis Setup</strong></p>
+
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableItem">Item</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableValue">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemMaterial">Material</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Aluminum 7075-T6</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemAnalyzedPart">Analyzed part</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueAnalyzedPart">Robot arm link</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemOptimizedPart">Optimized part</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueOptimizedPart">Main arm link body</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemSupportCondition">Support condition</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueSupportCondition">Remote displacement at the fixed interface</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemLoadCondition">Load condition</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueLoadCondition">Standard Earth gravity + remote force inputs from wrist and servo motor masses</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemMainWristLoad">Main wrist-side load</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">626 N remote force</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemServoLoadDefinition">Servo load definition</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueServoLoadDefinition">Servo masses estimated from datasheets and converted into remote forces</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemDynamicLoadFactor">Dynamic load factor</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">2g applied to inertial loads</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemAnalyses">Analyses</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueAnalyses">Static Structural + Topology Optimization + Eigenvalue Buckling</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemStaticMeshLevels">Static mesh levels</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Coarse, Medium, Fine</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="analysisItemBucklingSetup">Buckling setup</td>
+            <td style="padding:10px;" data-i18n="analysisValueBucklingSetup">First three positive buckling modes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 data-i18n="topologyOptimizationTitle">Topology Optimization</h3>
+      <p data-i18n="topologyOptimizationIntro">
+        Topology optimization was performed after the baseline static setup was completed. The objective was to minimize compliance with a 50% mass retention target. The result showed that the main load paths were carried through the upper and lower structural regions, while the middle and rear body regions had lower-density areas that could be reduced.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="topologySettingsTableTitle">Topology Settings</strong></p>
+
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="topologyTableColSetting">Topology Setting</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableValue">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="topologyObjective">Objective</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Minimize compliance</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="topologyMassRetentionTarget">Mass retention target</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">50%</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="topologyMaximumIterations">Maximum iterations</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">500</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="topologyConvergenceAccuracy">Convergence accuracy</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.1%</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="topologyFinalIteration">Final iteration</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">19</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="topologyRetainedMass">Retained mass at 0.5 threshold</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">17.43 kg</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="topologyRetainedMassRatio">Retained mass ratio at 0.5 threshold</td>
+            <td style="padding:10px;">50.613%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-i18n="topologyGuideText">
+        The topology result was used as a design guide rather than a direct CAD output.
+      </p>
+
+      <div class="project-full-stack">
+        <img src="project3/v1topologyside.png" alt="Topology optimization side view">
+        <img src="project3/v1topologyside2.png" alt="Topology optimization secondary side view">
+        <img src="project3/v1topologyup.png" alt="Topology optimization top view">
+      </div>
+
+      <h3 data-i18n="designIterationTitle">Design Iteration</h3>
+      <p data-i18n="designIterationText">
+        The V1 model was the original robot arm link geometry. It had a continuous main body between the large hub region and the wrist-end cylindrical interface. The baseline geometry was structurally safe under the selected static load case, but it also contained material in regions where the topology result later indicated lower contribution to the main load path.
+      </p>
+
+      <p data-i18n="designIterationText2">
+        The V2 design introduced controlled material removal from the middle and rear body regions of the arm link. The large hub, wrist-end interface, fixed support region, and main upper and lower load paths were preserved. The wrist-end cylindrical interface was also slightly refined by reducing the secondary outer cylinder diameter, while keeping the wrist-side load transfer region and connection geometry intact. The redesign avoided copying the irregular topology shape directly and instead translated the result into cleaner cutouts with smoother transitions.
+      </p>
+
+      <div class="project-top-row">
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project3/v1side.PNG" alt="V1 side view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project3/v2side.PNG" alt="V2 side view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+      </div>
+
+      <div class="project-top-row">
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project3/v1other.PNG" alt="V1 alternate design view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project3/v2other.PNG" alt="V2 alternate design view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+      </div>
+
+      <div class="project-top-row">
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project3/v1side2.PNG" alt="V1 secondary side view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project3/v2side2.PNG" alt="V2 secondary side view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+      </div>
+
+      <div class="project-top-row">
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project3/v1other2.PNG" alt="V1 additional comparison view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project3/v2other2.PNG" alt="V2 additional comparison view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+      </div>
+
+      <div class="project-top-row">
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project3/v1down.PNG" alt="V1 bottom view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project3/v2down.PNG" alt="V2 bottom view" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+      </div>
+
+      <p data-i18n="massReductionText">
+        The final V2 geometry reduced the mass from 34,438.78 g to 25,408.36 g, corresponding to a 26.22% mass reduction.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="massComparisonTableTitle">Mass Comparison</strong></p>
+
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableMetric">Metric</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV1Baseline">V1 Baseline</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV2Final">V2 Final</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableChange">Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricMass">Mass</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">34,438.78 g</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">25,408.36 g</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-26.22%</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricVolume">Volume</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">12,255,795.15 mm³</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">9,042,121.97 mm³</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-26.22%</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="metricSurfaceArea">Surface area</td>
+            <td style="padding:10px;">403,549.37 mm²</td>
+            <td style="padding:10px;">477,433.22 mm²</td>
+            <td style="padding:10px;">+18.31%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-i18n="massComparisonConclusion">
+        The final V2 design removed 9,030.42 g of material while preserving the main connection and load-transfer regions of the original arm link.
+      </p>
+
+      <h3 data-i18n="meshStudyTitle">Mesh Convergence Study</h3>
+      <p data-i18n="meshStudyIntroText">
+        To assess mesh sensitivity, three mesh configurations were tested for both the V1 baseline and the V2 final geometry. The stress, total deformation, and elastic strain values were compared across coarse, medium, and fine meshes. The fine mesh results were selected as the final static values for both designs.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1StaticMeshConvergenceTitle">V1 Static Mesh Convergence</strong></p>
+
+      <div class="table-scroll">
+        <table style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMesh">Mesh</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColGlobalLocalSize">Global / Local Size</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMaxStress">Max von Mises Stress</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMaxDeformation">Max Total Deformation</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMaxElasticStrain">Max Elastic Strain</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="meshRowCoarse">Coarse</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">8 / 4 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1.7004 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.022443 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">2.384E-05</td>
+            </tr>
+            <tr>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="meshRowMedium">Medium</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">6 / 3 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1.903 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.022448 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">2.660E-05</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;" data-i18n="meshRowFine">Fine</td>
+              <td style="padding:10px;">4 / 2 mm</td>
+              <td style="padding:10px;">1.954 MPa</td>
+              <td style="padding:10px;">0.022452 mm</td>
+              <td style="padding:10px;">2.734E-05</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="v1MeshConclusionText">
+        Between the medium and fine meshes, the V1 stress changed by 2.68%, deformation changed by 0.018%, and elastic strain changed by 2.78%.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2StaticMeshConvergenceTitle">V2 Static Mesh Convergence</strong></p>
+
+      <div class="table-scroll">
+        <table style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMesh">Mesh</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColGlobalLocalSize">Global / Local Size</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMaxStress">Max von Mises Stress</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMaxDeformation">Max Total Deformation</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMaxElasticStrain">Max Elastic Strain</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="meshRowCoarse">Coarse</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">8 / 4 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">5.895 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.041343 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">8.2192E-05</td>
+            </tr>
+            <tr>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="meshRowMedium">Medium</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">6 / 3 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">6.0658 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.041367 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">8.4629E-05</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;" data-i18n="meshRowFine">Fine</td>
+              <td style="padding:10px;">4 / 2 mm</td>
+              <td style="padding:10px;">6.1475 MPa</td>
+              <td style="padding:10px;">0.041385 mm</td>
+              <td style="padding:10px;">8.574E-05</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="v2MeshConclusionText">
+        Between the medium and fine meshes, the V2 stress changed by 1.35%, deformation changed by 0.044%, and elastic strain changed by 1.31%. These results indicate that the final V2 static solution was stable under mesh refinement. Buckling analysis was performed using the same mesh configuration as the static analysis to maintain consistency across analyses. Mesh sensitivity for the static solution was verified separately.
+      </p>
+
+      <h3 data-i18n="staticStructuralResultsTitle">Static Structural Results</h3>
+      <p data-i18n="staticStructuralResultsIntro">
+        The final V2 design reduced mass significantly, but stress and deformation increased compared with the V1 baseline. This was expected because material was removed from the structure. Even after the redesign, the final stress and deformation values remained low under the selected load case.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="staticResultsTableTitle">Static Results</strong></p>
+
+      <div class="table-scroll">
+        <table style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableMetric">Metric</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV1Baseline">V1 Baseline</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV2Final">V2 Final</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableChange">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricMaxVonMisesStress">Max von Mises Stress</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1.954 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">6.1475 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+214.6%</td>
+            </tr>
+            <tr>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricMaxTotalDeformation">Max Total Deformation</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.022452 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.041385 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">+84.3%</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;" data-i18n="metricMaxElasticStrain">Max Elastic Strain</td>
+              <td style="padding:10px;">2.734E-05</td>
+              <td style="padding:10px;">8.574E-05</td>
+              <td style="padding:10px;">+213.6%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="staticResultsConclusion">
+        Although the percentage increase in stress is large, the absolute value remained low. The maximum von Mises stress in V2 was 6.1475 MPa, corresponding to approximately 1.2% of the 7075-T6 yield strength of 503 MPa. The structural safety margin remained large.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1StressResultTitle">V1 Baseline Equivalent (von-Mises) Stress Result</strong></p>
+      <img src="project3/v1stress.png" alt="V1 equivalent von Mises stress result" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2StressResultTitle">V2 Final Equivalent (von-Mises) Stress Result</strong></p>
+      <img src="project3/v2stress.png" alt="V2 equivalent von Mises stress result" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <h3 data-i18n="bucklingResultsTitle">Buckling Analysis Results</h3>
+      <p data-i18n="bucklingResultsIntro">
+        Eigenvalue buckling analysis was performed as a stability check for both V1 and V2. Negative load multipliers were disabled, and the first three positive buckling modes were extracted. This made the V1 and V2 buckling comparison cleaner and easier to interpret.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="bucklingResultsTableTitle">Buckling Load Multipliers</strong></p>
+
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableMode">Mode</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV1LoadMultiplier">V1 Load Multiplier</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV2LoadMultiplier">V2 Load Multiplier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Mode 1</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">20,303</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">2,970.6</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Mode 2</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">38,327</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">4,108.6</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">Mode 3</td>
+            <td style="padding:10px;">39,858</td>
+            <td style="padding:10px;">4,395.8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-i18n="bucklingResultsText">
+        The first buckling load multiplier decreased from 20,303 in V1 to 2,970.6 in V2. This is a large reduction, but the V2 value remained far above 1, which indicates that the redesigned arm link still had a large buckling stability margin under the applied load case.
+      </p>
+
+      <p data-i18n="bucklingResultsText2">
+        Although the buckling load multiplier decreased by 85% relative to the baseline, the V2 value of 2,970.6 remains far beyond any realistic operational loading scenario, confirming the structural viability of the topology-optimized geometry.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1BucklingResultTitle">V1 Baseline Buckling Result</strong></p>
+      <img src="project3/v1buckling.png" alt="V1 buckling analysis result" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2BucklingResultTitle">V2 Final Buckling Result</strong></p>
+      <img src="project3/v2buckling.png" alt="V2 buckling analysis result" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <h3 data-i18n="discussionTitle">Discussion</h3>
+      <p data-i18n="discussionText">
+        The V1 baseline was not structurally weak. It showed low stress, very small deformation, and a very high buckling load multiplier under the selected load case. The purpose of the redesign was not to fix a failed part, but to improve mass efficiency while keeping the structural response within a safe range.
+      </p>
+
+      <p data-i18n="discussionText2">
+        The topology result helped identify where material had lower structural contribution. Based on this, the V2 design removed material mainly from the middle and rear body regions while keeping the main hub, wrist-end interface, and upper and lower load paths. As expected, the V2 design showed higher stress and deformation than V1, but the final values remained low.
+      </p>
+
+      <p data-i18n="discussionText3">
+        The buckling multiplier decreased significantly after material removal, which confirms that the lightweight cutouts reduced the global stiffness of the arm link. However, the first V2 buckling multiplier remained at 2,970.6, so buckling was not a limiting issue for the selected load case.
+      </p>
+
+      <div class="project-top-row">
+        <div>
+          <img src="project3/Assembly2.PNG" alt="Robot assembly view 1" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+
+        <div>
+          <img src="project3/Assembly4.PNG" alt="Robot assembly view 2" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+      </div>
+
+      <div class="project-top-row">
+        <div>
+          <img src="project3/Assembly11.PNG" alt="Robot assembly view 3" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+
+        <div>
+          <img src="project3/Assembly21.PNG" alt="Robot assembly view 4" style="width:100%; height:auto; display:block; border-radius:12px;">
+        </div>
+      </div>
+
+      <h3 data-i18n="finalConclusionTitle">Final Technical Conclusion</h3>
+      <p data-i18n="finalConclusionText">
+        The final V2 robot arm link achieved a 26.22% mass reduction compared with the V1 baseline. Static mesh convergence showed stable results, with the medium-to-fine difference remaining below 1.5% for stress, deformation, and elastic strain in the V2 model. The final V2 stress increased to 6.1475 MPa, but the absolute value remained low for the selected material and load case. At 6.1475 MPa, the final stress represented approximately 1.2% of the material yield strength, confirming a large structural safety margin.
+      </p>
+
+      <p data-i18n="finalConclusionText2">
+        The first buckling load multiplier decreased from 20,303 to 2,970.6 after material removal. Despite this reduction, the value remained far above the critical threshold of 1.
+      </p>
+
+      <p data-i18n="finalConclusionText3">
+        Based on the static and buckling checks, the topology-based V2 design improved mass efficiency while maintaining a large structural stability margin.
+      </p>
+
+      <div class="project-hero-image">
+        <img src="project3/v2main.PNG" alt="V2 final optimized robotic arm link closing image">
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Taylan Daldal
+  </footer>
+
+  <script src="script.js?v=11"></script>
+</body>
+</html>
