@@ -26,7 +26,10 @@
   <div class="container">
 
     <div class="section">
-      <a href="index.html" class="back-link" data-i18n="backLink">← Back to Featured Projects</a>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:16px; flex-wrap:wrap;">
+        <a href="index.html" class="back-link" data-i18n="backLink" style="margin-bottom:0;">← Back to Featured Projects</a>
+        <a href="project3.html" class="back-link" style="margin-bottom:0;">Next Project →</a>
+      </div>
 
       <h2 data-i18n="project1Title">Project 1</h2>
       <h3 data-i18n="project1MainTitle">Local Stress Reduction of a Robotic Gripper Finger Using Static and Fatigue FEA</h3>
@@ -190,14 +193,9 @@
 
       <h3 data-i18n="designVersionsTitle">Design Iteration</h3>
 
-      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1BaselineTitle">V1 – Baseline</strong></p>
-      <p data-i18n="v1BaselineText">
-        The first version was the original finger geometry.
-      </p>
-
-      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalTitle">V2 – Final Iteration</strong></p>
-      <p data-i18n="v2FinalText">
-        Two local geometry refinements were introduced in the final version. R2.0 mm fillets were added to the two lower slot corners. The critical inner root fillet was increased from approximately R2.03 mm to R2.5 mm, which was the smallest radius that provided clear stress relief at the hotspot without conflicting with the adjacent slot geometry constraints. These modifications were selected to smooth the local load path, reduce abrupt stress transitions, and relieve the hotspot identified in the baseline analysis.
+      <p>
+        <span data-i18n="v1BaselineText">The first version was the original finger geometry.</span>
+        <span data-i18n="v2FinalText">Two local geometry refinements were introduced in the final version. R2.0 mm fillets were added to the two lower slot corners. The critical inner root fillet was increased from approximately R2.03 mm to R2.5 mm, which was the smallest radius that provided clear stress relief at the hotspot without conflicting with the adjacent slot geometry constraints. These modifications were selected to smooth the local load path, reduce abrupt stress transitions, and relieve the hotspot identified in the baseline analysis.</span>
       </p>
 
       <div class="project-top-row">
@@ -385,7 +383,7 @@
 
     <div class="section">
       <h2 data-i18n="contactTitle">Resume / LinkedIn / Contact</h2>
-      <p><strong>Resume:</strong> <a href="Taylan-Daldal-Resume.pdf" target="_blank">Taylan Daldal</a></p>
+      <p><strong data-i18n="resumeLabel">Resume:</strong> <a href="Taylan-Daldal-Resume.pdf" target="_blank">Taylan Daldal</a></p>
       <p><strong data-i18n="linkedinLabel">LinkedIn:</strong> <a href="https://www.linkedin.com/in/taylandaldal/" target="_blank">linkedin.com/in/taylandaldal</a></p>
       <p><strong data-i18n="emailLabel">Email:</strong> daldaltaylan@gmail.com</p>
     </div>
@@ -396,6 +394,6 @@
     © 2026 Taylan Daldal
   </footer>
 
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>
