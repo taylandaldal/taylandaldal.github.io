@@ -685,7 +685,7 @@ const translations = {
     de: {
       heroTitle: "Taylan Daldal",
       heroRole: "Maschinenbauingenieur | Mechanisches Design & CAE",
-      heroSub: "FEA | SolidWorks | Ansys | Optimierung | Robotik",
+      heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
 
       backLink: "← Zurück zu den Projekten",
       project1Title: "Projekt 1",
