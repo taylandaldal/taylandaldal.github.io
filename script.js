@@ -15,6 +15,9 @@ const translations = {
       card3Title: "Topology-Based Lightweight Redesign of a Robotic Arm Link Using Static and Buckling FEA",
       card3Metric: "26.22% mass reduction while retaining structural and buckling stability",
       card3Subtitle: "View project",
+      card4Title: "Thermo-Mechanical Design Iteration of a Three-Phase Molded Busbar Assembly Using Thermal, Fatigue and Nonlinear Contact FEA",
+      card4Metric: "51.4× higher fatigue life with 13.3% lower peak stress and only 0.24% mass increase",
+      card4Subtitle: "View project",
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
@@ -44,6 +47,9 @@ const translations = {
       card3Title: "Topologiebasierte Leichtbau-Neukonstruktion eines Roboterarmglieds mit statischer und Knick-FEA",
       card3Metric: "26,22 % Massenreduzierung bei erhaltener Struktur- und Knickstabilität",
       card3Subtitle: "Projekt ansehen",
+      card4Title: "Thermomechanische Designiteration einer dreiphasigen vergossenen Busbar-Baugruppe mit thermischer, Ermüdungs- und nichtlinearer Kontakt-FEA",
+      card4Metric: "51,4-fach höhere Ermüdungslebensdauer bei 13,3 % geringerer Spitzenspannung und nur 0,24 % Massenzunahme",
+      card4Subtitle: "Projekt ansehen",
 
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
@@ -67,15 +73,31 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
 
       backLink: "← Back to Featured Projects",
+      previousProject: "← Previous Project",
+      nextProject: "Next Project →",
       project3Title: "Project 3",
       project3MainTitle: "Topology-Based Lightweight Redesign of a Robotic Arm Link Using Static and Buckling FEA",
 
       overviewTitle: "Project Overview",
       overviewText: "This project focused on the lightweight redesign of a robot arm link using static structural analysis, eigenvalue buckling analysis, and topology optimization. The original V1 geometry was first evaluated under the selected loading and boundary conditions. After the baseline analysis, topology optimization was used to identify the main load-transfer regions and the lower-density areas where material could be removed.",
       overviewText2: "The final V2 design was created based on the topology result. The topology output was not used directly as the final CAD geometry because it produced an irregular mesh-based shape. Instead, it was used as a load-path guide to create a cleaner and manufacturable redesign with controlled cutouts and preserved interface regions.",
+      overviewText3: "Reducing the mass of a moving robot-arm link can improve structural mass efficiency while reducing the inertia carried by the robot during acceleration and deceleration. The engineering challenge was therefore to remove unnecessary material without introducing excessive deformation, stress, or loss of structural stability.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Reference Model:",
+      relatedSectorsLabel: "Related Sectors:",
+      relatedSectorsValue: "Industrial Robotics & Automation, Automotive Manufacturing, General Manufacturing, Material Handling & Logistics, Advanced Manufacturing",
+
+      achievementsTitle: "Achievements",
+      achievementsIntro: "The final V2 design achieved a substantial mass reduction while maintaining low absolute stress and deformation levels and a large buckling stability margin under the selected load case.",
+      tableAchievement: "Achievement",
+      achievementTotalMass: "Total mass",
+      achievementMaxStress: "Max von Mises stress",
+      achievementMaxDeformation: "Max total deformation",
+      achievementMaxStrain: "Max elastic strain",
+      achievementBucklingMultiplier: "First buckling load multiplier",
+      achievementsText1: "The main achievement was the removal of approximately 9.03 kg of material, reducing the arm-link mass by 26.22%. The increase in stress and deformation reflects the expected stiffness tradeoff after substantial material removal, while the final absolute values remained low.",
+      achievementsText2: "Although the first buckling load multiplier decreased significantly relative to the V1 baseline, the V2 value remained at 2,970.6, far above the critical value of 1. The final design therefore achieved a major improvement in mass efficiency while retaining a large structural stability margin.",
 
       objectiveTitle: "Objective",
       objectiveText: "The main goal was to reduce the mass of the robot arm link while keeping the static response and buckling stability within a safe range. The redesign focused on removing material from low-density regions suggested by topology optimization, while keeping the main hub, wrist-end interface, support region, and load-transfer paths intact.",
@@ -86,9 +108,11 @@ const translations = {
       scopeTitle: "Scope and Limitation",
       scopeText: "The study focused on the main robot arm link body. The surrounding robot assembly, bearings, bolts, and detailed contact behavior were not fully modeled in this iteration. The purpose was to compare the original and redesigned arm link under identical boundary conditions and evaluate whether the V2 geometry could reduce mass without creating an unacceptable penalty in static stress, deformation, or buckling stability.",
       scopeText2: "Eigenvalue buckling was used as a stability check. The buckling result was interpreted as a comparative indicator between V1 and V2 rather than as a full nonlinear collapse prediction.",
+      scopeText3: "The loading scenario was anchored to the manufacturer-rated 20 kg maximum payload of the KR16 reference platform. Relevant industrial robot standards such as ISO 9283 and ISO 10218 provide performance and safety frameworks, but the structural FEA load case in this study was defined as an engineering validation scenario rather than a prescribed certification test.",
 
       modelSetupTitle: "Model and Analysis Setup",
       modelSetupText: "The model was analyzed in ANSYS Mechanical using Static Structural, Topology Optimization, and Eigenvalue Buckling analyses. Standard Earth gravity was included. A 2g dynamic load factor was applied to all inertial loads to account for operational accelerations. The wrist-side remote force was calculated from the combined mass of the wrist, revolver, and maximum payload package. The wrist mass was 5.168 kg, the revolver mass was 6.744 kg, and the maximum payload package was taken as 20 kg based on the KUKA datasheet, giving a total supported mass of 31.912 kg. This resulted in 31.912 kg × 9.81 m/s² × 2 ≈ 626 N. Servo motor masses were estimated from manufacturer datasheets and converted in the same way, resulting in remote forces of 491 N for the large servo, 274 N for 2 standard servos mounted in the same area, and 137 N for 1 standard servo mounted separately.",
+      modelSetupText2: "The base-side cylindrical interface was constrained using Remote Displacement to represent its connection to the preceding robot joint. Remote Forces were used at the wrist and servo mounting regions because the attached components were not included as full structural bodies; their equivalent operational loads were instead transferred through the corresponding mounting interfaces.",
 
       analysisSetupTableTitle: "Analysis Setup",
       tableItem: "Item",
@@ -205,15 +229,31 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
 
       backLink: "← Zurück zu den Projekten",
+      previousProject: "← Vorheriges Projekt",
+      nextProject: "Nächstes Projekt →",
       project3Title: "Projekt 3",
       project3MainTitle: "Topologiebasierte Leichtbau-Neukonstruktion eines Roboterarmglieds mit statischer und Knick-FEA",
 
       overviewTitle: "Projektübersicht",
       overviewText: "Dieses Projekt konzentrierte sich auf die Leichtbau-Neukonstruktion eines Roboterarmglieds mithilfe statischer Strukturanalyse, Eigenwert-Knickanalyse und Topologieoptimierung. Die ursprüngliche V1-Geometrie wurde zunächst unter den gewählten Last- und Randbedingungen bewertet. Nach der Ausgangsanalyse wurde die Topologieoptimierung genutzt, um die wichtigsten Lastpfade und Bereiche mit geringerer Dichte zu identifizieren, in denen Material entfernt werden konnte.",
       overviewText2: "Das finale V2-Design wurde auf Grundlage des Topologieergebnisses erstellt. Das Topologieergebnis wurde nicht direkt als finale CAD-Geometrie verwendet, da es eine unregelmäßige, netzbasierte Form erzeugte. Stattdessen diente es als Lastpfad-Orientierung für eine sauberere und fertigungsgerechtere Neukonstruktion mit kontrollierten Ausschnitten und erhaltenen Schnittstellenbereichen.",
+      overviewText3: "Die Reduzierung der Masse eines bewegten Roboterarmglieds kann die strukturelle Masseneffizienz verbessern und gleichzeitig die während Beschleunigungs- und Verzögerungsvorgängen mitbewegte Trägheit verringern. Die technische Herausforderung bestand daher darin, unnötiges Material zu entfernen, ohne übermäßige Verformung, Spannung oder einen Verlust an struktureller Stabilität zu verursachen.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Referenzmodell:",
+      relatedSectorsLabel: "Zugehörige Branchen:",
+      relatedSectorsValue: "Industrierobotik & Automatisierung, Automobilfertigung, Allgemeine Fertigung, Materialfluss & Logistik, Fortschrittliche Fertigung",
+
+      achievementsTitle: "Ergebnisse im Überblick",
+      achievementsIntro: "Das finale V2-Design erreichte eine deutliche Massenreduzierung, während die absoluten Spannungs- und Verformungswerte niedrig blieben und unter dem gewählten Lastfall eine große Knickstabilitätsreserve erhalten wurde.",
+      tableAchievement: "Ergebnis",
+      achievementTotalMass: "Gesamtmasse",
+      achievementMaxStress: "Max. von-Mises-Spannung",
+      achievementMaxDeformation: "Max. Gesamtverformung",
+      achievementMaxStrain: "Max. elastische Dehnung",
+      achievementBucklingMultiplier: "Erster Knicklastmultiplikator",
+      achievementsText1: "Das wichtigste Ergebnis war die Entfernung von ungefähr 9,03 kg Material, wodurch die Masse des Armglieds um 26,22 % reduziert wurde. Der Anstieg von Spannung und Verformung entspricht dem erwarteten Steifigkeitskompromiss nach einer deutlichen Materialentfernung, während die finalen Absolutwerte niedrig blieben.",
+      achievementsText2: "Obwohl der erste Knicklastmultiplikator gegenüber der V1-Ausgangsversion deutlich abnahm, blieb der V2-Wert mit 2.970,6 weit über dem kritischen Wert von 1. Das finale Design erreichte damit eine deutliche Verbesserung der Masseneffizienz bei weiterhin großer struktureller Stabilitätsreserve.",
 
       objectiveTitle: "Ziel",
       objectiveText: "Das Hauptziel war, die Masse des Roboterarmglieds zu reduzieren und gleichzeitig die statische Antwort und die Knickstabilität in einem sicheren Bereich zu halten. Die Neukonstruktion konzentrierte sich darauf, Material aus Bereichen mit geringer Dichte zu entfernen, die durch die Topologieoptimierung vorgeschlagen wurden, während Hauptnabe, Handgelenk-Schnittstelle, Lagerbereich und Lastpfade erhalten blieben.",
@@ -224,9 +264,11 @@ const translations = {
       scopeTitle: "Umfang und Einschränkung",
       scopeText: "Die Studie konzentrierte sich auf den Hauptkörper des Roboterarmglieds. Die umliegende Roboterbaugruppe, Lager, Schrauben und das detaillierte Kontaktverhalten wurden in dieser Iteration nicht vollständig modelliert. Ziel war es, das ursprüngliche und das neu konstruierte Armglied unter identischen Randbedingungen zu vergleichen und zu bewerten, ob die V2-Geometrie die Masse reduzieren kann, ohne eine unakzeptable Verschlechterung bei statischer Spannung, Verformung oder Knickstabilität zu erzeugen.",
       scopeText2: "Die Eigenwert-Knickanalyse wurde als Stabilitätsprüfung verwendet. Das Knickergebnis wurde als vergleichender Indikator zwischen V1 und V2 interpretiert und nicht als vollständige nichtlineare Kollapsvorhersage.",
+      scopeText3: "Das Lastszenario wurde an der vom Hersteller angegebenen maximalen Nutzlast von 20 kg der KR16-Referenzplattform ausgerichtet. Relevante Industrieroboter-Normen wie ISO 9283 und ISO 10218 liefern Rahmenbedingungen für Leistung und Sicherheit, der strukturelle FEA-Lastfall dieser Studie wurde jedoch als technische Validierungssituation und nicht als vorgeschriebene Zertifizierungsprüfung definiert.",
 
       modelSetupTitle: "Modell- und Analyseaufbau",
       modelSetupText: "Das Modell wurde in ANSYS Mechanical mit Static Structural, Topology Optimization und Eigenvalue Buckling analysiert. Die Standard-Erdgravitation wurde berücksichtigt. Ein dynamischer Lastfaktor von 2g wurde auf alle Trägheitslasten angewendet, um Betriebsbeschleunigungen abzubilden. Die handgelenkseitige Remote Force wurde aus der kombinierten Masse von Handgelenk, Revolver und maximalem Nutzlastpaket berechnet. Die Handgelenkmasse betrug 5,168 kg, die Revolvermasse 6,744 kg, und das maximale Nutzlastpaket wurde auf Basis des KUKA-Datenblatts mit 20 kg angesetzt. Daraus ergab sich eine unterstützte Gesamtmasse von 31,912 kg. Dies führte zu 31,912 kg × 9,81 m/s² × 2 ≈ 626 N. Die Servomotormassen wurden aus Herstellerdatenblättern abgeschätzt und auf die gleiche Weise in Remote Forces umgerechnet. Daraus ergaben sich 491 N für den großen Servo, 274 N für 2 Standardservos im selben Bereich und 137 N für 1 separat montierten Standardservo.",
+      modelSetupText2: "Die zylindrische Schnittstelle auf der Basisseite wurde über Remote Displacement eingeschränkt, um ihre Verbindung mit dem vorhergehenden Robotergelenk abzubilden. An den Montagebereichen von Handgelenk und Servos wurden Remote Forces verwendet, da die angebauten Komponenten nicht als vollständige Strukturkörper modelliert wurden; ihre äquivalenten Betriebslasten wurden stattdessen über die entsprechenden Montageschnittstellen eingeleitet.",
 
       analysisSetupTableTitle: "Analyse-Setup",
       tableItem: "Eintrag",
@@ -1275,7 +1317,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.body.dataset.page !== "project4") return;
+  if (!["project3", "project4"].includes(document.body.dataset.page)) return;
 
   const zoomImages = document.querySelectorAll(".section img");
   if (!zoomImages.length) return;
