@@ -387,14 +387,30 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
 
       backLink: "← Back to Featured Projects",
+      previousProject: "← Previous Project",
+      nextProject: "Next Project →",
       project2Title: "Project 2",
       project2MainTitle: "Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis",
 
       overviewTitle: "Project Overview",
       overviewText: "This project focused on a camera on-arm mount used to connect a machine vision camera to a robot arm. The study included the robot adapter and camera bracket assembly. A baseline model V1 was analyzed first, and then a lighter version of the robot adapter V2 was developed and checked again with the same analysis approach. The aim was to reduce mass without creating a clear penalty in stress, deformation, or modal behavior.",
+      overviewText2: "In an on-arm machine vision system, the mount adds payload at the robot wrist while also needing sufficient stiffness to maintain stable camera positioning. The design problem was therefore to remove unnecessary adapter mass without introducing excessive deformation or a significant change in the mount's dynamic response.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Reference Model:",
+      relatedSectorsLabel: "Related Sectors:",
+      relatedSectorsValue: "Industrial Automation & Robotics, Machine Vision, Smart Manufacturing, Inspection & Metrology",
+
+      achievementsTitle: "Achievements",
+      achievementsIntro: "The final V2 design reduced the robot adapter mass while maintaining nearly the same static and modal response as the V1 baseline. The lightweight iteration achieved a 7.35% mass reduction with only minor changes in stress, deformation, and natural frequencies.",
+      tableAchievement: "Achievement",
+      achievementAdapterMass: "Robot adapter mass",
+      achievementMaxStress: "Max von Mises stress",
+      achievementMaxDeformation: "Max total deformation",
+      achievementMode1: "First natural frequency",
+      achievementMode2: "Second natural frequency",
+      achievementMode3: "Third natural frequency",
+      achievementsText: "The main achievement was the 7.35% reduction in robot adapter mass without a meaningful change in the overall structural response. Maximum stress slightly decreased, total deformation increased by less than 1%, and the first natural frequency changed by less than 1%. The final V2 design was also verified through mesh convergence and an additional combined gravity and 3g inertial load study.",
 
       objectiveTitle: "Objective",
       objectiveText: "The main goal was to check whether the mount was structurally safe under the camera load and whether a lighter adapter could keep similar performance. The design change was limited to the robot adapter. The camera bracket was kept unchanged.",
@@ -403,7 +419,8 @@ const translations = {
       v2FinalIteration: "V2 Final Iteration",
 
       modelSetupTitle: "Model and Analysis Setup",
-      modelSetupText: "The model was analyzed in ANSYS Mechanical using a concept-level setup. The camera mass was defined as 1 kg based on the Zivid 2+ M60 manufacturer datasheet and applied as a point mass at the camera mounting region. The robot-side mounting interface was fixed, and the contact between the adapter and the bracket was modeled as bonded. Static structural and modal analyses were used to compare the baseline and the final iteration.",
+      modelSetupText: "The model was analyzed in ANSYS Mechanical using a concept-level setup. The camera mass was defined as 1 kg based on the Zivid 2+ M60 manufacturer datasheet and applied as a point mass at the camera mounting region. The 1 kg value was selected as a rounded and slightly conservative representation of the manufacturer-listed Zivid 2+ camera mass. The robot-side mounting interface was fixed, and the contact between the adapter and the bracket was modeled as bonded. Gravity was applied to represent the self-weight of the camera and mount assembly. The robot-side flange was fixed to idealize the rigid connection between the adapter and the robot wrist, while the adapter–bracket interface was modeled as bonded to represent a fully constrained fastened connection. Bolt preload and interface slip were outside the scope of this concept-level comparison. Static structural and modal analyses were used to compare the baseline and the final iteration.",
+      modelSetupIsoText: "The OA211 reference mount uses an ISO 9409-1-63-4-M6 robot flange interface, providing an industry-standard mechanical connection between the adapter and compatible robot wrists.",
 
       analysisSetupTableTitle: "Analysis Setup",
       tableItem: "Item",
@@ -417,6 +434,8 @@ const translations = {
       analysisValueCameraRepresentation: "1 kg point mass",
       analysisItemSupportCondition: "Support condition",
       analysisValueSupportCondition: "Fixed support at robot-side interface",
+      analysisItemRobotFlangeInterface: "Robot flange interface",
+      analysisValueRobotFlangeInterface: "ISO 9409-1-63-4-M6 (Zivid OA211 reference)",
       analysisItemContact: "Contact",
       analysisValueContact: "Bonded contact between adapter and bracket",
       analysisItemAnalyses: "Analyses",
@@ -464,7 +483,7 @@ const translations = {
       v2ModalTitle: "V2 Final Modal Analysis Result",
 
       inertialStudyTitle: "Inertial Load Study",
-      inertialStudyIntroText: "To extend the concept-level validation, an additional combined gravity and inertial load check was performed on the final V2 design. Standard Earth gravity was kept active, and a 3g acceleration input (29,419.8 mm/s²) was applied in selected global directions as a conservative assumption representing rapid robot motion during operation. Equivalent stress and total deformation were evaluated for each case. Among the investigated cases, the +Y input direction produced the highest stress and deformation and was therefore treated as the worst-case inertial loading condition in this study.",
+      inertialStudyIntroText: "To extend the concept-level validation, an additional combined gravity and inertial load check was performed on the final V2 design. Standard Earth gravity was kept active, and a 3g acceleration input (29,419.8 mm/s²) was applied in selected global directions as a conservative assumption representing rapid robot motion during operation. Because a robot-specific acceleration profile was not available for this concept study, 3g was selected as a conservative engineering assumption rather than a manufacturer- or standard-defined test requirement. Equivalent stress and total deformation were evaluated for each case. Among the investigated cases, the +Y input direction produced the highest stress and deformation and was therefore treated as the worst-case inertial loading condition in this study.",
       inertialTableColLoadCase: "Load Case",
       inertialTableColDirection: "Direction",
       inertialTableColMaxStress: "Max Stress",
@@ -496,14 +515,30 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
 
       backLink: "← Zurück zu den Projekten",
+      previousProject: "← Vorheriges Projekt",
+      nextProject: "Nächstes Projekt →",
       project2Title: "Projekt 2",
       project2MainTitle: "Leichtbau-Designiteration einer On-Arm-Kamerahalterung für ein Machine-Vision-System mit statischer und modaler Analyse",
 
       overviewTitle: "Projektübersicht",
       overviewText: "Dieses Projekt konzentrierte sich auf eine On-Arm-Kamerahalterung, die verwendet wird, um eine Machine-Vision-Kamera mit einem Roboterarm zu verbinden. Die Studie umfasste die Baugruppe aus Roboteradapter und Kamerahalter. Zunächst wurde ein Ausgangsmodell V1 analysiert, danach wurde eine leichtere Version des Roboteradapters V2 entwickelt und mit demselben Analyseansatz erneut geprüft. Ziel war es, die Masse zu reduzieren, ohne eine klare Verschlechterung bei Spannung, Verformung oder modalem Verhalten zu erzeugen.",
+      overviewText2: "Bei einem On-Arm-Machine-Vision-System erhöht die Halterung die Nutzlast am Roboterhandgelenk und muss gleichzeitig eine ausreichende Steifigkeit aufweisen, um eine stabile Kamerapositionierung zu gewährleisten. Die konstruktive Aufgabe bestand daher darin, unnötige Masse des Adapters zu entfernen, ohne übermäßige Verformungen oder eine wesentliche Änderung des dynamischen Verhaltens der Halterung zu verursachen.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Referenzmodell:",
+      relatedSectorsLabel: "Verwandte Branchen:",
+      relatedSectorsValue: "Industrielle Automatisierung & Robotik, industrielle Bildverarbeitung, intelligente Fertigung, Inspektion & Messtechnik",
+
+      achievementsTitle: "Ergebnisse",
+      achievementsIntro: "Das finale V2-Design reduzierte die Masse des Roboteradapters, während die statische und modale Antwort nahezu auf dem Niveau der V1-Ausgangsversion blieb. Die Leichtbauiteration erreichte eine Massenreduzierung von 7,35 % bei nur geringfügigen Änderungen von Spannung, Verformung und Eigenfrequenzen.",
+      tableAchievement: "Ergebnis",
+      achievementAdapterMass: "Masse des Roboteradapters",
+      achievementMaxStress: "Max. von-Mises-Spannung",
+      achievementMaxDeformation: "Max. Gesamtverformung",
+      achievementMode1: "Erste Eigenfrequenz",
+      achievementMode2: "Zweite Eigenfrequenz",
+      achievementMode3: "Dritte Eigenfrequenz",
+      achievementsText: "Das wichtigste Ergebnis war die Reduzierung der Roboteradaptermasse um 7,35 %, ohne eine wesentliche Änderung des gesamten strukturellen Verhaltens. Die maximale Spannung nahm leicht ab, die Gesamtverformung stieg um weniger als 1 %, und die erste Eigenfrequenz änderte sich um weniger als 1 %. Das finale V2-Design wurde zusätzlich durch eine Netzkonvergenzprüfung und eine kombinierte Schwerkraft- und 3g-Trägheitslaststudie verifiziert.",
 
       objectiveTitle: "Ziel",
       objectiveText: "Das Hauptziel war zu prüfen, ob die Halterung unter der Kameralast strukturell sicher ist und ob ein leichterer Adapter eine ähnliche Leistung beibehalten kann. Die Designänderung war auf den Roboteradapter begrenzt. Der Kamerahalter blieb unverändert.",
@@ -512,7 +547,8 @@ const translations = {
       v2FinalIteration: "V2 Finale Iteration",
 
       modelSetupTitle: "Modell- und Analyseaufbau",
-      modelSetupText: "Das Modell wurde in ANSYS Mechanical mit einem Konzept-Setup analysiert. Die Kameramasse wurde auf Grundlage des Herstellerdatenblatts der Zivid 2+ M60 mit 1 kg definiert und als Punktmasse im Kamerabefestigungsbereich aufgebracht. Die roboterseitige Befestigungsschnittstelle wurde fixiert, und der Kontakt zwischen Adapter und Halter wurde als bonded modelliert. Zur Gegenüberstellung der Ausgangsversion und der finalen Iteration wurden statische und modale Analysen verwendet.",
+      modelSetupText: "Das Modell wurde in ANSYS Mechanical mit einem Konzept-Setup analysiert. Die Kameramasse wurde auf Grundlage des Herstellerdatenblatts der Zivid 2+ M60 mit 1 kg definiert und als Punktmasse im Kamerabefestigungsbereich aufgebracht. Der Wert von 1 kg wurde als gerundete und leicht konservative Darstellung der vom Hersteller angegebenen Masse der Zivid-2+-Kamera gewählt. Die roboterseitige Befestigungsschnittstelle wurde fixiert, und der Kontakt zwischen Adapter und Halter wurde als bonded modelliert. Die Schwerkraft wurde berücksichtigt, um das Eigengewicht der Kamera- und Halterungsbaugruppe abzubilden. Der roboterseitige Flansch wurde fixiert, um die starre Verbindung zwischen Adapter und Roboterhandgelenk zu idealisieren, während die Adapter-Halter-Schnittstelle als bonded modelliert wurde, um eine vollständig eingeschränkte verschraubte Verbindung darzustellen. Schraubenvorspannung und Gleiten an der Schnittstelle lagen außerhalb des Umfangs dieses konzeptbezogenen Vergleichs. Zur Gegenüberstellung der Ausgangsversion und der finalen Iteration wurden statische und modale Analysen verwendet.",
+      modelSetupIsoText: "Die OA211-Referenzhalterung verwendet eine Roboterflansch-Schnittstelle nach ISO 9409-1-63-4-M6 und stellt damit eine industrieweit standardisierte mechanische Verbindung zwischen dem Adapter und kompatiblen Roboterhandgelenken bereit.",
 
       analysisSetupTableTitle: "Analyse-Setup",
       tableItem: "Eintrag",
@@ -526,6 +562,8 @@ const translations = {
       analysisValueCameraRepresentation: "1 kg Punktmasse",
       analysisItemSupportCondition: "Randbedingung",
       analysisValueSupportCondition: "Feste Lagerung an der roboterseitigen Schnittstelle",
+      analysisItemRobotFlangeInterface: "Roboterflansch-Schnittstelle",
+      analysisValueRobotFlangeInterface: "ISO 9409-1-63-4-M6 (Zivid OA211 Referenz)",
       analysisItemContact: "Kontakt",
       analysisValueContact: "Bonded-Kontakt zwischen Adapter und Halter",
       analysisItemAnalyses: "Analysen",
@@ -573,7 +611,7 @@ const translations = {
       v2ModalTitle: "V2 Final Modal Analysis Result",
 
       inertialStudyTitle: "Trägheitslaststudie",
-      inertialStudyIntroText: "Zur Erweiterung der konzeptbezogenen Validierung wurde eine zusätzliche kombinierte Schwerkraft- und Trägheitslastprüfung am finalen V2-Design durchgeführt. Die Standard-Erdschwerkraft blieb aktiv, und ein 3g-Beschleunigungseingang (29.419,8 mm/s²) wurde in ausgewählten globalen Richtungen als konservative Annahme für schnelle Roboterbewegungen im Betrieb aufgebracht. Für jeden Fall wurden äquivalente Spannung und Gesamtverformung ausgewertet. Unter den untersuchten Fällen erzeugte die +Y-Eingangsrichtung die höchste Spannung und Verformung und wurde daher in dieser Studie als Worst-Case-Trägheitslastbedingung behandelt.",
+      inertialStudyIntroText: "Zur Erweiterung der konzeptbezogenen Validierung wurde eine zusätzliche kombinierte Schwerkraft- und Trägheitslastprüfung am finalen V2-Design durchgeführt. Die Standard-Erdschwerkraft blieb aktiv, und ein 3g-Beschleunigungseingang (29.419,8 mm/s²) wurde in ausgewählten globalen Richtungen als konservative Annahme für schnelle Roboterbewegungen im Betrieb aufgebracht. Da für diese Konzeptstudie kein roboterspezifisches Beschleunigungsprofil verfügbar war, wurde 3g als konservative technische Annahme und nicht als vom Hersteller oder von einer Norm vorgegebene Prüfanforderung gewählt. Für jeden Fall wurden äquivalente Spannung und Gesamtverformung ausgewertet. Unter den untersuchten Fällen erzeugte die +Y-Eingangsrichtung die höchste Spannung und Verformung und wurde daher in dieser Studie als Worst-Case-Trägheitslastbedingung behandelt.",
       inertialTableColLoadCase: "Lastfall",
       inertialTableColDirection: "Richtung",
       inertialTableColMaxStress: "Max. Spannung",
@@ -1317,7 +1355,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (!["project3", "project4"].includes(document.body.dataset.page)) return;
+  if (!["project2", "project3", "project4"].includes(document.body.dataset.page)) return;
 
   const zoomImages = document.querySelectorAll(".section img");
   if (!zoomImages.length) return;
