@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project 4 | Taylan Daldal</title>
-  <link rel="stylesheet" href="style.css?v=16" />
+  <link rel="stylesheet" href="style.css?v=17" />
 </head>
 <body data-page="project4">
   <header>
@@ -25,9 +25,10 @@
 
   <div class="container">
     <div class="section">
-      <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:16px; flex-wrap:wrap;">
-        <a href="index.html" class="back-link" data-i18n="backLink" style="margin-bottom:0;">← Back to Featured Projects</a>
-        <a href="project3.html" class="back-link" data-i18n="nextProject" style="margin-bottom:0;">Next Project →</a>
+      <div class="project-nav">
+        <span class="project-nav-disabled nav-left" data-i18n="previousProjectDisabled">← Previous Project</span>
+        <a href="index.html" class="back-link project-nav-link nav-center" data-i18n="backLink">← Back to Featured Projects</a>
+        <a href="project3.html" class="back-link project-nav-link nav-right" data-i18n="nextProject">Next Project →</a>
       </div>
 
       <h2 data-i18n="project4Title">Project 4</h2>
@@ -231,11 +232,13 @@
         This setup was kept identical between V1 and V2 so that the influence of the geometry iteration could be compared on the same basis.
       </p>
 
-      <div class="project-full-stack">
-        <img src="project4/v1bctemp.png" alt="V1 prescribed temperature boundary condition">
-        <img src="project4/v1bccon.png" alt="V1 convection boundary condition">
-        <img src="project4/v2bctemp.png" alt="V2 prescribed temperature boundary condition">
-        <img src="project4/v2bccon.png" alt="V2 convection boundary condition">
+      <div class="project-top-row">
+        <div><img src="project4/v1bctemp.png" alt="V1 prescribed temperature boundary condition"></div>
+        <div><img src="project4/v1bccon.png" alt="V1 convection boundary condition"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v2bctemp.png" alt="V2 prescribed temperature boundary condition"></div>
+        <div><img src="project4/v2bccon.png" alt="V2 convection boundary condition"></div>
       </div>
 
       <h4 data-i18n="staticStructuralTitle">Static Structural</h4>
@@ -384,10 +387,14 @@
 
       <div class="project-full-stack">
         <img src="project4/v1deformation.png" alt="V1 total deformation result">
-        <img src="project4/v1stress.png" alt="V1 whole assembly stress result">
-        <img src="project4/v1stressco.png" alt="V1 copper stress result">
-        <img src="project4/v1stressho.png" alt="V1 housing stress result">
-        <img src="project4/v1strainco.png" alt="V1 copper elastic strain result">
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v1stress.png" alt="V1 whole assembly stress result"></div>
+        <div><img src="project4/v1stressco.png" alt="V1 copper stress result"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v1stressho.png" alt="V1 housing stress result"></div>
+        <div><img src="project4/v1strainco.png" alt="V1 copper elastic strain result"></div>
       </div>
 
       <h3 data-i18n="designIterationTitle">Design Iteration</h3>
@@ -410,36 +417,18 @@
       </div>
 
       <div class="project-top-row">
-        <div>
-          <p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
-          <img src="project4/0.PNG" alt="V1 baseline comparison view 2">
-        </div>
-        <div>
-          <p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
-          <img src="project4/2.PNG" alt="V2 comparison view 2">
-        </div>
+        <div><img src="project4/0.PNG" alt="V1 baseline comparison view 2"></div>
+        <div><img src="project4/2.PNG" alt="V2 comparison view 2"></div>
       </div>
 
       <div class="project-top-row">
-        <div>
-          <p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
-          <img src="project4/0.PNG" alt="V1 baseline comparison view 3">
-        </div>
-        <div>
-          <p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
-          <img src="project4/3.PNG" alt="V2 comparison view 3">
-        </div>
+        <div><img src="project4/0.PNG" alt="V1 baseline comparison view 3"></div>
+        <div><img src="project4/3.PNG" alt="V2 comparison view 3"></div>
       </div>
 
       <div class="project-top-row">
-        <div>
-          <p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
-          <img src="project4/5.PNG" alt="V1 baseline comparison view 4">
-        </div>
-        <div>
-          <p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
-          <img src="project4/4.PNG" alt="V2 comparison view 4">
-        </div>
+        <div><img src="project4/5.PNG" alt="V1 baseline comparison view 4"></div>
+        <div><img src="project4/4.PNG" alt="V2 comparison view 4"></div>
       </div>
 
       <h3 data-i18n="linearResultsTitle">V1 vs V2 Linear Thermo-Mechanical Results</h3>
@@ -475,6 +464,11 @@
       </div>
 
       <p data-i18n="linearResultsText1">The thermal field remained almost unchanged between the two versions, which was expected because the main conductor dimensions and thermal boundary conditions were retained.</p>
+
+      <div class="project-top-row">
+        <div><img src="project4/v1temp.png" alt="V1 thermal field comparison"></div>
+        <div><img src="project4/v2temp.png" alt="V2 thermal field comparison"></div>
+      </div>
       <p data-i18n="linearResultsText2">Maximum total deformation also remained almost identical, increasing by only 0.27%.</p>
       <p data-i18n="linearResultsText3">The clearer structural improvement appeared in stress and strain. Maximum copper/assembly stress decreased by 13.33%, maximum housing stress decreased by 11.54%, and maximum copper elastic strain decreased by 19.52%.</p>
       <p data-i18n="linearResultsText4">The representative copper stress also decreased by 8.75%.</p>
@@ -682,6 +676,6 @@
   </div>
 
   <footer>© 2026 Taylan Daldal</footer>
-  <script src="script.js?v=16"></script>
+  <script src="script.js?v=17"></script>
 </body>
 </html>
