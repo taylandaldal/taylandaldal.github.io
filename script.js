@@ -646,6 +646,8 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
 
       backLink: "← Back to Featured Projects",
+      previousProject: "← Previous Project",
+      nextProject: "Next Project →",
       project1Title: "Project 1",
       project1MainTitle: "Local Stress Reduction of a Robotic Gripper Finger Using Static and Fatigue FEA",
 
@@ -657,15 +659,31 @@ const translations = {
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Reference Model:",
+      referenceModelValue: "KR16-Type Gripper",
+      relatedSectorsLabel: "Related Sectors:",
+      relatedSectorsValue: "Industrial Automation & Robotics, End-of-Arm Tooling, Assembly Automation, Material Handling, Smart Manufacturing",
+
+      achievementsTitle: "Achievements",
+      achievementsIntro: "The final V2 design reduced the critical stress concentration and elastic strain while improving the fatigue safety margin under the same 300 N load case.",
+      tableAchievement: "Achievement",
+      tableChange: "Change",
+      achievementPeakStress: "Peak von Mises stress",
+      achievementElasticStrain: "Equivalent elastic strain",
+      achievementTotalDeformation: "Total deformation",
+      achievementDirectionalY: "Directional deformation (Y)",
+      achievementMinSafetyFactor: "Minimum fatigue safety factor",
+      achievementsText1: "The most important result was the reduction of the local stress concentration. V2 reduced peak von Mises stress by 13.54% and equivalent elastic strain by 13.94%, while increasing the minimum fatigue safety factor by 15.66%.",
+      achievementsText2: "These improvements were achieved through small local geometry refinements without changing the overall loading concept or the global form of the finger.",
 
       objectiveTitle: "Objective",
+      objectiveIntro: "In a robotic gripping application, repeated force transfer through the finger can create localized stress concentrations around geometric transitions, potentially reducing structural durability over repeated operating cycles.",
       objectiveText: "The aim of the study was to reduce stress concentration in the critical root region of the gripper finger, lower elastic strain, and improve fatigue behavior under the same loading and boundary conditions. The focus was not on changing the global form of the part, but on refining a few local geometric transitions along the load path.",
 
       scopeTitle: "Scope and Limitation",
       scopeText: "The study focused on the primary load-bearing finger body. Mating components were not fully reworked in this iteration, since the scope of the study was limited to comparative structural and fatigue response of the main part under identical boundary conditions.",
 
       modelSetupTitle: "Model and Analysis Setup",
-      modelSetupText: "The part material was defined as Aluminum 6061-T6. Structural performance was evaluated in ANSYS using both Static Structural and Stress-Life Fatigue analysis. A 300 N load case was applied to the finger. Fatigue was assessed using zero-based cyclic loading (0 → 300 N → 0) with Goodman mean stress correction and Equivalent (von-Mises) stress as the fatigue stress component.",
+      modelSetupText: "The part material was defined as Aluminum 6061-T6. Structural performance was evaluated in ANSYS using both Static Structural and Stress-Life Fatigue analysis. A 300 N load was applied to the inner load-face region to represent force transfer through the finger during a representative gripping load case. The base interface was fixed to represent the structural restraint provided by the gripper body. The same loading and support conditions were maintained for both design versions to ensure a direct comparison. Fatigue was assessed using zero-based cyclic loading (0 → 300 N → 0) with Goodman mean stress correction and Equivalent (von-Mises) stress as the fatigue stress component.",
 
       analysisSetupTableTitle: "Analysis Setup",
       tableItem: "Item",
@@ -713,7 +731,6 @@ const translations = {
       tableMetric: "Metric",
       tableV1Baseline: "V1 Baseline",
       tableV2Final: "V2 Final",
-      tableChange: "Change",
       metricEquivalentStress: "Equivalent Stress",
       metricTotalDeformation: "Total Deformation",
       metricDirectionalY: "Directional Deformation (Y)",
@@ -751,23 +768,24 @@ const translations = {
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
-
       skillsTitle: "Skills",
       toolsTitle: "Tools",
       coreTitle: "Core Areas",
       relatedTitle: "Related Areas",
-
       contactTitle: "Resume / LinkedIn / Contact",
       resumeLabel: "Resume:",
       linkedinLabel: "LinkedIn:",
       emailLabel: "Email:"
     },
+
     de: {
       heroTitle: "Taylan Daldal",
       heroRole: "Maschinenbauingenieur | Mechanisches Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
 
       backLink: "← Zurück zu den Projekten",
+      previousProject: "← Vorheriges Projekt",
+      nextProject: "Nächstes Projekt →",
       project1Title: "Projekt 1",
       project1MainTitle: "Lokale Spannungsreduzierung eines Roboter-Greiffingers mit statischer und Ermüdungs-FEA",
 
@@ -779,15 +797,31 @@ const translations = {
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Referenzmodell:",
+      referenceModelValue: "Greifer vom Typ KR16",
+      relatedSectorsLabel: "Verwandte Sektoren:",
+      relatedSectorsValue: "Industrielle Automatisierung & Robotik, End-of-Arm-Tooling, Montageautomatisierung, Materialhandling, Smart Manufacturing",
+
+      achievementsTitle: "Erfolge",
+      achievementsIntro: "Das finale V2-Design reduzierte die kritische Spannungskonzentration und die elastische Dehnung und verbesserte gleichzeitig die Ermüdungssicherheitsreserve unter demselben Lastfall von 300 N.",
+      tableAchievement: "Erfolg",
+      tableChange: "Änderung",
+      achievementPeakStress: "Maximale von-Mises-Spannung",
+      achievementElasticStrain: "Äquivalente elastische Dehnung",
+      achievementTotalDeformation: "Gesamtverformung",
+      achievementDirectionalY: "Richtungsverformung (Y)",
+      achievementMinSafetyFactor: "Minimaler Ermüdungssicherheitsfaktor",
+      achievementsText1: "Das wichtigste Ergebnis war die Reduzierung der lokalen Spannungskonzentration. V2 reduzierte die maximale von-Mises-Spannung um 13,54 % und die äquivalente elastische Dehnung um 13,94 %, während sich der minimale Ermüdungssicherheitsfaktor um 15,66 % erhöhte.",
+      achievementsText2: "Diese Verbesserungen wurden durch kleine lokale Geometrieverfeinerungen erreicht, ohne das grundlegende Lastkonzept oder die globale Form des Fingers zu verändern.",
 
       objectiveTitle: "Ziel",
+      objectiveIntro: "In einer robotischen Greifanwendung kann die wiederholte Kraftübertragung durch den Finger lokale Spannungskonzentrationen an geometrischen Übergängen erzeugen, was die strukturelle Dauerfestigkeit über wiederholte Betriebszyklen hinweg verringern kann.",
       objectiveText: "Ziel der Studie war es, die Spannungskonzentration im kritischen Wurzelbereich des Greiffingers zu reduzieren, die elastische Dehnung zu verringern und das Ermüdungsverhalten unter denselben Last- und Randbedingungen zu verbessern. Der Fokus lag nicht darauf, die globale Form des Bauteils zu verändern, sondern einige lokale geometrische Übergänge entlang des Lastpfads zu verfeinern.",
 
       scopeTitle: "Umfang und Einschränkung",
       scopeText: "Die Studie konzentrierte sich auf den primären lasttragenden Fingerkörper. Die verbundenen Komponenten wurden in dieser Iteration nicht vollständig überarbeitet, da der Umfang der Studie auf den vergleichenden strukturellen und ermüdungsbezogenen Response des Hauptbauteils unter identischen Randbedingungen begrenzt war.",
 
       modelSetupTitle: "Modell- und Analyseaufbau",
-      modelSetupText: "Das Bauteilmaterial wurde als Aluminium 6061-T6 definiert. Die strukturelle Leistung wurde in ANSYS sowohl mit Static Structural als auch mit Stress-Life Fatigue Analysis bewertet. Auf den Finger wurde ein Lastfall von 300 N angewendet. Die Ermüdung wurde unter nullbasierter zyklischer Belastung (0 → 300 N → 0) mit Goodman-Mittelspannungskorrektur und äquivalenter (von-Mises-)Spannung als Ermüdungsspannungskomponente bewertet.",
+      modelSetupText: "Das Bauteilmaterial wurde als Aluminium 6061-T6 definiert. Die strukturelle Leistung wurde in ANSYS sowohl mit Static Structural als auch mit Stress-Life Fatigue Analysis bewertet. Eine Last von 300 N wurde auf den inneren Lastflächenbereich aufgebracht, um die Kraftübertragung durch den Finger in einem repräsentativen Greiflastfall darzustellen. Die Basisschnittstelle wurde fest gelagert, um die strukturelle Abstützung durch den Greiferkörper abzubilden. Für beide Designversionen wurden dieselben Last- und Randbedingungen beibehalten, um einen direkten Vergleich sicherzustellen. Die Ermüdung wurde unter nullbasierter zyklischer Belastung (0 → 300 N → 0) mit Goodman-Mittelspannungskorrektur und äquivalenter (von-Mises-)Spannung als Ermüdungsspannungskomponente bewertet.",
 
       analysisSetupTableTitle: "Analyse-Setup",
       tableItem: "Eintrag",
@@ -835,7 +869,6 @@ const translations = {
       tableMetric: "Kennwert",
       tableV1Baseline: "V1 Ausgangsversion",
       tableV2Final: "V2 Finale Version",
-      tableChange: "Änderung",
       metricEquivalentStress: "Äquivalente Spannung",
       metricTotalDeformation: "Gesamtverformung",
       metricDirectionalY: "Richtungsbezogene Verformung (Y)",
@@ -873,19 +906,16 @@ const translations = {
 
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
-
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
       coreTitle: "Kernbereiche",
       relatedTitle: "Verwandte Bereiche",
-
       contactTitle: "Lebenslauf / LinkedIn / Kontakt",
       resumeLabel: "Lebenslauf:",
       linkedinLabel: "LinkedIn:",
       emailLabel: "E-Mail:"
     }
   },
-
   project4: {
     "en": {
         "heroTitle": "Taylan Daldal",
@@ -1355,7 +1385,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (!["project2", "project3", "project4"].includes(document.body.dataset.page)) return;
+  if (!["project1", "project2", "project3", "project4"].includes(document.body.dataset.page)) return;
 
   const zoomImages = document.querySelectorAll(".section img");
   if (!zoomImages.length) return;
