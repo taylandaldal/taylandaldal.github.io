@@ -360,6 +360,7 @@ a:hover {
   border-bottom-color: #d1d5db;
 }
 
+body[data-page="project3"] .section img,
 body[data-page="project4"] .section img {
   cursor: zoom-in;
 }
