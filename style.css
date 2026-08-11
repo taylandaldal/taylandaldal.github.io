@@ -153,7 +153,15 @@ h4 {
   margin-top: 18px;
 }
 
+.project-three-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
 .project-top-row img,
+.project-three-row img,
 .project-full-stack img,
 .project-hero-image img {
   width: 100%;
@@ -172,6 +180,13 @@ h4 {
 
 .project-full-stack img + img {
   margin-top: 16px;
+}
+
+.comparison-label {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
 .tools-line {
@@ -289,6 +304,80 @@ a:hover {
   min-width: 1100px;
 }
 
+.table-scroll-auto {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
+}
+
+.table-scroll-auto table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.table-scroll-auto th,
+.table-scroll-auto td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.table-scroll-auto th {
+  border-bottom-color: #d1d5db;
+}
+
+body[data-page="project4"] .section img {
+  cursor: zoom-in;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(2, 6, 23, 0.92);
+  box-sizing: border-box;
+}
+
+.image-lightbox.show {
+  display: flex;
+}
+
+.image-lightbox img {
+  max-width: 94vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  cursor: zoom-out;
+}
+
+.image-lightbox-close {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 10000;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+.image-lightbox-close:hover {
+  opacity: 0.8;
+}
+
 footer {
   text-align: center;
   padding: 30px 20px;
@@ -298,6 +387,7 @@ footer {
 
 @media (max-width: 768px) {
   .project-top-row,
+  .project-three-row,
   .project-cards {
     grid-template-columns: 1fr;
   }
@@ -310,5 +400,14 @@ footer {
   .lang-btn {
     padding: 7px 12px;
     font-size: 0.9rem;
+  }
+
+  .image-lightbox {
+    padding: 16px;
+  }
+
+  .image-lightbox-close {
+    top: 10px;
+    right: 12px;
   }
 }
