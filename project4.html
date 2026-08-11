@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 4 | Taylan Daldal</title>
+  <link rel="stylesheet" href="style.css?v=16" />
+</head>
+<body data-page="project4">
+  <header>
+    <div class="lang-switch">
+      <button class="lang-btn" id="langBtn" type="button">
+        🌐 <span id="currentLang">EN</span>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-option" type="button" data-lang="en">English</button>
+        <button class="lang-option" type="button" data-lang="de">Deutsch</button>
+      </div>
+    </div>
+
+    <h1 data-i18n="heroTitle">Taylan Daldal</h1>
+    <p data-i18n="heroRole">Mechanical Engineer | Mechanical Design & CAE</p>
+    <p class="hero-sub" data-i18n="heroSub">FEA | SolidWorks | Ansys | Optimization | Automation | Robotics</p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:16px; flex-wrap:wrap;">
+        <a href="index.html" class="back-link" data-i18n="backLink" style="margin-bottom:0;">← Back to Featured Projects</a>
+        <a href="project3.html" class="back-link" data-i18n="nextProject" style="margin-bottom:0;">Next Project →</a>
+      </div>
+
+      <h2 data-i18n="project4Title">Project 4</h2>
+      <h3 data-i18n="project4MainTitle">Thermo-Mechanical Design Iteration of a Three-Phase Molded Busbar Assembly Using Thermal, Fatigue and Nonlinear Contact FEA</h3>
+
+      <div class="project-hero-image">
+        <img src="project4/v1main.PNG" alt="V1 baseline phase busbar hero image">
+      </div>
+
+      <h3 data-i18n="overviewTitle">Project Overview</h3>
+      <p data-i18n="overviewText1">
+        This project focused on the thermo-mechanical behavior and design iteration of a three-phase molded busbar assembly. The model includes three separate copper phase conductors integrated into a glass-fiber-reinforced PPS housing, together with metallic mounting inserts.
+      </p>
+      <p data-i18n="overviewText2">
+        The study started with a V1 baseline and followed the same analysis sequence through a V2 design iteration. Steady-state thermal analysis was used to define the temperature field, which was then transferred into Static Structural analysis to evaluate thermal deformation, stress, and elastic strain. Thermal fatigue was assessed on the copper conductors, and the final V2 design was additionally evaluated using nonlinear frictional contact.
+      </p>
+      <p data-i18n="overviewText3">
+        The design changes were intentionally local. Instead of changing the overall size or conductor layout, the iteration focused on smoothing the main copper bend and the surrounding housing transitions. This allowed the original packaging concept to remain almost unchanged while improving peak structural response and, most importantly, thermal fatigue behavior.
+      </p>
+      <p data-i18n="overviewText4">
+        The geometry was developed with reference to ENNOVI phase busbar products. ENNOVI describes this type of component as a customizable multi-phase power interface used particularly in EV and HEV applications, including inverter and electric traction motor connections.
+      </p>
+
+      <p class="tools-line"><strong data-i18n="toolsLabel">Tools:</strong> SolidWorks, ANSYS Mechanical, ANSYS MAPDL</p>
+      <p class="tools-line"><strong data-i18n="referenceModelLabel">Reference Model:</strong> ENNOVI Phase Busbar</p>
+      <p class="tools-line"><strong data-i18n="relatedSectorsLabel">Related Sectors:</strong> <span data-i18n="relatedSectorsValue">Automotive & E-Mobility, Commercial Transportation, Personal Mobility, Energy Storage, Power Electronics</span></p>
+
+      <div class="project-full-stack">
+        <img src="project4/v1temp.png" alt="V1 temperature result isometric view">
+      </div>
+
+      <h3 data-i18n="achievementsTitle">Achievements</h3>
+      <p data-i18n="achievementsIntro">
+        The final V2 design produced the largest improvement in thermal fatigue performance while keeping mass, temperature, and global deformation almost unchanged.
+      </p>
+
+      <div class="table-scroll-auto">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="tableAchievement">Achievement</th>
+              <th>V1</th>
+              <th>V2</th>
+              <th data-i18n="tableChange">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="achievementMinLife">Minimum fatigue life</td>
+              <td>9.7898e7 cycles</td>
+              <td>5.0329e9 cycles</td>
+              <td>51.4× higher</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementMaxDamage">Maximum fatigue damage</td>
+              <td>10.215</td>
+              <td>0.19869</td>
+              <td>-98.05%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementMinSafetyFactor">Minimum fatigue safety factor</td>
+              <td>0.92133</td>
+              <td>1.063</td>
+              <td>+15.38%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementMaxCopperStress">Max copper / assembly stress</td>
+              <td>130.25 MPa</td>
+              <td>112.89 MPa</td>
+              <td>-13.33%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementMaxHousingStress">Max housing stress</td>
+              <td>100.91 MPa</td>
+              <td>89.269 MPa</td>
+              <td>-11.54%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementMaxCopperStrain">Max copper elastic strain</td>
+              <td>0.0013411</td>
+              <td>0.0010793</td>
+              <td>-19.52%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementCopperRepStress">Copper representative stress</td>
+              <td>64.423 MPa</td>
+              <td>58.786 MPa</td>
+              <td>-8.75%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementTotalMass">Total mass</td>
+              <td>301.35 g</td>
+              <td>302.07 g</td>
+              <td>+0.24%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="achievementsText1">
+        The most important result was the change in fatigue behavior. V1 remained below a fatigue safety factor of 1.0 at the selected design life, while V2 increased the minimum safety factor above 1.0 and reduced calculated fatigue damage by approximately 98%.
+      </p>
+      <p data-i18n="achievementsText2">
+        This improvement was achieved with only a 0.24% increase in total assembly mass.
+      </p>
+
+      <div class="project-full-stack">
+        <img src="project4/v1fatiguesafety.png" alt="V1 fatigue safety factor result">
+        <img src="project4/v2fatiguesafety.png" alt="V2 fatigue safety factor result">
+      </div>
+
+      <h3 data-i18n="objectiveTitle">Objective</h3>
+      <p data-i18n="objectiveText">
+        The main objective was to evaluate the thermal and structural behavior of the molded busbar assembly and determine whether local geometry improvements could reduce critical stress and fatigue sensitivity without significantly increasing mass or changing the overall packaging concept.
+      </p>
+      <p data-i18n="objectiveText2">
+        The study examined how the prescribed terminal temperature propagated through the copper conductors and molded housing, where the main thermo-mechanical stress and strain concentrations developed, and whether local changes to the copper bend and housing transitions could improve the structural and fatigue response. The final V2 design was also evaluated using nonlinear contact to understand how a more realistic interface definition affected the local stress distribution.
+      </p>
+
+      <h3 data-i18n="scopeTitle">Scope and Limitations</h3>
+      <p data-i18n="scopeText1">
+        The project is a concept-level CAE study intended for comparative engineering evaluation rather than product certification.
+      </p>
+      <p data-i18n="scopeText2">
+        The thermal model uses a prescribed temperature boundary condition and convection rather than a full electrical Joule-heating calculation. Current density, electrical resistance, electromagnetic effects, and short-circuit loading were therefore outside the scope.
+      </p>
+      <p data-i18n="scopeText3">
+        Thermal fatigue was evaluated using a simplified stress-life approach for the copper conductors. The calculated life values depend on the selected S-N input and should primarily be interpreted as a comparative V1-to-V2 design indicator rather than a validated service-life prediction.
+      </p>
+      <p data-i18n="scopeText4">
+        The standards referenced in the study were used to guide the engineering context and boundary-condition selection. No formal compliance or certification assessment was performed.
+      </p>
+
+      <h3 data-i18n="standardsContextTitle">Reference and Standards Context</h3>
+      <p data-i18n="standardsContextText1">
+        The busbar was treated as an automotive/e-mobility electrical component. ISO 16750-4:2023 was used as an environmental reference because it addresses climatic loads for electrical and electronic systems and components used in road vehicles, including electric propulsion systems. The selected 85 °C terminal temperature and 25 °C convection bulk temperature were used as concept-level thermal boundary conditions informed by this automotive environment, not as a claim that ISO 16750-4 directly prescribes those exact values for this component.
+      </p>
+      <p data-i18n="standardsContextText2">
+        IEC 60068-2-14:2023 was used as a general reference for temperature-change loading. The standard addresses the effects of specified ambient temperature changes on components and equipment. In this project, the fatigue model was simplified to a cold reference state and the mapped hot operating state rather than reproducing a formal IEC qualification test.
+      </p>
+      <p data-i18n="standardsContextText3">
+        IEC 60664-1 was considered as an insulation-design reference because it covers clearance, creepage distance, and solid-insulation principles for low-voltage equipment. Electrical insulation distances were not formally assessed in this project, so the standard is referenced only as design context.
+      </p>
+      <p data-i18n="standardsContextText4">
+        UL 94 was also considered at material-selection level as a general flammability reference for molded electrical polymer applications. No UL 94 test or certification claim is made in this study. UL describes UL 94 classifications as small-scale flame-test classifications used to distinguish the burning behavior of plastic materials.
+      </p>
+
+      <h3 data-i18n="modelMaterialTitle">Model and Material Definition</h3>
+      <p data-i18n="modelMaterialText1">
+        The assembly consists of three individual copper phase conductors passing through a molded insulating housing. Four metallic inserts represent the mounting interfaces.
+      </p>
+      <p data-i18n="modelMaterialText2">
+        The conductors were defined as C11000 ETP copper. The housing was modeled using Ryton R-4-220NA, a 40% glass-fiber-reinforced PPS material. Syensqo describes R-4-220NA as a 40% glass-fiber-reinforced PPS grade with high stiffness, good dimensional stability, low thermal expansion, chemical resistance, and high-temperature capability.
+      </p>
+
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableItem">Item</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableDefinition">Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="modelConductorMaterial">Conductor material</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">C11000 ETP Copper</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="modelHousingMaterial">Housing material</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Ryton R-4-220NA, PPS-GF40</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="modelV1Mass">V1 total mass</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">301.35 g</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="modelV2Mass">V2 total mass</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">302.07 g</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="modelMainAnalyses">Main analyses</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="modelMainAnalysesValue">Steady-State Thermal, Static Structural, Thermal Fatigue</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="modelAdvancedVerification">Advanced V2 verification</td>
+            <td style="padding:10px;" data-i18n="modelAdvancedVerificationValue">Nonlinear Frictional Contact</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 data-i18n="thermalStructuralSetupTitle">Thermal and Structural Analysis Setup</h3>
+
+      <h4 data-i18n="steadyStateThermalTitle">Steady-State Thermal</h4>
+      <p data-i18n="steadyStateThermalText1">
+        A prescribed temperature of 85 °C was applied at the selected terminal interface. Convection was applied to the exposed assembly surfaces using a 25 °C bulk temperature.
+      </p>
+      <p data-i18n="steadyStateThermalText2">
+        The resulting steady-state temperature field was transferred directly into the structural model for sequential thermo-mechanical analysis.
+      </p>
+      <p data-i18n="steadyStateThermalText3">
+        This setup was kept identical between V1 and V2 so that the influence of the geometry iteration could be compared on the same basis.
+      </p>
+
+      <div class="project-full-stack">
+        <img src="project4/v1bctemp.png" alt="V1 prescribed temperature boundary condition">
+        <img src="project4/v1bccon.png" alt="V1 convection boundary condition">
+        <img src="project4/v2bctemp.png" alt="V2 prescribed temperature boundary condition">
+        <img src="project4/v2bccon.png" alt="V2 convection boundary condition">
+      </div>
+
+      <h4 data-i18n="staticStructuralTitle">Static Structural</h4>
+      <p data-i18n="staticStructuralText1">
+        The mapped thermal field was used as the structural thermal load. The housing mounting interfaces were constrained at the mounting-hole regions.
+      </p>
+      <p data-i18n="staticStructuralText2">
+        Equivalent von Mises stress, equivalent elastic strain, and total deformation were evaluated for the whole assembly. Copper-only and housing-only results were also extracted separately to avoid interpreting a single global maximum without knowing which material produced it.
+      </p>
+      <p data-i18n="staticStructuralText3">
+        Two representative stress probe locations were additionally defined: one on a repeatable copper face near the critical bend/load-transfer region and one on the housing around the conductor exit region.
+      </p>
+      <p data-i18n="staticStructuralText4">
+        These probe locations were used as the main local quantities for mesh convergence because local absolute maxima showed significantly greater mesh sensitivity.
+      </p>
+
+      <div class="project-top-row">
+        <div><img src="project4/v1support.png" alt="V1 structural support definition"></div>
+        <div><img src="project4/v1importedtemp.png" alt="V1 imported temperature field"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v2support.png" alt="V2 structural support definition"></div>
+        <div><img src="project4/v2importedtemp.png" alt="V2 imported temperature field"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/copperprobe1.png" alt="Copper representative stress probe location"></div>
+        <div><img src="project4/housingprobe1.png" alt="Housing representative stress probe location"></div>
+      </div>
+
+      <h4 data-i18n="analysisSetupTableTitle">Analysis Setup</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableItem">Item</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableValue">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupAnalyzedAssembly">Analyzed assembly</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupAnalyzedAssemblyValue">Three-phase molded busbar assembly</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupDesignVersions">Design versions</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupDesignVersionsValue">V1 baseline + V2 design iteration</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupConductorMaterial">Conductor material</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">C11000 ETP Copper</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupHousingMaterial">Housing material</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">Ryton R-4-220NA, PPS-GF40</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupThermalLoading">Thermal loading</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupThermalLoadingValue">85 °C prescribed terminal temperature</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupConvectionReference">Convection reference</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupConvectionReferenceValue">25 °C bulk temperature on exposed surfaces</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupStructuralConstraint">Structural constraint</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupStructuralConstraintValue">Housing mounting interfaces</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupCoupling">Thermo-mechanical coupling</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupCouplingValue">Steady-state temperature field mapped into Static Structural</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupMainAnalyses">Main analyses</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupMainAnalysesValue">Steady-State Thermal + Static Structural + Thermal Fatigue</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupFatigueMethod">Fatigue method</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupFatigueMethodValue">Stress-Life, zero-based loading</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupFatigueScope">Fatigue scope</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupFatigueScopeValue">Three copper conductors</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupFatigueLife">Fatigue design life</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">1.0 × 10⁹ cycles</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupMeshLevels">Mesh levels</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupMeshLevelsValue">Coarse, Medium, Fine</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupAdvancedVerification">Advanced verification</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="setupAdvancedVerificationValue">V2 nonlinear frictional contact</td></tr>
+          <tr><td style="padding:10px;" data-i18n="setupFrictionCoefficient">Friction coefficient</td><td style="padding:10px;">0.2</td></tr>
+        </tbody>
+      </table>
+
+      <h3 data-i18n="meshStudyTitle">Mesh Convergence Study</h3>
+      <p data-i18n="meshStudyIntroText">
+        Three mesh levels were evaluated for both V1 and V2: Coarse, Medium, and Fine. Three mesh levels were generated using the same ten local sizing regions for both V1 and V2. The Coarse, Medium, and Fine meshes used global element sizes of 4, 2, and 1 mm respectively, with corresponding local sizing values of 2, 1, and 0.5 mm; smoothing was kept High and transition Slow, while Span Angle Center was changed from Coarse to Medium to Fine with each refinement level.
+      </p>
+      <p data-i18n="meshStudyIntroText2">
+        The convergence assessment did not rely only on absolute maximum stress. Peak local stresses increased substantially with refinement, particularly around small geometric transitions. For this reason, maximum stresses were retained and reported, but representative face-based stress probes and maximum total deformation were used as the main structural convergence indicators.
+      </p>
+
+      <h4 data-i18n="v1MeshConvergenceTitle">V1 Mesh Convergence</h4>
+      <div class="table-scroll-auto">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="tableResult">Result</th>
+              <th data-i18n="meshRowCoarse">Coarse</th>
+              <th data-i18n="meshRowMedium">Medium</th>
+              <th data-i18n="meshRowFine">Fine</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="meshAllAvgTemp">All-bodies avg. temperature</td><td>49.218 °C</td><td>53.600 °C</td><td>57.614 °C</td></tr>
+            <tr><td data-i18n="meshHousingAvgTemp">Housing avg. temperature</td><td>44.011 °C</td><td>45.819 °C</td><td>48.196 °C</td></tr>
+            <tr><td data-i18n="meshMaxDef">Max total deformation</td><td>0.13751 mm</td><td>0.13722 mm</td><td>0.13741 mm</td></tr>
+            <tr><td data-i18n="meshWholeMaxStress">Whole-assembly max stress</td><td>74.954 MPa</td><td>92.447 MPa</td><td>130.25 MPa</td></tr>
+            <tr><td data-i18n="meshCopperMaxStress">Copper max stress</td><td>74.954 MPa</td><td>92.447 MPa</td><td>130.25 MPa</td></tr>
+            <tr><td data-i18n="meshHousingMaxStress">Housing max stress</td><td>49.553 MPa</td><td>57.134 MPa</td><td>100.91 MPa</td></tr>
+            <tr><td data-i18n="meshCopperRepStress">Copper representative stress</td><td>57.441 MPa</td><td>59.368 MPa</td><td>64.423 MPa</td></tr>
+            <tr><td data-i18n="meshHousingRepStress">Housing representative stress</td><td>23.297 MPa</td><td>22.171 MPa</td><td>21.241 MPa</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-i18n="v1MeshText1">
+        Between the Medium and Fine meshes, maximum deformation changed by only approximately 0.14%. The copper representative probe changed by approximately 8.5%, while the housing probe changed by approximately 4.2%.
+      </p>
+      <p data-i18n="v1MeshText2">
+        The absolute peak stresses remained considerably more mesh-sensitive than the representative results. This behavior was therefore treated as local hotspot sensitivity rather than using peak stress alone as the convergence criterion.
+      </p>
+
+      <h4 data-i18n="v2MeshConvergenceTitle">V2 Mesh Convergence</h4>
+      <div class="table-scroll-auto">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="tableResult">Result</th>
+              <th data-i18n="meshRowCoarse">Coarse</th>
+              <th data-i18n="meshRowMedium">Medium</th>
+              <th data-i18n="meshRowFine">Fine</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="meshAllAvgTemp">All-bodies avg. temperature</td><td>48.881 °C</td><td>53.328 °C</td><td>57.777 °C</td></tr>
+            <tr><td data-i18n="meshHousingAvgTemp">Housing avg. temperature</td><td>43.524 °C</td><td>45.347 °C</td><td>48.953 °C</td></tr>
+            <tr><td data-i18n="meshMaxDef">Max total deformation</td><td>0.13840 mm</td><td>0.13768 mm</td><td>0.13778 mm</td></tr>
+            <tr><td data-i18n="meshWholeMaxStress">Whole-assembly max stress</td><td>56.726 MPa</td><td>64.840 MPa</td><td>112.890 MPa</td></tr>
+            <tr><td data-i18n="meshCopperMaxStress">Copper max stress</td><td>56.726 MPa</td><td>64.840 MPa</td><td>112.890 MPa</td></tr>
+            <tr><td data-i18n="meshHousingMaxStress">Housing max stress</td><td>45.166 MPa</td><td>59.876 MPa</td><td>89.269 MPa</td></tr>
+            <tr><td data-i18n="meshCopperRepStress">Copper representative stress</td><td>56.726 MPa</td><td>56.859 MPa</td><td>58.786 MPa</td></tr>
+            <tr><td data-i18n="meshHousingRepStress">Housing representative stress</td><td>23.866 MPa</td><td>21.960 MPa</td><td>21.723 MPa</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-i18n="v2MeshText1">
+        V2 showed stronger convergence at the representative probe locations. Between the Medium and Fine meshes, the copper probe changed by approximately 3.4%, the housing probe by approximately 1.1%, and maximum total deformation by less than 0.1%.
+      </p>
+      <p data-i18n="v2MeshText2">
+        As in V1, the local maximum stresses remained mesh-sensitive. The probe results and global deformation therefore provided the more stable basis for comparing the final V1 and V2 solutions.
+      </p>
+
+      <h3 data-i18n="v1BaselineResultsTitle">V1 Baseline Results</h3>
+      <h4 data-i18n="thermalResponseTitle">Thermal Response</h4>
+      <p data-i18n="v1ThermalText1">
+        The V1 fine-mesh solution reached the prescribed maximum temperature of 85 °C at the loaded terminal region. The average assembly temperature was 57.614 °C, while the housing reached a maximum of 77.513 °C and an average of 48.196 °C.
+      </p>
+      <p data-i18n="v1ThermalText2">
+        The temperature field shows heat spreading from the copper interfaces into the surrounding PPS housing while the mounting-side regions remain cooler.
+      </p>
+
+      <div class="project-full-stack">
+        <img src="project4/v1temp.png" alt="V1 assembly temperature result">
+        <img src="project4/v1tempho.png" alt="V1 housing temperature result">
+      </div>
+
+      <h4 data-i18n="structuralResponseTitle">Structural Response</h4>
+      <p data-i18n="v1StructuralText1">
+        For the V1 fine mesh, the maximum total deformation was 0.13741 mm. The maximum whole-assembly equivalent stress and maximum copper stress were both 130.25 MPa, while the maximum housing stress was 100.91 MPa. The maximum copper equivalent elastic strain was 0.0013411. The representative stress values were 64.423 MPa for the copper and 21.241 MPa for the housing.
+      </p>
+      <p data-i18n="v1StructuralText2">
+        The large difference between the absolute local maximum and the representative face values reinforced the decision to use representative locations when judging local design behavior and mesh refinement.
+      </p>
+
+      <div class="project-full-stack">
+        <img src="project4/v1deformation.png" alt="V1 total deformation result">
+        <img src="project4/v1stress.png" alt="V1 whole assembly stress result">
+        <img src="project4/v1stressco.png" alt="V1 copper stress result">
+        <img src="project4/v1stressho.png" alt="V1 housing stress result">
+        <img src="project4/v1strainco.png" alt="V1 copper elastic strain result">
+      </div>
+
+      <h3 data-i18n="designIterationTitle">Design Iteration</h3>
+      <p data-i18n="designIterationText1">
+        The V2 iteration focused on the regions where the copper geometry changes direction and where thermal expansion loads are transferred into the housing, while retaining the overall busbar arrangement, conductor width, primary interfaces, and general packaging concept. The most important geometric update was applied to the main copper bend, where the fillet radius was increased from R2 mm to R5 mm in order to create a smoother transition through the 90-degree direction change and reduce the local geometric severity of the bend. To maintain compatibility with this revised conductor shape, the corresponding housing groove was also updated so that the copper could remain properly seated without being forced into the previous transition geometry.
+      </p>
+      <p data-i18n="designIterationText2">
+        Additional housing refinements were introduced to improve load transfer and smooth local stress-raising features. An R5 mm fillet was added to the lower outer housing transition to preserve local material thickness while replacing a sharper transition with a smoother load path. An R3 mm fillet was also introduced in the upper transition region to further soften the local housing geometry without substantially changing the surrounding structure. In addition, the small protruding corners located at the intersections between the central members of the H-shaped slot structure and the conductor groove edges were rounded using R4 mm fillets. Four local corner transitions were modified around each of the three conductor grooves, resulting in a total of 12 R4 fillets. These changes were intended to reduce abrupt local geometric transitions and provide smoother structural support around the copper exit regions.
+      </p>
+
+      <div class="project-top-row">
+        <div>
+          <p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project4/0.PNG" alt="V1 baseline comparison view 1">
+        </div>
+        <div>
+          <p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project4/1.PNG" alt="V2 comparison view 1">
+        </div>
+      </div>
+
+      <div class="project-top-row">
+        <div>
+          <p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project4/0.PNG" alt="V1 baseline comparison view 2">
+        </div>
+        <div>
+          <p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project4/2.PNG" alt="V2 comparison view 2">
+        </div>
+      </div>
+
+      <div class="project-top-row">
+        <div>
+          <p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project4/0.PNG" alt="V1 baseline comparison view 3">
+        </div>
+        <div>
+          <p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project4/3.PNG" alt="V2 comparison view 3">
+        </div>
+      </div>
+
+      <div class="project-top-row">
+        <div>
+          <p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project4/5.PNG" alt="V1 baseline comparison view 4">
+        </div>
+        <div>
+          <p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project4/4.PNG" alt="V2 comparison view 4">
+        </div>
+      </div>
+
+      <h3 data-i18n="linearResultsTitle">V1 vs V2 Linear Thermo-Mechanical Results</h3>
+      <p data-i18n="linearResultsIntro">
+        The final fine-mesh solutions were compared under the same thermal and structural boundary conditions.
+      </p>
+
+      <div class="table-scroll-auto">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="tableMetric">Metric</th>
+              <th>V1</th>
+              <th>V2</th>
+              <th data-i18n="tableChange">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="metricMass">Mass</td><td>301.35 g</td><td>302.07 g</td><td>+0.24%</td></tr>
+            <tr><td data-i18n="meshAllAvgTemp">All-bodies avg. temperature</td><td>57.614 °C</td><td>57.777 °C</td><td>+0.28%</td></tr>
+            <tr><td data-i18n="meshHousingAvgTemp">Housing avg. temperature</td><td>48.196 °C</td><td>48.953 °C</td><td>+1.57%</td></tr>
+            <tr><td data-i18n="metricMaxTotalDeformation">Max total deformation</td><td>0.13741 mm</td><td>0.13778 mm</td><td>+0.27%</td></tr>
+            <tr><td data-i18n="metricAverageTotalDeformation">Average total deformation</td><td>0.022936 mm</td><td>0.02190 mm</td><td>-4.52%</td></tr>
+            <tr><td data-i18n="meshWholeMaxStress">Whole-assembly max stress</td><td>130.25 MPa</td><td>112.89 MPa</td><td>-13.33%</td></tr>
+            <tr><td data-i18n="meshCopperMaxStress">Copper max stress</td><td>130.25 MPa</td><td>112.89 MPa</td><td>-13.33%</td></tr>
+            <tr><td data-i18n="meshHousingMaxStress">Housing max stress</td><td>100.91 MPa</td><td>89.269 MPa</td><td>-11.54%</td></tr>
+            <tr><td data-i18n="metricCopperMaxElasticStrain">Copper max elastic strain</td><td>0.0013411</td><td>0.0010793</td><td>-19.52%</td></tr>
+            <tr><td data-i18n="metricHousingMaxElasticStrain">Housing max elastic strain</td><td>0.0065369</td><td>0.0062832</td><td>-3.88%</td></tr>
+            <tr><td data-i18n="meshCopperRepStress">Copper representative stress</td><td>64.423 MPa</td><td>58.786 MPa</td><td>-8.75%</td></tr>
+            <tr><td data-i18n="meshHousingRepStress">Housing representative stress</td><td>21.241 MPa</td><td>21.723 MPa</td><td>+2.27%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="linearResultsText1">The thermal field remained almost unchanged between the two versions, which was expected because the main conductor dimensions and thermal boundary conditions were retained.</p>
+      <p data-i18n="linearResultsText2">Maximum total deformation also remained almost identical, increasing by only 0.27%.</p>
+      <p data-i18n="linearResultsText3">The clearer structural improvement appeared in stress and strain. Maximum copper/assembly stress decreased by 13.33%, maximum housing stress decreased by 11.54%, and maximum copper elastic strain decreased by 19.52%.</p>
+      <p data-i18n="linearResultsText4">The representative copper stress also decreased by 8.75%.</p>
+      <p data-i18n="linearResultsText5">The housing representative probe increased slightly by 2.27%. This was treated as a minor local trade-off because the maximum housing stress decreased by more than 11%, while the overall fatigue performance improved significantly.</p>
+
+      <div class="project-top-row">
+        <div><img src="project4/v1deformation.png" alt="V1 deformation comparison"></div>
+        <div><img src="project4/v2deformation.png" alt="V2 deformation comparison"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v1stress.png" alt="V1 assembly stress comparison"></div>
+        <div><img src="project4/v2stress.png" alt="V2 assembly stress comparison"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v1stressco.png" alt="V1 copper stress comparison"></div>
+        <div><img src="project4/v2stressco.png" alt="V2 copper stress comparison"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v1stressho.png" alt="V1 housing stress comparison"></div>
+        <div><img src="project4/v2stressho.png" alt="V2 housing stress comparison"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v1strainco.png" alt="V1 copper elastic strain comparison"></div>
+        <div><img src="project4/v2strainco.png" alt="V2 copper elastic strain comparison"></div>
+      </div>
+
+      <h3 data-i18n="fatigueAnalysisTitle">Thermal Fatigue Analysis</h3>
+      <p data-i18n="fatigueAnalysisText1">Thermal fatigue was evaluated on the three copper conductors only.</p>
+      <p data-i18n="fatigueAnalysisText2">A Stress-Life approach was used with a copper S-N curve. The cycle was defined using a cold reference state and the mapped hot operating state. Loading was treated as zero-based for the fatigue calculation.</p>
+      <p data-i18n="fatigueAnalysisText3">A design life of 1.0e9 cycles was used for both V1 and V2.</p>
+      <p data-i18n="fatigueAnalysisText4">Because the S-N data represent a simplified material-level fatigue input rather than component-specific experimental validation, the results are primarily used to compare the two geometries.</p>
+
+      <h4 data-i18n="fatigueResultsTitle">Fatigue Results</h4>
+      <div class="table-scroll-auto">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="tableMetric">Metric</th>
+              <th>V1</th>
+              <th>V2</th>
+              <th data-i18n="tableChange">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="fatigueMinimumLife">Minimum life</td><td>9.7898e7 cycles</td><td>5.0329e9 cycles</td><td>51.4× higher</td></tr>
+            <tr><td data-i18n="fatigueMaxDamage">Maximum damage @ 1e9 cycles</td><td>10.215</td><td>0.19869</td><td>-98.05%</td></tr>
+            <tr><td data-i18n="fatigueMinSafetyFactor">Minimum safety factor</td><td>0.92133</td><td>1.063</td><td>+15.38%</td></tr>
+            <tr><td data-i18n="fatigueCriticalBody">Critical body</td><td>Copper C</td><td>Copper C</td><td data-i18n="fatigueSame">Same</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="fatigueResultsText1">The fatigue result created the strongest distinction between V1 and V2.</p>
+      <p data-i18n="fatigueResultsText2">At the selected design life, V1 produced a maximum damage value above 1 and a minimum fatigue safety factor below 1.0.</p>
+      <p data-i18n="fatigueResultsText3">V2 reduced maximum calculated damage from 10.215 to 0.19869, increased minimum life by approximately 51 times, and raised the minimum fatigue safety factor from 0.92133 to 1.063.</p>
+      <p data-i18n="fatigueResultsText4">The iteration therefore changed the design from a configuration that did not meet the selected fatigue design-life target to one that exceeded it under the assumptions of the simplified fatigue model.</p>
+
+      <div class="project-top-row">
+        <div><img src="project4/v1life.png" alt="V1 fatigue life result"></div>
+        <div><img src="project4/v2life.png" alt="V2 fatigue life result"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v1damage.png" alt="V1 fatigue damage result"></div>
+        <div><img src="project4/v2damage.png" alt="V2 fatigue damage result"></div>
+      </div>
+      <div class="project-top-row">
+        <div><img src="project4/v1fatiguesafety.png" alt="V1 fatigue safety result"></div>
+        <div><img src="project4/v2fatiguesafety.png" alt="V2 fatigue safety result"></div>
+      </div>
+
+      <h3 data-i18n="nonlinearVerificationTitle">V2 Nonlinear Contact Verification</h3>
+      <p data-i18n="nonlinearVerificationText1">The linear V1-to-V2 comparison was intentionally kept consistent for design evaluation. After the V2 geometry was finalized, an additional nonlinear contact model was created to study the assembly with more realistic copper-to-housing interaction.</p>
+      <p data-i18n="nonlinearVerificationText2">The copper-to-housing interfaces were modeled using frictional contact with a coefficient of friction of 0.2. The solution allowed the interfaces to develop local sticking, sliding, near-contact, and open regions rather than forcing the complete interface to remain kinematically tied.</p>
+      <p data-i18n="nonlinearVerificationText3">During this stage, the final nonlinear model was executed directly through the ANSYS MAPDL Product Launcher for solver stability while retaining the same analysis definition. The converged MAPDL result set was then used for post-processing.</p>
+
+      <h4 data-i18n="nonlinearResultsTitle">Nonlinear Results</h4>
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableResult">Result</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;">V2 Nonlinear Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="nonlinearMaxDef">Maximum total deformation</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.110 mm</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="nonlinearMaxStress">Maximum equivalent stress</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">52.1 MPa</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="nonlinearMaxStrain">Maximum equivalent elastic strain</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.003271</td></tr>
+          <tr><td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="nonlinearMaxContactPressure">Maximum contact pressure</td><td style="padding:10px; border-bottom:1px solid #e5e7eb;">41.7 MPa</td></tr>
+          <tr><td style="padding:10px;" data-i18n="nonlinearMaxPenetration">Maximum penetration</td><td style="padding:10px;">0.00109 mm / 1.09 µm</td></tr>
+        </tbody>
+      </table>
+
+      <p data-i18n="nonlinearResultsText1">The maximum penetration was approximately 1.09 µm, which remained very small compared with the overall component dimensions and calculated deformation.</p>
+      <p data-i18n="nonlinearResultsText2">The contact-pressure result showed localized load transfer around the copper-housing interfaces rather than a uniform pressure field.</p>
+      <p data-i18n="nonlinearResultsText3">The contact-status plot showed a combination of sticking, sliding, near-contact, and open regions. This confirmed that the nonlinear model allowed the individual conductor interfaces to respond locally instead of behaving as a fully constrained interface.</p>
+
+      <div class="project-three-row">
+        <img src="project4/NLV2_POST002.png" alt="V2 nonlinear result 1">
+        <img src="project4/NLV2_POST007.png" alt="V2 nonlinear result 2">
+        <img src="project4/NLV2_POST013.png" alt="V2 nonlinear result 3">
+      </div>
+      <div class="project-three-row">
+        <img src="project4/NLV2003.png" alt="V2 nonlinear contact result 4">
+        <img src="project4/NLV2008.png" alt="V2 nonlinear contact result 5">
+        <img src="project4/NLV2013.png" alt="V2 nonlinear contact result 6">
+      </div>
+
+      <h4 data-i18n="linearVsNonlinearTitle">Linear vs Nonlinear Representative Stress</h4>
+      <p data-i18n="linearVsNonlinearIntro">The same physical representative regions used in the linear V2 model were also extracted from the nonlinear MAPDL result.</p>
+
+      <div class="table-scroll-auto">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="representativeRegion">Representative Region</th>
+              <th data-i18n="linearV2">Linear V2</th>
+              <th data-i18n="nonlinearV2">Nonlinear V2</th>
+              <th data-i18n="tableDifference">Difference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="copper">Copper</td><td>58.786 MPa</td><td>22.934 MPa</td><td>-61.0%</td></tr>
+            <tr><td data-i18n="housing">Housing</td><td>21.723 MPa</td><td>11.865 MPa</td><td>-45.4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="linearVsNonlinearText1">These reductions should not be interpreted as an additional V2 design improvement. The geometry is identical in both cases.</p>
+      <p data-i18n="linearVsNonlinearText2">Instead, they show the effect of changing the interface physics. When local separation and sliding are permitted, the load path and stress distribution differ from the simplified linear model.</p>
+      <p data-i18n="linearVsNonlinearText3">This comparison was useful because it showed how strongly the assumed interface behavior can affect local stress prediction.</p>
+
+      <h4 data-i18n="probeTraceabilityTitle">Probe Traceability</h4>
+      <p data-i18n="probeTraceabilityText1">The nonlinear representative stresses were extracted from the same physical CAD-face locations used in the linear V2 study.</p>
+      <p data-i18n="probeTraceabilityText2">The Workbench faces were identified using their geometry information and mapped into the MAPDL model using material identification and global face coordinates. The selected node sets were visually verified before the maximum equivalent stress was extracted from the converged nonlinear result.</p>
+      <p data-i18n="probeTraceabilityText3">This provided a direct location-to-location comparison instead of comparing unrelated global hotspots.</p>
+
+      <div class="project-top-row">
+        <div><img src="project4/NLV2_PROBE_POST002.png" alt="Nonlinear copper representative probe traceability"></div>
+        <div><img src="project4/NLV2_PROBE_POST001.png" alt="Nonlinear housing representative probe traceability"></div>
+      </div>
+
+      <h3 data-i18n="discussionTitle">Discussion</h3>
+      <p data-i18n="discussionText1">The final V2 iteration did not significantly change the global thermal response or deformation of the assembly. This was expected because the primary dimensions, materials, and thermal loading remained almost unchanged.</p>
+      <p data-i18n="discussionText2">The main effect of the iteration appeared in local structural behavior.</p>
+      <p data-i18n="discussionText3">Increasing the copper bend radius and smoothing the surrounding housing transitions reduced the severity of the stress field around the critical regions. Peak copper and housing stresses decreased, and the maximum copper elastic strain dropped by almost 20%.</p>
+      <p data-i18n="discussionText4">The fatigue study showed an even larger effect. Although the V2 mass increased by only 0.24%, the predicted minimum fatigue life increased by more than 50 times and the calculated maximum damage at the selected design life decreased by approximately 98%.</p>
+      <p data-i18n="discussionText5">Not every local result improved. The housing representative stress increased by approximately 2.3%. However, this small increase occurred together with lower maximum housing stress, lower maximum copper stress and strain, and substantially improved fatigue performance. The V2 geometry was therefore considered the stronger overall design rather than optimizing a single local result.</p>
+      <p data-i18n="discussionText6">The nonlinear study added a second level of verification. It showed that the local stress field changes substantially when the copper-housing interfaces are allowed to open, slide, and stick. The small calculated penetration and localized contact-pressure distribution supported the numerical behavior of the converged contact solution.</p>
+
+      <h3 data-i18n="finalConclusionTitle">Final Technical Conclusion</h3>
+      <p data-i18n="finalConclusionText1">The V2 design improved the thermo-mechanical performance of the three-phase molded busbar assembly through a small set of local geometry changes.</p>
+      <p data-i18n="finalConclusionText2">The final iteration reduced maximum copper/assembly stress by 13.33%, maximum housing stress by 11.54%, and maximum copper elastic strain by 19.52%, while increasing total mass by only 0.24%.</p>
+      <p data-i18n="finalConclusionText3">The largest improvement was observed in thermal fatigue. Minimum predicted life increased from 9.7898e7 to 5.0329e9 cycles, maximum damage decreased by 98.05%, and the minimum fatigue safety factor increased from 0.92133 to 1.063.</p>
+      <p data-i18n="finalConclusionText4">The final design was then evaluated with nonlinear frictional contact. The model converged with a maximum contact pressure of 41.7 MPa and a maximum penetration of only 1.09 µm, while showing realistic local sticking, sliding, and interface opening behavior.</p>
+      <p data-i18n="finalConclusionText5">Based on the combined thermal, structural, fatigue, convergence, and nonlinear contact results, V2 was selected as the final design iteration.</p>
+
+      <div class="project-hero-image">
+        <img src="project4/v2main.PNG" alt="V2 final phase busbar design">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 data-i18n="aboutTitle">About</h2>
+      <p data-i18n="aboutText">
+        Mechanical engineer focused on mechanical design, CAE, and engineering analysis.
+        This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 data-i18n="skillsTitle">Skills</h2>
+
+      <div class="skills-group">
+        <h3 data-i18n="toolsTitle">Tools</h3>
+        <span class="tag">SolidWorks</span>
+        <span class="tag">Ansys</span>
+        <span class="tag">Python</span>
+        <span class="tag">VBA</span>
+        <span class="tag">Arduino</span>
+      </div>
+
+      <div class="skills-group">
+        <h3 data-i18n="coreTitle">Core Areas</h3>
+        <span class="tag">Mechanical Design</span>
+        <span class="tag">CAE</span>
+        <span class="tag">FEA</span>
+        <span class="tag">Engineering Analysis</span>
+        <span class="tag">Optimization</span>
+      </div>
+
+      <div class="skills-group">
+        <h3 data-i18n="relatedTitle">Related Areas</h3>
+        <span class="tag">Automation</span>
+        <span class="tag">AI Applications</span>
+        <span class="tag">Robotics</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 data-i18n="contactTitle">Resume / LinkedIn / Contact</h2>
+      <p><strong data-i18n="resumeLabel">Resume:</strong> <a href="Taylan-Daldal-Resume.pdf" target="_blank">Taylan Daldal</a></p>
+      <p><strong data-i18n="linkedinLabel">LinkedIn:</strong> <a href="https://www.linkedin.com/in/taylandaldal/" target="_blank">linkedin.com/in/taylandaldal</a></p>
+      <p><strong data-i18n="emailLabel">Email:</strong> daldaltaylan@gmail.com</p>
+    </div>
+  </div>
+
+  <footer>© 2026 Taylan Daldal</footer>
+  <script src="script.js?v=16"></script>
+</body>
+</html>
