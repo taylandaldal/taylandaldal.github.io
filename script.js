@@ -15,6 +15,9 @@ const translations = {
       card3Title: "Topology-Based Lightweight Redesign of a Robotic Arm Link Using Static and Buckling FEA",
       card3Metric: "26.22% mass reduction while retaining structural and buckling stability",
       card3Subtitle: "View project",
+      card4Title: "Thermo-Mechanical Design Iteration of a Three-Phase Molded Busbar Assembly Using Thermal, Fatigue and Nonlinear Contact FEA",
+      card4Metric: "51.4× higher fatigue life with 13.3% lower peak stress and only 0.24% mass increase",
+      card4Subtitle: "View project",
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
@@ -44,6 +47,9 @@ const translations = {
       card3Title: "Topologiebasierte Leichtbau-Neukonstruktion eines Roboterarmglieds mit statischer und Knick-FEA",
       card3Metric: "26,22 % Massenreduzierung bei erhaltener Struktur- und Knickstabilität",
       card3Subtitle: "Projekt ansehen",
+      card4Title: "Thermomechanische Designiteration einer dreiphasigen vergossenen Busbar-Baugruppe mit thermischer, Ermüdungs- und nichtlinearer Kontakt-FEA",
+      card4Metric: "51,4-fach höhere Ermüdungslebensdauer bei 13,3 % geringerer Spitzenspannung und nur 0,24 % Massenzunahme",
+      card4Subtitle: "Projekt ansehen",
 
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
@@ -67,15 +73,31 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
 
       backLink: "← Back to Featured Projects",
+      previousProject: "← Previous Project",
+      nextProject: "Next Project →",
       project3Title: "Project 3",
       project3MainTitle: "Topology-Based Lightweight Redesign of a Robotic Arm Link Using Static and Buckling FEA",
 
       overviewTitle: "Project Overview",
       overviewText: "This project focused on the lightweight redesign of a robot arm link using static structural analysis, eigenvalue buckling analysis, and topology optimization. The original V1 geometry was first evaluated under the selected loading and boundary conditions. After the baseline analysis, topology optimization was used to identify the main load-transfer regions and the lower-density areas where material could be removed.",
       overviewText2: "The final V2 design was created based on the topology result. The topology output was not used directly as the final CAD geometry because it produced an irregular mesh-based shape. Instead, it was used as a load-path guide to create a cleaner and manufacturable redesign with controlled cutouts and preserved interface regions.",
+      overviewText3: "Reducing the mass of a moving robot-arm link can improve structural mass efficiency while reducing the inertia carried by the robot during acceleration and deceleration. The engineering challenge was therefore to remove unnecessary material without introducing excessive deformation, stress, or loss of structural stability.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Reference Model:",
+      relatedSectorsLabel: "Related Sectors:",
+      relatedSectorsValue: "Industrial Robotics & Automation, Automotive Manufacturing, General Manufacturing, Material Handling & Logistics, Advanced Manufacturing",
+
+      achievementsTitle: "Achievements",
+      achievementsIntro: "The final V2 design achieved a substantial mass reduction while maintaining low absolute stress and deformation levels and a large buckling stability margin under the selected load case.",
+      tableAchievement: "Achievement",
+      achievementTotalMass: "Total mass",
+      achievementMaxStress: "Max von Mises stress",
+      achievementMaxDeformation: "Max total deformation",
+      achievementMaxStrain: "Max elastic strain",
+      achievementBucklingMultiplier: "First buckling load multiplier",
+      achievementsText1: "The main achievement was the removal of approximately 9.03 kg of material, reducing the arm-link mass by 26.22%. The increase in stress and deformation reflects the expected stiffness tradeoff after substantial material removal, while the final absolute values remained low.",
+      achievementsText2: "Although the first buckling load multiplier decreased significantly relative to the V1 baseline, the V2 value remained at 2,970.6, far above the critical value of 1. The final design therefore achieved a major improvement in mass efficiency while retaining a large structural stability margin.",
 
       objectiveTitle: "Objective",
       objectiveText: "The main goal was to reduce the mass of the robot arm link while keeping the static response and buckling stability within a safe range. The redesign focused on removing material from low-density regions suggested by topology optimization, while keeping the main hub, wrist-end interface, support region, and load-transfer paths intact.",
@@ -86,9 +108,11 @@ const translations = {
       scopeTitle: "Scope and Limitation",
       scopeText: "The study focused on the main robot arm link body. The surrounding robot assembly, bearings, bolts, and detailed contact behavior were not fully modeled in this iteration. The purpose was to compare the original and redesigned arm link under identical boundary conditions and evaluate whether the V2 geometry could reduce mass without creating an unacceptable penalty in static stress, deformation, or buckling stability.",
       scopeText2: "Eigenvalue buckling was used as a stability check. The buckling result was interpreted as a comparative indicator between V1 and V2 rather than as a full nonlinear collapse prediction.",
+      scopeText3: "The loading scenario was anchored to the manufacturer-rated 20 kg maximum payload of the KR16 reference platform. Relevant industrial robot standards such as ISO 9283 and ISO 10218 provide performance and safety frameworks, but the structural FEA load case in this study was defined as an engineering validation scenario rather than a prescribed certification test.",
 
       modelSetupTitle: "Model and Analysis Setup",
       modelSetupText: "The model was analyzed in ANSYS Mechanical using Static Structural, Topology Optimization, and Eigenvalue Buckling analyses. Standard Earth gravity was included. A 2g dynamic load factor was applied to all inertial loads to account for operational accelerations. The wrist-side remote force was calculated from the combined mass of the wrist, revolver, and maximum payload package. The wrist mass was 5.168 kg, the revolver mass was 6.744 kg, and the maximum payload package was taken as 20 kg based on the KUKA datasheet, giving a total supported mass of 31.912 kg. This resulted in 31.912 kg × 9.81 m/s² × 2 ≈ 626 N. Servo motor masses were estimated from manufacturer datasheets and converted in the same way, resulting in remote forces of 491 N for the large servo, 274 N for 2 standard servos mounted in the same area, and 137 N for 1 standard servo mounted separately.",
+      modelSetupText2: "The base-side cylindrical interface was constrained using Remote Displacement to represent its connection to the preceding robot joint. Remote Forces were used at the wrist and servo mounting regions because the attached components were not included as full structural bodies; their equivalent operational loads were instead transferred through the corresponding mounting interfaces.",
 
       analysisSetupTableTitle: "Analysis Setup",
       tableItem: "Item",
@@ -153,7 +177,7 @@ const translations = {
       meshRowFine: "Fine",
       v1MeshConclusionText: "Between the medium and fine meshes, the V1 stress changed by 2.68%, deformation changed by 0.018%, and elastic strain changed by 2.78%.",
       v2StaticMeshConvergenceTitle: "V2 Static Mesh Convergence",
-      v2MeshConclusionText: "Between the medium and fine meshes, the V2 stress changed by 1.35%, deformation changed by 0.044%, and elastic strain changed by 1.31%. These results indicate that the final V2 static solution was stable under mesh refinement. Buckling analysis was performed using the same mesh configuration as the static analysis to maintain consistency across analyses. Mesh sensitivity for the static solution was verified separately.",
+      v2MeshConclusionText: "Between the medium and fine meshes, the V2 stress changed by 1.35%, deformation changed by 0.044%, and elastic strain changed by 1.31%. These results indicate that the final V2 static solution was stable under mesh refinement. Buckling analysis was performed using the same mesh configuration for both V1 and V2 to keep the stability comparison consistent. Mesh sensitivity for the static solution was verified separately.",
 
       staticStructuralResultsTitle: "Static Structural Results",
       staticStructuralResultsIntro: "The final V2 design reduced mass significantly, but stress and deformation increased compared with the V1 baseline. This was expected because material was removed from the structure. Even after the redesign, the final stress and deformation values remained low under the selected load case.",
@@ -205,15 +229,31 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
 
       backLink: "← Zurück zu den Projekten",
+      previousProject: "← Vorheriges Projekt",
+      nextProject: "Nächstes Projekt →",
       project3Title: "Projekt 3",
       project3MainTitle: "Topologiebasierte Leichtbau-Neukonstruktion eines Roboterarmglieds mit statischer und Knick-FEA",
 
       overviewTitle: "Projektübersicht",
       overviewText: "Dieses Projekt konzentrierte sich auf die Leichtbau-Neukonstruktion eines Roboterarmglieds mithilfe statischer Strukturanalyse, Eigenwert-Knickanalyse und Topologieoptimierung. Die ursprüngliche V1-Geometrie wurde zunächst unter den gewählten Last- und Randbedingungen bewertet. Nach der Ausgangsanalyse wurde die Topologieoptimierung genutzt, um die wichtigsten Lastpfade und Bereiche mit geringerer Dichte zu identifizieren, in denen Material entfernt werden konnte.",
       overviewText2: "Das finale V2-Design wurde auf Grundlage des Topologieergebnisses erstellt. Das Topologieergebnis wurde nicht direkt als finale CAD-Geometrie verwendet, da es eine unregelmäßige, netzbasierte Form erzeugte. Stattdessen diente es als Lastpfad-Orientierung für eine sauberere und fertigungsgerechtere Neukonstruktion mit kontrollierten Ausschnitten und erhaltenen Schnittstellenbereichen.",
+      overviewText3: "Die Reduzierung der Masse eines bewegten Roboterarmglieds kann die strukturelle Masseneffizienz verbessern und gleichzeitig die während Beschleunigungs- und Verzögerungsvorgängen mitbewegte Trägheit verringern. Die technische Herausforderung bestand daher darin, unnötiges Material zu entfernen, ohne übermäßige Verformung, Spannung oder einen Verlust an struktureller Stabilität zu verursachen.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Referenzmodell:",
+      relatedSectorsLabel: "Zugehörige Branchen:",
+      relatedSectorsValue: "Industrierobotik & Automatisierung, Automobilfertigung, Allgemeine Fertigung, Materialfluss & Logistik, Fortschrittliche Fertigung",
+
+      achievementsTitle: "Ergebnisse im Überblick",
+      achievementsIntro: "Das finale V2-Design erreichte eine deutliche Massenreduzierung, während die absoluten Spannungs- und Verformungswerte niedrig blieben und unter dem gewählten Lastfall eine große Knickstabilitätsreserve erhalten wurde.",
+      tableAchievement: "Ergebnis",
+      achievementTotalMass: "Gesamtmasse",
+      achievementMaxStress: "Max. von-Mises-Spannung",
+      achievementMaxDeformation: "Max. Gesamtverformung",
+      achievementMaxStrain: "Max. elastische Dehnung",
+      achievementBucklingMultiplier: "Erster Knicklastmultiplikator",
+      achievementsText1: "Das wichtigste Ergebnis war die Entfernung von ungefähr 9,03 kg Material, wodurch die Masse des Armglieds um 26,22 % reduziert wurde. Der Anstieg von Spannung und Verformung entspricht dem erwarteten Steifigkeitskompromiss nach einer deutlichen Materialentfernung, während die finalen Absolutwerte niedrig blieben.",
+      achievementsText2: "Obwohl der erste Knicklastmultiplikator gegenüber der V1-Ausgangsversion deutlich abnahm, blieb der V2-Wert mit 2.970,6 weit über dem kritischen Wert von 1. Das finale Design erreichte damit eine deutliche Verbesserung der Masseneffizienz bei weiterhin großer struktureller Stabilitätsreserve.",
 
       objectiveTitle: "Ziel",
       objectiveText: "Das Hauptziel war, die Masse des Roboterarmglieds zu reduzieren und gleichzeitig die statische Antwort und die Knickstabilität in einem sicheren Bereich zu halten. Die Neukonstruktion konzentrierte sich darauf, Material aus Bereichen mit geringer Dichte zu entfernen, die durch die Topologieoptimierung vorgeschlagen wurden, während Hauptnabe, Handgelenk-Schnittstelle, Lagerbereich und Lastpfade erhalten blieben.",
@@ -224,9 +264,11 @@ const translations = {
       scopeTitle: "Umfang und Einschränkung",
       scopeText: "Die Studie konzentrierte sich auf den Hauptkörper des Roboterarmglieds. Die umliegende Roboterbaugruppe, Lager, Schrauben und das detaillierte Kontaktverhalten wurden in dieser Iteration nicht vollständig modelliert. Ziel war es, das ursprüngliche und das neu konstruierte Armglied unter identischen Randbedingungen zu vergleichen und zu bewerten, ob die V2-Geometrie die Masse reduzieren kann, ohne eine unakzeptable Verschlechterung bei statischer Spannung, Verformung oder Knickstabilität zu erzeugen.",
       scopeText2: "Die Eigenwert-Knickanalyse wurde als Stabilitätsprüfung verwendet. Das Knickergebnis wurde als vergleichender Indikator zwischen V1 und V2 interpretiert und nicht als vollständige nichtlineare Kollapsvorhersage.",
+      scopeText3: "Das Lastszenario wurde an der vom Hersteller angegebenen maximalen Nutzlast von 20 kg der KR16-Referenzplattform ausgerichtet. Relevante Industrieroboter-Normen wie ISO 9283 und ISO 10218 liefern Rahmenbedingungen für Leistung und Sicherheit, der strukturelle FEA-Lastfall dieser Studie wurde jedoch als technische Validierungssituation und nicht als vorgeschriebene Zertifizierungsprüfung definiert.",
 
       modelSetupTitle: "Modell- und Analyseaufbau",
       modelSetupText: "Das Modell wurde in ANSYS Mechanical mit Static Structural, Topology Optimization und Eigenvalue Buckling analysiert. Die Standard-Erdgravitation wurde berücksichtigt. Ein dynamischer Lastfaktor von 2g wurde auf alle Trägheitslasten angewendet, um Betriebsbeschleunigungen abzubilden. Die handgelenkseitige Remote Force wurde aus der kombinierten Masse von Handgelenk, Revolver und maximalem Nutzlastpaket berechnet. Die Handgelenkmasse betrug 5,168 kg, die Revolvermasse 6,744 kg, und das maximale Nutzlastpaket wurde auf Basis des KUKA-Datenblatts mit 20 kg angesetzt. Daraus ergab sich eine unterstützte Gesamtmasse von 31,912 kg. Dies führte zu 31,912 kg × 9,81 m/s² × 2 ≈ 626 N. Die Servomotormassen wurden aus Herstellerdatenblättern abgeschätzt und auf die gleiche Weise in Remote Forces umgerechnet. Daraus ergaben sich 491 N für den großen Servo, 274 N für 2 Standardservos im selben Bereich und 137 N für 1 separat montierten Standardservo.",
+      modelSetupText2: "Die zylindrische Schnittstelle auf der Basisseite wurde über Remote Displacement eingeschränkt, um ihre Verbindung mit dem vorhergehenden Robotergelenk abzubilden. An den Montagebereichen von Handgelenk und Servos wurden Remote Forces verwendet, da die angebauten Komponenten nicht als vollständige Strukturkörper modelliert wurden; ihre äquivalenten Betriebslasten wurden stattdessen über die entsprechenden Montageschnittstellen eingeleitet.",
 
       analysisSetupTableTitle: "Analyse-Setup",
       tableItem: "Eintrag",
@@ -291,7 +333,7 @@ const translations = {
       meshRowFine: "Fein",
       v1MeshConclusionText: "Zwischen mittlerem und feinem Netz änderte sich die V1-Spannung um 2,68 %, die Verformung um 0,018 % und die elastische Dehnung um 2,78 %.",
       v2StaticMeshConvergenceTitle: "V2 statische Netzkonvergenz",
-      v2MeshConclusionText: "Zwischen mittlerem und feinem Netz änderte sich die V2-Spannung um 1,35 %, die Verformung um 0,044 % und die elastische Dehnung um 1,31 %. Diese Ergebnisse zeigen, dass die finale statische V2-Lösung unter Netzverfeinerung stabil war. Die Knickanalyse wurde mit derselben Netzkonfiguration wie die statische Analyse durchgeführt, um die Konsistenz zwischen den Analysen zu erhalten. Die Netzsensitivität der statischen Lösung wurde separat verifiziert.",
+      v2MeshConclusionText: "Zwischen mittlerem und feinem Netz änderte sich die V2-Spannung um 1,35 %, die Verformung um 0,044 % und die elastische Dehnung um 1,31 %. Diese Ergebnisse zeigen, dass die finale statische V2-Lösung unter Netzverfeinerung stabil war. Die Knickanalyse wurde für V1 und V2 mit derselben Netzkonfiguration durchgeführt, um den Stabilitätsvergleich konsistent zu halten. Die Netzsensitivität der statischen Lösung wurde separat verifiziert.",
 
       staticStructuralResultsTitle: "Ergebnisse der statischen Strukturanalyse",
       staticStructuralResultsIntro: "Das finale V2-Design reduzierte die Masse deutlich, aber Spannung und Verformung stiegen im Vergleich zur V1-Ausgangsversion an. Dies war zu erwarten, da Material aus der Struktur entfernt wurde. Auch nach der Neukonstruktion blieben die finalen Spannungs- und Verformungswerte unter dem gewählten Lastfall niedrig.",
@@ -345,14 +387,30 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
 
       backLink: "← Back to Featured Projects",
+      previousProject: "← Previous Project",
+      nextProject: "Next Project →",
       project2Title: "Project 2",
       project2MainTitle: "Lightweight Design Iteration of a Camera On-Arm Mount for Machine Vision System Using Static and Modal Analysis",
 
       overviewTitle: "Project Overview",
       overviewText: "This project focused on a camera on-arm mount used to connect a machine vision camera to a robot arm. The study included the robot adapter and camera bracket assembly. A baseline model V1 was analyzed first, and then a lighter version of the robot adapter V2 was developed and checked again with the same analysis approach. The aim was to reduce mass without creating a clear penalty in stress, deformation, or modal behavior.",
+      overviewText2: "In an on-arm machine vision system, the mount adds payload at the robot wrist while also needing sufficient stiffness to maintain stable camera positioning. The design problem was therefore to remove unnecessary adapter mass without introducing excessive deformation or a significant change in the mount's dynamic response.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Reference Model:",
+      relatedSectorsLabel: "Related Sectors:",
+      relatedSectorsValue: "Industrial Automation & Robotics, Machine Vision, Smart Manufacturing, Inspection & Metrology",
+
+      achievementsTitle: "Achievements",
+      achievementsIntro: "The final V2 design reduced the robot adapter mass while maintaining nearly the same static and modal response as the V1 baseline. The lightweight iteration achieved a 7.35% mass reduction with only minor changes in stress, deformation, and natural frequencies.",
+      tableAchievement: "Achievement",
+      achievementAdapterMass: "Robot adapter mass",
+      achievementMaxStress: "Max von Mises stress",
+      achievementMaxDeformation: "Max total deformation",
+      achievementMode1: "First natural frequency",
+      achievementMode2: "Second natural frequency",
+      achievementMode3: "Third natural frequency",
+      achievementsText: "The main achievement was the 7.35% reduction in robot adapter mass without a meaningful change in the overall structural response. Maximum stress slightly decreased, total deformation increased by less than 1%, and the first natural frequency changed by less than 1%. The final V2 design was also verified through mesh convergence and an additional combined gravity and 3g inertial load study.",
 
       objectiveTitle: "Objective",
       objectiveText: "The main goal was to check whether the mount was structurally safe under the camera load and whether a lighter adapter could keep similar performance. The design change was limited to the robot adapter. The camera bracket was kept unchanged.",
@@ -361,7 +419,8 @@ const translations = {
       v2FinalIteration: "V2 Final Iteration",
 
       modelSetupTitle: "Model and Analysis Setup",
-      modelSetupText: "The model was analyzed in ANSYS Mechanical using a concept-level setup. The camera mass was defined as 1 kg based on the Zivid 2+ M60 manufacturer datasheet and applied as a point mass at the camera mounting region. The robot-side mounting interface was fixed, and the contact between the adapter and the bracket was modeled as bonded. Static structural and modal analyses were used to compare the baseline and the final iteration.",
+      modelSetupText: "The model was analyzed in ANSYS Mechanical using a concept-level setup. The camera mass was defined as 1 kg based on the Zivid 2+ M60 manufacturer datasheet and applied as a point mass at the camera mounting region. The 1 kg value was selected as a rounded and slightly conservative representation of the manufacturer-listed Zivid 2+ camera mass. The robot-side mounting interface was fixed, and the contact between the adapter and the bracket was modeled as bonded. Gravity was applied to represent the self-weight of the camera and mount assembly. The robot-side flange was fixed to idealize the rigid connection between the adapter and the robot wrist, while the adapter–bracket interface was modeled as bonded to represent a fully constrained fastened connection. Bolt preload and interface slip were outside the scope of this concept-level comparison. Static structural and modal analyses were used to compare the baseline and the final iteration.",
+      modelSetupIsoText: "The OA211 reference mount uses an ISO 9409-1-63-4-M6 robot flange interface, providing an industry-standard mechanical connection between the adapter and compatible robot wrists.",
 
       analysisSetupTableTitle: "Analysis Setup",
       tableItem: "Item",
@@ -369,12 +428,14 @@ const translations = {
       analysisItemMaterial: "Material",
       analysisItemAnalysedParts: "Analyzed parts",
       analysisValueAnalysedParts: "Robot Adapter + Camera Bracket",
-      analysisItemOptimisedPart: "Optimized part",
+      analysisItemOptimisedPart: "Iterated part",
       analysisValueOptimisedPart: "Robot Adapter only",
       analysisItemCameraRepresentation: "Camera representation",
       analysisValueCameraRepresentation: "1 kg point mass",
       analysisItemSupportCondition: "Support condition",
       analysisValueSupportCondition: "Fixed support at robot-side interface",
+      analysisItemRobotFlangeInterface: "Robot flange interface",
+      analysisValueRobotFlangeInterface: "ISO 9409-1-63-4-M6 (Zivid OA211 reference)",
       analysisItemContact: "Contact",
       analysisValueContact: "Bonded contact between adapter and bracket",
       analysisItemAnalyses: "Analyses",
@@ -422,7 +483,7 @@ const translations = {
       v2ModalTitle: "V2 Final Modal Analysis Result",
 
       inertialStudyTitle: "Inertial Load Study",
-      inertialStudyIntroText: "To extend the concept-level validation, an additional combined gravity and inertial load check was performed on the final V2 design. Standard Earth gravity was kept active, and a 3g acceleration input (29,419.8 mm/s²) was applied in selected global directions as a conservative assumption representing rapid robot motion during operation. Equivalent stress and total deformation were evaluated for each case. Among the investigated cases, the +Y input direction produced the highest stress and deformation and was therefore treated as the worst-case inertial loading condition in this study.",
+      inertialStudyIntroText: "To extend the concept-level validation, an additional combined gravity and inertial load check was performed on the final V2 design. Standard Earth gravity was kept active, and a 3g acceleration input (29,419.8 mm/s²) was applied in selected global directions as a conservative assumption representing rapid robot motion during operation. Because a robot-specific acceleration profile was not available for this concept study, 3g was selected as a conservative engineering assumption rather than a manufacturer- or standard-defined test requirement. Equivalent stress and total deformation were evaluated for each case. Among the investigated cases, the +Y input direction produced the highest stress and deformation and was therefore treated as the worst-case inertial loading condition in this study.",
       inertialTableColLoadCase: "Load Case",
       inertialTableColDirection: "Direction",
       inertialTableColMaxStress: "Max Stress",
@@ -454,14 +515,30 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
 
       backLink: "← Zurück zu den Projekten",
+      previousProject: "← Vorheriges Projekt",
+      nextProject: "Nächstes Projekt →",
       project2Title: "Projekt 2",
       project2MainTitle: "Leichtbau-Designiteration einer On-Arm-Kamerahalterung für ein Machine-Vision-System mit statischer und modaler Analyse",
 
       overviewTitle: "Projektübersicht",
       overviewText: "Dieses Projekt konzentrierte sich auf eine On-Arm-Kamerahalterung, die verwendet wird, um eine Machine-Vision-Kamera mit einem Roboterarm zu verbinden. Die Studie umfasste die Baugruppe aus Roboteradapter und Kamerahalter. Zunächst wurde ein Ausgangsmodell V1 analysiert, danach wurde eine leichtere Version des Roboteradapters V2 entwickelt und mit demselben Analyseansatz erneut geprüft. Ziel war es, die Masse zu reduzieren, ohne eine klare Verschlechterung bei Spannung, Verformung oder modalem Verhalten zu erzeugen.",
+      overviewText2: "Bei einem On-Arm-Machine-Vision-System erhöht die Halterung die Nutzlast am Roboterhandgelenk und muss gleichzeitig eine ausreichende Steifigkeit aufweisen, um eine stabile Kamerapositionierung zu gewährleisten. Die konstruktive Aufgabe bestand daher darin, unnötige Masse des Adapters zu entfernen, ohne übermäßige Verformungen oder eine wesentliche Änderung des dynamischen Verhaltens der Halterung zu verursachen.",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Referenzmodell:",
+      relatedSectorsLabel: "Verwandte Branchen:",
+      relatedSectorsValue: "Industrielle Automatisierung & Robotik, industrielle Bildverarbeitung, intelligente Fertigung, Inspektion & Messtechnik",
+
+      achievementsTitle: "Ergebnisse",
+      achievementsIntro: "Das finale V2-Design reduzierte die Masse des Roboteradapters, während die statische und modale Antwort nahezu auf dem Niveau der V1-Ausgangsversion blieb. Die Leichtbauiteration erreichte eine Massenreduzierung von 7,35 % bei nur geringfügigen Änderungen von Spannung, Verformung und Eigenfrequenzen.",
+      tableAchievement: "Ergebnis",
+      achievementAdapterMass: "Masse des Roboteradapters",
+      achievementMaxStress: "Max. von-Mises-Spannung",
+      achievementMaxDeformation: "Max. Gesamtverformung",
+      achievementMode1: "Erste Eigenfrequenz",
+      achievementMode2: "Zweite Eigenfrequenz",
+      achievementMode3: "Dritte Eigenfrequenz",
+      achievementsText: "Das wichtigste Ergebnis war die Reduzierung der Roboteradaptermasse um 7,35 %, ohne eine wesentliche Änderung des gesamten strukturellen Verhaltens. Die maximale Spannung nahm leicht ab, die Gesamtverformung stieg um weniger als 1 %, und die erste Eigenfrequenz änderte sich um weniger als 1 %. Das finale V2-Design wurde zusätzlich durch eine Netzkonvergenzprüfung und eine kombinierte Schwerkraft- und 3g-Trägheitslaststudie verifiziert.",
 
       objectiveTitle: "Ziel",
       objectiveText: "Das Hauptziel war zu prüfen, ob die Halterung unter der Kameralast strukturell sicher ist und ob ein leichterer Adapter eine ähnliche Leistung beibehalten kann. Die Designänderung war auf den Roboteradapter begrenzt. Der Kamerahalter blieb unverändert.",
@@ -470,7 +547,8 @@ const translations = {
       v2FinalIteration: "V2 Finale Iteration",
 
       modelSetupTitle: "Modell- und Analyseaufbau",
-      modelSetupText: "Das Modell wurde in ANSYS Mechanical mit einem Konzept-Setup analysiert. Die Kameramasse wurde auf Grundlage des Herstellerdatenblatts der Zivid 2+ M60 mit 1 kg definiert und als Punktmasse im Kamerabefestigungsbereich aufgebracht. Die roboterseitige Befestigungsschnittstelle wurde fixiert, und der Kontakt zwischen Adapter und Halter wurde als bonded modelliert. Zur Gegenüberstellung der Ausgangsversion und der finalen Iteration wurden statische und modale Analysen verwendet.",
+      modelSetupText: "Das Modell wurde in ANSYS Mechanical mit einem Konzept-Setup analysiert. Die Kameramasse wurde auf Grundlage des Herstellerdatenblatts der Zivid 2+ M60 mit 1 kg definiert und als Punktmasse im Kamerabefestigungsbereich aufgebracht. Der Wert von 1 kg wurde als gerundete und leicht konservative Darstellung der vom Hersteller angegebenen Masse der Zivid-2+-Kamera gewählt. Die roboterseitige Befestigungsschnittstelle wurde fixiert, und der Kontakt zwischen Adapter und Halter wurde als bonded modelliert. Die Schwerkraft wurde berücksichtigt, um das Eigengewicht der Kamera- und Halterungsbaugruppe abzubilden. Der roboterseitige Flansch wurde fixiert, um die starre Verbindung zwischen Adapter und Roboterhandgelenk zu idealisieren, während die Adapter-Halter-Schnittstelle als bonded modelliert wurde, um eine vollständig eingeschränkte verschraubte Verbindung darzustellen. Schraubenvorspannung und Gleiten an der Schnittstelle lagen außerhalb des Umfangs dieses konzeptbezogenen Vergleichs. Zur Gegenüberstellung der Ausgangsversion und der finalen Iteration wurden statische und modale Analysen verwendet.",
+      modelSetupIsoText: "Die OA211-Referenzhalterung verwendet eine Roboterflansch-Schnittstelle nach ISO 9409-1-63-4-M6 und stellt damit eine industrieweit standardisierte mechanische Verbindung zwischen dem Adapter und kompatiblen Roboterhandgelenken bereit.",
 
       analysisSetupTableTitle: "Analyse-Setup",
       tableItem: "Eintrag",
@@ -478,12 +556,14 @@ const translations = {
       analysisItemMaterial: "Material",
       analysisItemAnalysedParts: "Analysierte Teile",
       analysisValueAnalysedParts: "Roboteradapter + Kamerahalter",
-      analysisItemOptimisedPart: "Optimiertes Teil",
+      analysisItemOptimisedPart: "Iteriertes Teil",
       analysisValueOptimisedPart: "Nur Roboteradapter",
       analysisItemCameraRepresentation: "Kameradarstellung",
       analysisValueCameraRepresentation: "1 kg Punktmasse",
       analysisItemSupportCondition: "Randbedingung",
       analysisValueSupportCondition: "Feste Lagerung an der roboterseitigen Schnittstelle",
+      analysisItemRobotFlangeInterface: "Roboterflansch-Schnittstelle",
+      analysisValueRobotFlangeInterface: "ISO 9409-1-63-4-M6 (Zivid OA211 Referenz)",
       analysisItemContact: "Kontakt",
       analysisValueContact: "Bonded-Kontakt zwischen Adapter und Halter",
       analysisItemAnalyses: "Analysen",
@@ -531,7 +611,7 @@ const translations = {
       v2ModalTitle: "V2 Final Modal Analysis Result",
 
       inertialStudyTitle: "Trägheitslaststudie",
-      inertialStudyIntroText: "Zur Erweiterung der konzeptbezogenen Validierung wurde eine zusätzliche kombinierte Schwerkraft- und Trägheitslastprüfung am finalen V2-Design durchgeführt. Die Standard-Erdschwerkraft blieb aktiv, und ein 3g-Beschleunigungseingang (29.419,8 mm/s²) wurde in ausgewählten globalen Richtungen als konservative Annahme für schnelle Roboterbewegungen im Betrieb aufgebracht. Für jeden Fall wurden äquivalente Spannung und Gesamtverformung ausgewertet. Unter den untersuchten Fällen erzeugte die +Y-Eingangsrichtung die höchste Spannung und Verformung und wurde daher in dieser Studie als Worst-Case-Trägheitslastbedingung behandelt.",
+      inertialStudyIntroText: "Zur Erweiterung der konzeptbezogenen Validierung wurde eine zusätzliche kombinierte Schwerkraft- und Trägheitslastprüfung am finalen V2-Design durchgeführt. Die Standard-Erdschwerkraft blieb aktiv, und ein 3g-Beschleunigungseingang (29.419,8 mm/s²) wurde in ausgewählten globalen Richtungen als konservative Annahme für schnelle Roboterbewegungen im Betrieb aufgebracht. Da für diese Konzeptstudie kein roboterspezifisches Beschleunigungsprofil verfügbar war, wurde 3g als konservative technische Annahme und nicht als vom Hersteller oder von einer Norm vorgegebene Prüfanforderung gewählt. Für jeden Fall wurden äquivalente Spannung und Gesamtverformung ausgewertet. Unter den untersuchten Fällen erzeugte die +Y-Eingangsrichtung die höchste Spannung und Verformung und wurde daher in dieser Studie als Worst-Case-Trägheitslastbedingung behandelt.",
       inertialTableColLoadCase: "Lastfall",
       inertialTableColDirection: "Richtung",
       inertialTableColMaxStress: "Max. Spannung",
@@ -566,26 +646,44 @@ const translations = {
       heroSub: "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
 
       backLink: "← Back to Featured Projects",
+      previousProject: "← Previous Project",
+      nextProject: "Next Project →",
       project1Title: "Project 1",
       project1MainTitle: "Local Stress Reduction of a Robotic Gripper Finger Using Static and Fatigue FEA",
 
       overviewTitle: "Project Overview",
-      overviewText: "This project focused on the structural optimization of a robotic gripper finger using static and fatigue finite element analysis. The baseline geometry was evaluated under a 300 N load, and the highest stress concentration was identified at the inner load-path root region. A second design iteration introduced local slot-corner relief fillets and increased the critical root fillet radius to smooth the stress flow. Compared with the baseline, the final design reduced peak von Mises stress by 13.5%, equivalent elastic strain by 13.9%, and total deformation by 3.2%. Fatigue analysis under zero-based cyclic loading (0–300 N) showed that both designs remained in the high-cycle regime, but the optimized version improved the minimum fatigue safety factor by 15.7%. The study shows how small local geometry refinements can improve structural response without changing the overall load case.",
+      overviewText: "This project focused on the local structural refinement of a robotic gripper finger using static and fatigue finite element analysis. The baseline geometry was evaluated under a 300 N load, and the highest stress concentration was identified at the inner load-path root region. A second design iteration introduced local slot-corner relief fillets and increased the critical root fillet radius to smooth the stress flow. Compared with the baseline, the final design reduced peak von Mises stress by 13.5%, equivalent elastic strain by 13.9%, and total deformation by 3.2%. Fatigue analysis under zero-based cyclic loading (0–300 N) showed that both designs remained in the high-cycle regime, but the optimized version improved the minimum fatigue safety factor by 15.7%. The study shows how small local geometry refinements can improve structural response without changing the overall load case.",
 
       v1Baseline: "V1 Baseline",
       v2FinalIteration: "V2 Final Iteration",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Reference Model:",
+      referenceModelValue: "KR16-Type Gripper",
+      relatedSectorsLabel: "Related Sectors:",
+      relatedSectorsValue: "Industrial Automation & Robotics, End-of-Arm Tooling, Assembly Automation, Material Handling, Smart Manufacturing",
+
+      achievementsTitle: "Achievements",
+      achievementsIntro: "The final V2 design reduced the critical stress concentration and elastic strain while improving the fatigue safety margin under the same 300 N load case.",
+      tableAchievement: "Achievement",
+      tableChange: "Change",
+      achievementPeakStress: "Peak von Mises stress",
+      achievementElasticStrain: "Equivalent elastic strain",
+      achievementTotalDeformation: "Total deformation",
+      achievementDirectionalY: "Directional deformation (Y)",
+      achievementMinSafetyFactor: "Minimum fatigue safety factor",
+      achievementsText1: "The most important result was the reduction of the local stress concentration. V2 reduced peak von Mises stress by 13.54% and equivalent elastic strain by 13.94%, while increasing the minimum fatigue safety factor by 15.66%.",
+      achievementsText2: "These improvements were achieved through small local geometry refinements without changing the overall loading concept or the global form of the finger.",
 
       objectiveTitle: "Objective",
+      objectiveIntro: "In a robotic gripping application, repeated force transfer through the finger can create localized stress concentrations around geometric transitions, potentially reducing structural durability over repeated operating cycles.",
       objectiveText: "The aim of the study was to reduce stress concentration in the critical root region of the gripper finger, lower elastic strain, and improve fatigue behavior under the same loading and boundary conditions. The focus was not on changing the global form of the part, but on refining a few local geometric transitions along the load path.",
 
       scopeTitle: "Scope and Limitation",
-      scopeText: "The study focused on the primary load-bearing finger body. Mating components were not fully reworked in this iteration, since the scope of the study was limited to comparative structural and fatigue response of the main part under identical boundary conditions.",
+      scopeText: "This study focused on local geometric refinement of the primary load-bearing finger body under a defined static load case. Full assembly-level analysis, including fully reworked mating components and dynamic loading, is outside the scope of this iteration.",
 
       modelSetupTitle: "Model and Analysis Setup",
-      modelSetupText: "The part material was defined as Aluminum 6061-T6. Structural performance was evaluated in ANSYS using both Static Structural and Stress-Life Fatigue analysis. A 300 N load case was applied to the finger. Fatigue was assessed using zero-based cyclic loading (0 → 300 N → 0) with Goodman mean stress correction and Equivalent (von-Mises) stress as the fatigue stress component.",
+      modelSetupText: "The part material was defined as Aluminum 6061-T6. Structural performance was evaluated in ANSYS using both Static Structural and Stress-Life Fatigue analysis. A 300 N load was applied to the inner load-face region to represent force transfer through the finger during a representative gripping load case. The base interface was fixed to represent the structural restraint provided by the gripper body. The same loading and support conditions were maintained for both design versions to ensure a direct comparison. Fatigue was assessed using zero-based cyclic loading (0 → 300 N → 0) with Goodman mean stress correction and Equivalent (von-Mises) stress as the fatigue stress component.",
 
       analysisSetupTableTitle: "Analysis Setup",
       tableItem: "Item",
@@ -633,7 +731,6 @@ const translations = {
       tableMetric: "Metric",
       tableV1Baseline: "V1 Baseline",
       tableV2Final: "V2 Final",
-      tableChange: "Change",
       metricEquivalentStress: "Equivalent Stress",
       metricTotalDeformation: "Total Deformation",
       metricDirectionalY: "Directional Deformation (Y)",
@@ -671,43 +768,60 @@ const translations = {
 
       aboutTitle: "About",
       aboutText: "Mechanical engineer focused on mechanical design, CAE, and engineering analysis. This portfolio showcases selected projects in FEA, simulation, optimization, and mechanical design, with applications in manufacturing, automation, and robotics.",
-
       skillsTitle: "Skills",
       toolsTitle: "Tools",
       coreTitle: "Core Areas",
       relatedTitle: "Related Areas",
-
       contactTitle: "Resume / LinkedIn / Contact",
       resumeLabel: "Resume:",
       linkedinLabel: "LinkedIn:",
       emailLabel: "Email:"
     },
+
     de: {
       heroTitle: "Taylan Daldal",
       heroRole: "Maschinenbauingenieur | Mechanisches Design & CAE",
       heroSub: "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
 
       backLink: "← Zurück zu den Projekten",
+      previousProject: "← Vorheriges Projekt",
+      nextProject: "Nächstes Projekt →",
       project1Title: "Projekt 1",
       project1MainTitle: "Lokale Spannungsreduzierung eines Roboter-Greiffingers mit statischer und Ermüdungs-FEA",
 
       overviewTitle: "Projektübersicht",
-      overviewText: "Dieses Projekt konzentrierte sich auf die strukturelle Optimierung eines Roboter-Greiffingers mithilfe statischer und Ermüdungs-Finite-Elemente-Analyse. Die Ausgangsgeometrie wurde unter einer Last von 300 N ausgewertet, und die höchste Spannungskonzentration wurde im inneren Wurzelbereich des Lastpfads identifiziert. Eine zweite Designiteration führte lokale Entlastungsradien an den Schlitzkanten ein und vergrößerte den kritischen inneren Wurzelradius, um den Spannungsverlauf zu glätten. Im Vergleich zur Ausgangsversion reduzierte die finale Version die maximale von-Mises-Spannung um 13,5 %, die äquivalente elastische Dehnung um 13,9 % und die Gesamtverformung um 3,2 %. Die Ermüdungsanalyse unter nullbasierter zyklischer Belastung (0–300 N) zeigte, dass beide Designs im High-Cycle-Bereich blieben, die optimierte Version jedoch den minimalen Ermüdungssicherheitsfaktor um 15,7 % verbesserte. Die Studie zeigt, wie kleine lokale Geometrieverfeinerungen das strukturelle Verhalten verbessern können, ohne den allgemeinen Lastfall zu ändern.",
+      overviewText: "Dieses Projekt konzentrierte sich auf die lokale strukturelle Verfeinerung eines Roboter-Greiffingers mithilfe statischer und Ermüdungs-Finite-Elemente-Analyse. Die Ausgangsgeometrie wurde unter einer Last von 300 N ausgewertet, und die höchste Spannungskonzentration wurde im inneren Wurzelbereich des Lastpfads identifiziert. Eine zweite Designiteration führte lokale Entlastungsradien an den Schlitzkanten ein und vergrößerte den kritischen inneren Wurzelradius, um den Spannungsverlauf zu glätten. Im Vergleich zur Ausgangsversion reduzierte die finale Version die maximale von-Mises-Spannung um 13,5 %, die äquivalente elastische Dehnung um 13,9 % und die Gesamtverformung um 3,2 %. Die Ermüdungsanalyse unter nullbasierter zyklischer Belastung (0–300 N) zeigte, dass beide Designs im High-Cycle-Bereich blieben, die optimierte Version jedoch den minimalen Ermüdungssicherheitsfaktor um 15,7 % verbesserte. Die Studie zeigt, wie kleine lokale Geometrieverfeinerungen das strukturelle Verhalten verbessern können, ohne den allgemeinen Lastfall zu ändern.",
 
       v1Baseline: "V1 Ausgangsversion",
       v2FinalIteration: "V2 Finale Iteration",
 
       toolsLabel: "Tools:",
       referenceModelLabel: "Referenzmodell:",
+      referenceModelValue: "Greifer vom Typ KR16",
+      relatedSectorsLabel: "Verwandte Sektoren:",
+      relatedSectorsValue: "Industrielle Automatisierung & Robotik, End-of-Arm-Tooling, Montageautomatisierung, Materialhandling, Smart Manufacturing",
+
+      achievementsTitle: "Erfolge",
+      achievementsIntro: "Das finale V2-Design reduzierte die kritische Spannungskonzentration und die elastische Dehnung und verbesserte gleichzeitig die Ermüdungssicherheitsreserve unter demselben Lastfall von 300 N.",
+      tableAchievement: "Erfolg",
+      tableChange: "Änderung",
+      achievementPeakStress: "Maximale von-Mises-Spannung",
+      achievementElasticStrain: "Äquivalente elastische Dehnung",
+      achievementTotalDeformation: "Gesamtverformung",
+      achievementDirectionalY: "Richtungsverformung (Y)",
+      achievementMinSafetyFactor: "Minimaler Ermüdungssicherheitsfaktor",
+      achievementsText1: "Das wichtigste Ergebnis war die Reduzierung der lokalen Spannungskonzentration. V2 reduzierte die maximale von-Mises-Spannung um 13,54 % und die äquivalente elastische Dehnung um 13,94 %, während sich der minimale Ermüdungssicherheitsfaktor um 15,66 % erhöhte.",
+      achievementsText2: "Diese Verbesserungen wurden durch kleine lokale Geometrieverfeinerungen erreicht, ohne das grundlegende Lastkonzept oder die globale Form des Fingers zu verändern.",
 
       objectiveTitle: "Ziel",
+      objectiveIntro: "In einer robotischen Greifanwendung kann die wiederholte Kraftübertragung durch den Finger lokale Spannungskonzentrationen an geometrischen Übergängen erzeugen, was die strukturelle Dauerfestigkeit über wiederholte Betriebszyklen hinweg verringern kann.",
       objectiveText: "Ziel der Studie war es, die Spannungskonzentration im kritischen Wurzelbereich des Greiffingers zu reduzieren, die elastische Dehnung zu verringern und das Ermüdungsverhalten unter denselben Last- und Randbedingungen zu verbessern. Der Fokus lag nicht darauf, die globale Form des Bauteils zu verändern, sondern einige lokale geometrische Übergänge entlang des Lastpfads zu verfeinern.",
 
       scopeTitle: "Umfang und Einschränkung",
-      scopeText: "Die Studie konzentrierte sich auf den primären lasttragenden Fingerkörper. Die verbundenen Komponenten wurden in dieser Iteration nicht vollständig überarbeitet, da der Umfang der Studie auf den vergleichenden strukturellen und ermüdungsbezogenen Response des Hauptbauteils unter identischen Randbedingungen begrenzt war.",
+      scopeText: "Diese Studie konzentrierte sich auf die lokale geometrische Verfeinerung des primären lasttragenden Fingerkörpers unter einem definierten statischen Lastfall. Eine vollständige Analyse auf Baugruppenebene, einschließlich vollständig überarbeiteter Gegenkomponenten und dynamischer Belastung, liegt außerhalb des Umfangs dieser Iteration.",
 
       modelSetupTitle: "Modell- und Analyseaufbau",
-      modelSetupText: "Das Bauteilmaterial wurde als Aluminium 6061-T6 definiert. Die strukturelle Leistung wurde in ANSYS sowohl mit Static Structural als auch mit Stress-Life Fatigue Analysis bewertet. Auf den Finger wurde ein Lastfall von 300 N angewendet. Die Ermüdung wurde unter nullbasierter zyklischer Belastung (0 → 300 N → 0) mit Goodman-Mittelspannungskorrektur und äquivalenter (von-Mises-)Spannung als Ermüdungsspannungskomponente bewertet.",
+      modelSetupText: "Das Bauteilmaterial wurde als Aluminium 6061-T6 definiert. Die strukturelle Leistung wurde in ANSYS sowohl mit Static Structural als auch mit Stress-Life Fatigue Analysis bewertet. Eine Last von 300 N wurde auf den inneren Lastflächenbereich aufgebracht, um die Kraftübertragung durch den Finger in einem repräsentativen Greiflastfall darzustellen. Die Basisschnittstelle wurde fest gelagert, um die strukturelle Abstützung durch den Greiferkörper abzubilden. Für beide Designversionen wurden dieselben Last- und Randbedingungen beibehalten, um einen direkten Vergleich sicherzustellen. Die Ermüdung wurde unter nullbasierter zyklischer Belastung (0 → 300 N → 0) mit Goodman-Mittelspannungskorrektur und äquivalenter (von-Mises-)Spannung als Ermüdungsspannungskomponente bewertet.",
 
       analysisSetupTableTitle: "Analyse-Setup",
       tableItem: "Eintrag",
@@ -755,7 +869,6 @@ const translations = {
       tableMetric: "Kennwert",
       tableV1Baseline: "V1 Ausgangsversion",
       tableV2Final: "V2 Finale Version",
-      tableChange: "Änderung",
       metricEquivalentStress: "Äquivalente Spannung",
       metricTotalDeformation: "Gesamtverformung",
       metricDirectionalY: "Richtungsbezogene Verformung (Y)",
@@ -793,26 +906,23 @@ const translations = {
 
       aboutTitle: "Über mich",
       aboutText: "Maschinenbauingenieur mit Schwerpunkt auf mechanischem Design, CAE und technischer Analyse. Dieses Portfolio zeigt ausgewählte Projekte in FEA, Simulation, Optimierung und mechanischem Design mit Anwendungen in Fertigung, Automatisierung und Robotik.",
-
       skillsTitle: "Fähigkeiten",
       toolsTitle: "Tools",
       coreTitle: "Kernbereiche",
       relatedTitle: "Verwandte Bereiche",
-
       contactTitle: "Lebenslauf / LinkedIn / Kontakt",
       resumeLabel: "Lebenslauf:",
       linkedinLabel: "LinkedIn:",
       emailLabel: "E-Mail:"
     }
   },
-
   project4: {
     "en": {
         "heroTitle": "Taylan Daldal",
         "heroRole": "Mechanical Engineer | Mechanical Design & CAE",
         "heroSub": "FEA | SolidWorks | Ansys | Optimization | Automation | Robotics",
         "backLink": "← Back to Featured Projects",
-        "previousProjectDisabled": "← Previous Project",
+        "previousProject": "← Previous Project",
         "nextProject": "Next Project →",
         "project4Title": "Project 4",
         "project4MainTitle": "Thermo-Mechanical Design Iteration of a Three-Phase Molded Busbar Assembly Using Thermal, Fatigue and Nonlinear Contact FEA",
@@ -904,7 +1014,7 @@ const translations = {
         "setupAdvancedVerificationValue": "V2 nonlinear frictional contact",
         "setupFrictionCoefficient": "Friction coefficient",
         "meshStudyTitle": "Mesh Convergence Study",
-        "meshStudyIntroText": "Three mesh levels were evaluated for both V1 and V2: Coarse, Medium, and Fine. Three mesh levels were generated using the same ten local sizing regions for both V1 and V2. The Coarse, Medium, and Fine meshes used global element sizes of 4, 2, and 1 mm respectively, with corresponding local sizing values of 2, 1, and 0.5 mm; smoothing was kept High and transition Slow, while Span Angle Center was changed from Coarse to Medium to Fine with each refinement level.",
+        "meshStudyIntroText": "Three mesh levels were generated using the same ten local sizing regions for both V1 and V2. The Coarse, Medium, and Fine meshes used global element sizes of 4, 2, and 1 mm respectively, with corresponding local sizing values of 2, 1, and 0.5 mm; smoothing was kept High and transition Slow, while Span Angle Center was changed from Coarse to Medium to Fine with each refinement level.",
         "meshStudyIntroText2": "The convergence assessment did not rely only on absolute maximum stress. Peak local stresses increased substantially with refinement, particularly around small geometric transitions. For this reason, maximum stresses were retained and reported, but representative face-based stress probes and maximum total deformation were used as the main structural convergence indicators.",
         "v1MeshConvergenceTitle": "V1 Mesh Convergence",
         "v2MeshConvergenceTitle": "V2 Mesh Convergence",
@@ -1021,7 +1131,7 @@ const translations = {
         "heroRole": "Maschinenbauingenieur | Mechanisches Design & CAE",
         "heroSub": "FEA | SolidWorks | Ansys | Optimierung | Automatisierung | Robotik",
         "backLink": "← Zurück zu den Projekten",
-        "previousProjectDisabled": "← Vorheriges Projekt",
+        "previousProject": "← Vorheriges Projekt",
         "nextProject": "Nächstes Projekt →",
         "project4Title": "Projekt 4",
         "project4MainTitle": "Thermomechanische Designiteration einer dreiphasigen vergossenen Busbar-Baugruppe mit thermischer, Ermüdungs- und nichtlinearer Kontakt-FEA",
@@ -1113,7 +1223,7 @@ const translations = {
         "setupAdvancedVerificationValue": "V2 nichtlinearer Reibkontakt",
         "setupFrictionCoefficient": "Reibungskoeffizient",
         "meshStudyTitle": "Netzkonvergenzstudie",
-        "meshStudyIntroText": "Für V1 und V2 wurden drei Netzstufen bewertet: Grob, Mittel und Fein. Für beide Geometrien wurden dieselben zehn lokalen Vernetzungsregionen verwendet. Die groben, mittleren und feinen Netze verwendeten globale Elementgrößen von 4, 2 und 1 mm mit entsprechenden lokalen Größen von 2, 1 und 0,5 mm; Smoothing blieb auf High und Transition auf Slow, während Span Angle Center mit jeder Verfeinerungsstufe von Coarse über Medium auf Fine geändert wurde.",
+        "meshStudyIntroText": "Für beide Geometrien wurden dieselben zehn lokalen Vernetzungsregionen verwendet. Die groben, mittleren und feinen Netze verwendeten globale Elementgrößen von 4, 2 und 1 mm mit entsprechenden lokalen Größen von 2, 1 und 0,5 mm; Smoothing blieb auf High und Transition auf Slow, während Span Angle Center mit jeder Verfeinerungsstufe von Coarse über Medium auf Fine geändert wurde.",
         "meshStudyIntroText2": "Die Konvergenzbewertung stützte sich nicht ausschließlich auf die absoluten Maximalspannungen. Lokale Spitzenwerte stiegen bei Netzverfeinerung deutlich an, insbesondere an kleinen geometrischen Übergängen. Deshalb wurden Maximalspannungen weiterhin berichtet, als wichtigste strukturelle Konvergenzindikatoren dienten jedoch repräsentative flächenbasierte Spannungs-Probes und die maximale Gesamtverformung.",
         "v1MeshConvergenceTitle": "V1 Netzkonvergenz",
         "v2MeshConvergenceTitle": "V2 Netzkonvergenz",
@@ -1275,7 +1385,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.body.dataset.page !== "project4") return;
+  if (!["project1", "project2", "project3", "project4"].includes(document.body.dataset.page)) return;
 
   const zoomImages = document.querySelectorAll(".section img");
   if (!zoomImages.length) return;
