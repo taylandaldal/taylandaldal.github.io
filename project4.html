@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project 4 | Taylan Daldal</title>
-  <link rel="stylesheet" href="style.css?v=17" />
+  <link rel="stylesheet" href="style.css?v=18" />
 </head>
 <body data-page="project4">
   <header>
@@ -26,12 +26,11 @@
   <div class="container">
     <div class="section">
       <div class="project-nav">
-        <span class="project-nav-disabled nav-left" data-i18n="previousProjectDisabled">← Previous Project</span>
+        <a href="project1.html" class="back-link project-nav-link nav-left" data-i18n="previousProject">← Previous Project</a>
         <a href="index.html" class="back-link project-nav-link nav-center" data-i18n="backLink">← Back to Featured Projects</a>
         <a href="project3.html" class="back-link project-nav-link nav-right" data-i18n="nextProject">Next Project →</a>
       </div>
 
-      <h2 data-i18n="project4Title">Project 4</h2>
       <h3 data-i18n="project4MainTitle">Thermo-Mechanical Design Iteration of a Three-Phase Molded Busbar Assembly Using Thermal, Fatigue and Nonlinear Contact FEA</h3>
 
       <div class="project-hero-image">
@@ -297,7 +296,7 @@
 
       <h3 data-i18n="meshStudyTitle">Mesh Convergence Study</h3>
       <p data-i18n="meshStudyIntroText">
-        Three mesh levels were evaluated for both V1 and V2: Coarse, Medium, and Fine. Three mesh levels were generated using the same ten local sizing regions for both V1 and V2. The Coarse, Medium, and Fine meshes used global element sizes of 4, 2, and 1 mm respectively, with corresponding local sizing values of 2, 1, and 0.5 mm; smoothing was kept High and transition Slow, while Span Angle Center was changed from Coarse to Medium to Fine with each refinement level.
+        Three mesh levels were generated using the same ten local sizing regions for both V1 and V2. The Coarse, Medium, and Fine meshes used global element sizes of 4, 2, and 1 mm respectively, with corresponding local sizing values of 2, 1, and 0.5 mm; smoothing was kept High and transition Slow, while Span Angle Center was changed from Coarse to Medium to Fine with each refinement level.
       </p>
       <p data-i18n="meshStudyIntroText2">
         The convergence assessment did not rely only on absolute maximum stress. Peak local stresses increased substantially with refinement, particularly around small geometric transitions. For this reason, maximum stresses were retained and reported, but representative face-based stress probes and maximum total deformation were used as the main structural convergence indicators.
@@ -405,30 +404,53 @@
         Additional housing refinements were introduced to improve load transfer and smooth local stress-raising features. An R5 mm fillet was added to the lower outer housing transition to preserve local material thickness while replacing a sharper transition with a smoother load path. An R3 mm fillet was also introduced in the upper transition region to further soften the local housing geometry without substantially changing the surrounding structure. In addition, the small protruding corners located at the intersections between the central members of the H-shaped slot structure and the conductor groove edges were rounded using R4 mm fillets. Four local corner transitions were modified around each of the three conductor grooves, resulting in a total of 12 R4 fillets. These changes were intended to reduce abrupt local geometric transitions and provide smoother structural support around the copper exit regions.
       </p>
 
-      <div class="project-top-row">
+      <div class="comparison-heading-row desktop-only">
+        <div><p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p></div>
+        <div><p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p></div>
+      </div>
+
+      <div class="comparison-pair">
         <div>
-          <p class="comparison-label"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <p class="comparison-label mobile-only"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
           <img src="project4/0.PNG" alt="V1 baseline comparison view 1">
         </div>
         <div>
-          <p class="comparison-label"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <p class="comparison-label mobile-only"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
           <img src="project4/1.PNG" alt="V2 comparison view 1">
         </div>
       </div>
 
-      <div class="project-top-row">
-        <div><img src="project4/0.PNG" alt="V1 baseline comparison view 2"></div>
-        <div><img src="project4/2.PNG" alt="V2 comparison view 2"></div>
+      <div class="comparison-pair">
+        <div>
+          <p class="comparison-label mobile-only"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project4/0.PNG" alt="V1 baseline comparison view 2">
+        </div>
+        <div>
+          <p class="comparison-label mobile-only"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project4/2.PNG" alt="V2 comparison view 2">
+        </div>
       </div>
 
-      <div class="project-top-row">
-        <div><img src="project4/0.PNG" alt="V1 baseline comparison view 3"></div>
-        <div><img src="project4/3.PNG" alt="V2 comparison view 3"></div>
+      <div class="comparison-pair">
+        <div>
+          <p class="comparison-label mobile-only"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project4/0.PNG" alt="V1 baseline comparison view 3">
+        </div>
+        <div>
+          <p class="comparison-label mobile-only"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project4/3.PNG" alt="V2 comparison view 3">
+        </div>
       </div>
 
-      <div class="project-top-row">
-        <div><img src="project4/5.PNG" alt="V1 baseline comparison view 4"></div>
-        <div><img src="project4/4.PNG" alt="V2 comparison view 4"></div>
+      <div class="comparison-pair">
+        <div>
+          <p class="comparison-label mobile-only"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project4/5.PNG" alt="V1 baseline comparison view 4">
+        </div>
+        <div>
+          <p class="comparison-label mobile-only"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project4/4.PNG" alt="V2 comparison view 4">
+        </div>
       </div>
 
       <h3 data-i18n="linearResultsTitle">V1 vs V2 Linear Thermo-Mechanical Results</h3>
