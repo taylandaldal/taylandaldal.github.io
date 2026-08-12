@@ -189,6 +189,22 @@ h4 {
   font-size: 0.95rem;
 }
 
+.comparison-heading-row,
+.comparison-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: grid;
+}
+
 .tools-line {
   margin-top: 16px;
   margin-bottom: 12px;
@@ -360,9 +376,6 @@ a:hover {
   border-bottom-color: #d1d5db;
 }
 
-body[data-page="project1"] .section img,
-body[data-page="project2"] .section img,
-body[data-page="project3"] .section img,
 body[data-page="project4"] .section img {
   cursor: zoom-in;
 }
@@ -422,8 +435,21 @@ footer {
 @media (max-width: 768px) {
   .project-top-row,
   .project-three-row,
-  .project-cards {
+  .project-cards,
+  .comparison-pair {
     grid-template-columns: 1fr;
+  }
+
+  .comparison-heading-row {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
   }
 
   .lang-switch {
