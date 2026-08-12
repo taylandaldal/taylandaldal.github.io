@@ -163,7 +163,8 @@ h4 {
 .project-top-row img,
 .project-three-row img,
 .project-full-stack img,
-.project-hero-image img {
+.project-hero-image img,
+.comparison-pair img {
   width: 100%;
   height: auto;
   display: block;
