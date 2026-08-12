@@ -194,7 +194,8 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 18px;
+  width: min(88%, 860px);
+  margin: 18px auto 0;
 }
 
 .mobile-only {
