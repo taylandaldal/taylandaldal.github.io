@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1 | Taylan Daldal</title>
+  <link rel="stylesheet" href="style.css?v=28" />
+</head>
+<body data-page="project1">
+  <header>
+    <div class="lang-switch">
+      <button class="lang-btn" id="langBtn" type="button">
+        🌐 <span id="currentLang">EN</span>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-option" type="button" data-lang="en">English</button>
+        <button class="lang-option" type="button" data-lang="de">Deutsch</button>
+      </div>
+    </div>
+
+    <a href="index.html" class="site-home-link" aria-label="Back to homepage">
+      <h1 data-i18n="heroTitle">Taylan Daldal</h1>
+      <p data-i18n="heroRole">Mechanical Engineer | CAE & CAD</p>
+      <p class="hero-sub" data-i18n="heroSub">FEA | Ansys | SolidWorks | Engineering Analysis | Design Iteration | Optimization | Automation | Robotics</p>
+    </a>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <div class="project-nav">
+        <a href="project2.html" class="back-link project-nav-link nav-left" data-i18n="previousProject">Previous Project</a>
+        <a href="index.html" class="back-link project-nav-link nav-center" data-i18n="backLink">Back to Featured Projects</a>
+        <a href="project4.html" class="back-link project-nav-link nav-right" data-i18n="nextProject">Next Project</a>
+      </div>
+
+      <h3 data-i18n="project1MainTitle">Local Stress Reduction of a Robotic Gripper Finger Using Static and Fatigue FEA</h3>
+
+      <div class="project-hero-image">
+        <img src="project1/Final.PNG" alt="Final optimized gripper design">
+      </div>
+
+      <h3 data-i18n="overviewTitle">Project Overview</h3>
+      <p data-i18n="overviewText">
+        This project focused on the local structural refinement of a robotic gripper finger using static and fatigue finite element analysis. The baseline geometry was evaluated under a 300 N load, and the highest stress concentration was identified at the inner load-path root region. A second design iteration introduced local slot-corner relief fillets and increased the critical root fillet radius to smooth the stress flow. Compared with the baseline, the final design reduced peak von Mises stress by 13.5%, equivalent elastic strain by 13.9%, and total deformation by 3.2%. Fatigue analysis under zero-based cyclic loading (0–300 N) showed that both designs remained in the high-cycle regime, but the optimized version improved the minimum fatigue safety factor by 15.7%. The study shows how small local geometry refinements can improve structural response without changing the overall load case.
+      </p>
+
+      <div class="project-top-row">
+        <div>
+          <img src="project1/v1main.PNG" alt="Version 1 main design view" style="width:100%; height:auto; display:block; border-radius:12px;">
+          <p style="text-align:center; margin-top:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+        </div>
+        <div>
+          <img src="project1/v2main.PNG" alt="Version 2 main design view" style="width:100%; height:auto; display:block; border-radius:12px;">
+          <p style="text-align:center; margin-top:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+        </div>
+      </div>
+
+      <div class="project-full-stack">
+        <img src="project1/v1stress.png" alt="Version 1 stress analysis">
+        <img src="project1/v2stress.png" alt="Version 2 stress analysis">
+      </div>
+
+      <p class="tools-line"><strong data-i18n="toolsLabel">Tools:</strong> SolidWorks, ANSYS Mechanical</p>
+      <p class="tools-line"><strong data-i18n="referenceModelLabel">Reference Model:</strong> <span data-i18n="referenceModelValue">KR16-Type Gripper</span></p>
+      <p class="tools-line"><strong data-i18n="relatedSectorsLabel">Related Sectors:</strong> <span data-i18n="relatedSectorsValue">Industrial Automation & Robotics, End-of-Arm Tooling, Assembly Automation, Material Handling, Smart Manufacturing</span></p>
+
+      <h3 data-i18n="achievementsTitle">Achievements</h3>
+      <p data-i18n="achievementsIntro">
+        The final V2 design reduced the critical stress concentration and elastic strain while improving the fatigue safety margin under the same 300 N load case.
+      </p>
+
+      <div class="table-scroll-auto">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="tableAchievement">Achievement</th>
+              <th>V1</th>
+              <th>V2</th>
+              <th data-i18n="tableChange">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="achievementPeakStress">Peak von Mises stress</td>
+              <td>25.963 MPa</td>
+              <td>22.448 MPa</td>
+              <td>-13.54%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementElasticStrain">Equivalent elastic strain</td>
+              <td>0.00038032</td>
+              <td>0.00032731</td>
+              <td>-13.94%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementTotalDeformation">Total deformation</td>
+              <td>0.008805 mm</td>
+              <td>0.008524 mm</td>
+              <td>-3.19%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementDirectionalY">Directional deformation (Y)</td>
+              <td>0.006646 mm</td>
+              <td>0.006353 mm</td>
+              <td>-4.41%</td>
+            </tr>
+            <tr>
+              <td data-i18n="achievementMinSafetyFactor">Minimum fatigue safety factor</td>
+              <td>7.1958</td>
+              <td>8.3224</td>
+              <td>+15.66%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="achievementsText1">
+        The most important result was the reduction of the local stress concentration. V2 reduced peak von Mises stress by 13.54% and equivalent elastic strain by 13.94%, while increasing the minimum fatigue safety factor by 15.66%.
+      </p>
+      <p data-i18n="achievementsText2">
+        These improvements were achieved through small local geometry refinements without changing the overall loading concept or the global form of the finger.
+      </p>
+
+      <h3 data-i18n="objectiveTitle">Objective</h3>
+      <p data-i18n="objectiveIntro">
+        In a robotic gripping application, repeated force transfer through the finger can create localized stress concentrations around geometric transitions, potentially reducing structural durability over repeated operating cycles.
+      </p>
+      <p data-i18n="objectiveText">
+        The aim of the study was to reduce stress concentration in the critical root region of the gripper finger, lower elastic strain, and improve fatigue behavior under the same loading and boundary conditions. The focus was not on changing the global form of the part, but on refining a few local geometric transitions along the load path.
+      </p>
+
+      <div style="width:75%; margin:16px auto 0;">
+        <img src="project1/Note2.PNG" alt="Project note" style="width:100%; height:auto; display:block; border-radius:12px;">
+      </div>
+
+      <h3 data-i18n="scopeTitle">Scope and Limitation</h3>
+      <p data-i18n="scopeText">
+        This study focused on local geometric refinement of the primary load-bearing finger body under a defined static load case. Full assembly-level analysis, including fully reworked mating components and dynamic loading, is outside the scope of this iteration.
+      </p>
+
+      <div style="width:75%; margin:16px auto 0;">
+        <img src="project1/cb.PNG" alt="Project note" style="width:100%; height:auto; display:block; border-radius:12px;">
+      </div>
+
+      <h3 data-i18n="modelSetupTitle">Model and Analysis Setup</h3>
+      <p data-i18n="modelSetupText">
+        The part material was defined as Aluminum 6061-T6. Structural performance was evaluated in ANSYS using both Static Structural and Stress-Life Fatigue analysis. A 300 N load was applied to the inner load-face region to represent force transfer through the finger during a representative gripping load case. The base interface was fixed to represent the structural restraint provided by the gripper body. The same loading and support conditions were maintained for both design versions to ensure a direct comparison. Fatigue was assessed using zero-based cyclic loading (0 → 300 N → 0) with Goodman mean stress correction and Equivalent (von-Mises) stress as the fatigue stress component.
+      </p>
+
+      <img src="project1/v1force.png" alt="Version 1 force and support" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="analysisSetupTableTitle">Analysis Setup</strong></p>
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableItem">Item</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableValue">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemMaterial">Material</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">Aluminum 6061-T6</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemAnalyzedPart">Analyzed part</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueAnalyzedPart">Robotic gripper finger main body</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemOptimizedPart">Optimized part</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueOptimizedPart">Main finger body only</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemSupportCondition">Support condition</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueSupportCondition">Fixed support at the base interface</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemLoadCondition">Load condition</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueLoadCondition">300 N static load</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemLoadApplication">Load application</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueLoadApplication">Inner slot load-face region</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisItemAnalyses">Analyses</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="analysisValueAnalyses">Static Structural + Fatigue</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="analysisItemMeshStrategy">Mesh strategy</td>
+            <td style="padding:10px;" data-i18n="analysisValueMeshStrategy">2 mm global mesh, 1 mm local sizing at critical regions, Span Angle Center: Fine, Smoothing: High</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="meshStudyTitle">Mesh Convergence Study</strong></p>
+      <p data-i18n="meshStudyIntroText">
+        To assess the mesh sensitivity of the baseline-to-optimized comparison, three mesh configurations were tested on both the V1 and V2 geometries. In V1, the sharp edge at the load-application site produced a stress singularity, creating a non-physical stress concentration that increases indefinitely with mesh refinement.
+      </p>
+
+      <div class="table-scroll">
+        <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColMesh">Mesh</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColGlobalLocalSize">Global / Local Size</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColV1PeakStress">V1 Peak Stress</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColV2PeakStress">V2 Peak Stress</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColStressReduction">Stress Reduction</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColV1TotalDef">V1 Total Deformation</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColV2TotalDef">V2 Total Deformation</th>
+              <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="meshTableColDefReduction">Deformation Reduction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="meshRowCoarse">Coarse</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">4 mm / 2 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">22.897 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">20.396 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-10.92%</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.008567 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.0082804 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-3.35%</td>
+            </tr>
+            <tr>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="meshRowMedium">Medium</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">2 mm / 1 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">25.597 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">22.151 MPa</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-13.46%</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.0087984 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.0085148 mm</td>
+              <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-3.22%</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;" data-i18n="meshRowFine">Fine</td>
+              <td style="padding:10px;">1 mm / 0.5 mm</td>
+              <td style="padding:10px;">29.204 MPa</td>
+              <td style="padding:10px;">24.035 MPa</td>
+              <td style="padding:10px;">-17.70%</td>
+              <td style="padding:10px;">0.0088886 mm</td>
+              <td style="padding:10px;">0.0086021 mm</td>
+              <td style="padding:10px;">-3.22%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-i18n="meshStudyConclusionText">
+        A stress sensitivity of ~8.5% was observed between the medium and fine mesh configurations in V2. Since the primary V1 and V2 analyses were performed using identical mesh settings, the baseline-to-optimized comparison was carried out on a consistent numerical basis. Across all three mesh levels, V2 produced lower peak stress and lower total deformation than V1. The supplementary mesh sensitivity check also showed that V2 produced a more stable stress response under refinement than the singularity-prone V1 geometry. Total deformation showed good convergence across all three configurations, with a variation below 5%.
+      </p>
+
+      <h3 data-i18n="designVersionsTitle">Design Iteration</h3>
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1BaselineTitle">V1 – Baseline</strong></p>
+      <p data-i18n="v1BaselineText">The first version was the original finger geometry.</p>
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalTitle">V2 – Final Iteration</strong></p>
+      <p data-i18n="v2FinalText">
+        Two local geometry refinements were introduced in the final version. R2.0 mm fillets were added to the two lower slot corners. The critical inner root fillet was increased from approximately R2.03 mm to R2.5 mm, which was the smallest radius that provided clear stress relief at the hotspot without conflicting with the adjacent slot geometry constraints. These modifications were selected to smooth the local load path, reduce abrupt stress transitions, and relieve the hotspot identified in the baseline analysis.
+      </p>
+
+      <div class="project-top-row">
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1Baseline">V1 Baseline</strong></p>
+          <img src="project1/f11.PNG" alt="Version 1 comparison view" style="width:100%; height:auto; display:block; border-radius:12px;">
+          <img src="project1/r11.PNG" alt="Version 1 comparison view" style="width:100%; height:auto; display:block; border-radius:12px; margin-top:8px;">
+        </div>
+        <div>
+          <p style="text-align:center; margin-top:8px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2FinalIteration">V2 Final Iteration</strong></p>
+          <img src="project1/f22.PNG" alt="Version 2 comparison view" style="width:100%; height:auto; display:block; border-radius:12px;">
+          <img src="project1/r22.PNG" alt="Version 2 comparison view" style="width:100%; height:auto; display:block; border-radius:12px; margin-top:8px;">
+        </div>
+      </div>
+
+      <h3 data-i18n="staticResultsTitle">Static Analysis Results</h3>
+      <p data-i18n="staticResultsIntro">
+        The redesigned geometry produced a measurable improvement under the same 300 N load case. Peak stress, equivalent elastic strain, and deformation all decreased in the final version.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="staticTableTitle">Static Results Table</strong></p>
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableMetric">Metric</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV1Baseline">V1 Baseline</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV2Final">V2 Final</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableChange">Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricEquivalentStress">Equivalent Stress</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">25.963 MPa</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">22.448 MPa</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-13.54%</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricTotalDeformation">Total Deformation</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.008805 mm</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.008524 mm</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-3.19%</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricDirectionalY">Directional Deformation (Y)</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.006646 mm</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.006353 mm</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">-4.41%</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="metricElasticStrain">Equivalent Elastic Strain</td>
+            <td style="padding:10px;">0.00038032</td>
+            <td style="padding:10px;">0.00032731</td>
+            <td style="padding:10px;">-13.94%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-i18n="staticResultsConclusion">
+        The final V2 redesign reduced peak von Mises stress and equivalent elastic strain while also slightly decreasing deformation under the same 300 N load case. Although both versions remained in a high-cycle fatigue range of approximately 1e8 cycles, V2 increased the minimum fatigue safety factor by about 15.7%, making it the stronger final design candidate.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1StressResultTitle">V1 Baseline Equivalent (von-Mises) Stress Result</strong></p>
+      <img src="project1/v1stress.png" alt="Version 1 stress" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2StressResultTitle">V2 Final Equivalent (von-Mises) Stress Result</strong></p>
+      <img src="project1/v2stress.png" alt="Version 2 stress" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1StrainResultTitle">V1 Baseline Equivalent Elastic Strain Result</strong></p>
+      <img src="project1/v1strain.png" alt="Version 1 strain" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2StrainResultTitle">V2 Final Elastic Strain Result</strong></p>
+      <img src="project1/v2strain.png" alt="Version 2 strain" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <h3 data-i18n="fatigueResultsTitle">Fatigue Analysis Results</h3>
+      <p data-i18n="fatigueResultsIntro">
+        Fatigue behaviour was evaluated using zero-based cyclic loading between 0 N and 300 N. Both versions remained in the high-cycle regime, so the difference between them did not appear strongly in the life and damage plots. The clearer distinction appeared in the fatigue safety factor.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="fatigueTableTitle">Fatigue Results Table</strong></p>
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableMetric">Metric</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV1">V1</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #d1d5db;" data-i18n="tableV2">V2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricEstimatedLife">Estimated Life</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1e8 cycles</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1e8 cycles</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricDamage1e6">Damage @ 1e6 cycles</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.01</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">0.01</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;" data-i18n="metricDamage1e8">Damage @ 1e8 cycles</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1.0</td>
+            <td style="padding:10px; border-bottom:1px solid #e5e7eb;">1.0</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;" data-i18n="metricMinSafetyFactor">Minimum Fatigue Safety Factor</td>
+            <td style="padding:10px;">7.1958</td>
+            <td style="padding:10px;">8.3224</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-i18n="fatigueResultsConclusion">
+        The fatigue results indicate that both geometries operate in a high-cycle regime at the selected load level. However, the final design improved the minimum fatigue safety factor by approximately 15.66%, which supports the structural improvements already observed in the static analysis.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1SafetyTitle">V1 Baseline Fatigue Safety Factor Result</strong></p>
+      <img src="project1/v1safety.png" alt="Version 1 safety" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2SafetyTitle">V2 Final Fatigue Safety Factor Result</strong></p>
+      <img src="project1/v2safety.png" alt="Version 2 safety" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <h3 data-i18n="discussionTitle">Discussion</h3>
+      <p data-i18n="discussionText">
+        The baseline design was not weak. Even the original geometry already showed a high fatigue life under the selected loading scenario. For that reason, the redesign did not create a significant change in predicted life or damage. Instead, the benefit of the redesign was seen in the local stress redistribution. The critical hotspot was relieved, peak stress dropped, strain dropped, and the fatigue safety margin increased. The geometry was not completely changed. Instead, a few local transitions were improved, which resulted in a measurable improvement while preserving the original loading concept.
+      </p>
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v1HotspotTitle">V1 Baseline Stress Hotspot</strong></p>
+      <img src="project1/v1hotspot.png" alt="Version 1 hotspot" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="margin-top:16px; margin-bottom:8px; font-size:0.95rem;"><strong data-i18n="v2HotspotTitle">V2 Final Stress Hotspot</strong></p>
+      <img src="project1/v2hotspot.png" alt="Version 2 hotspot" style="max-width:100%; height:auto; display:block; margin:16px auto 0; border-radius:12px;">
+
+      <p style="font-size:1rem;"><strong data-i18n="noteLabel">Note.</strong> <em data-i18n="noteText">Both plots are shown with individually scaled contours. Comparison should be interpreted using the reported maximum stress values.</em></p>
+
+      <h3 data-i18n="finalConclusionTitle">Final Technical Conclusion</h3>
+      <p data-i18n="finalConclusionText">
+        Small local geometry changes improved the structural response under the same load, reducing stress, strain, and deformation while increasing the fatigue safety factor.
+      </p>
+
+      <div class="project-hero-image">
+        <img src="project1/Final2.PNG" alt="Final optimized gripper design">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 data-i18n="aboutTitle">About</h2>
+      <p data-i18n="aboutText">
+        Mechanical engineer focused on CAE, engineering analysis, and mechanical design. This portfolio showcases selected independent engineering projects involving FEA, simulation, optimization, and design iteration, with applications in manufacturing, automation, and robotics. The projects include structural, fatigue, modal, buckling, and thermo-mechanical analyses, as well as topology optimization.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 data-i18n="skillsTitle">Skills</h2>
+
+      
+      <div class="skills-group">
+        <h3 data-i18n="toolsTitle">Tools</h3>
+        <span class="tag" data-i18n="skillSolidWorks">SolidWorks</span>
+        <span class="tag" data-i18n="skillAnsys">Ansys</span>
+      </div>
+
+      <div class="skills-group">
+        <h3 data-i18n="coreTitle">Core Areas</h3>
+        <span class="tag" data-i18n="skillCAE">CAE</span>
+        <span class="tag" data-i18n="skillFEA">FEA</span>
+        <span class="tag" data-i18n="skillMechanicalDesign">Mechanical Design</span>
+        <span class="tag" data-i18n="skillEngineeringAnalysis">Engineering Analysis</span>
+        <span class="tag" data-i18n="skillOptimization">Optimization</span>
+      </div>
+
+      <div class="skills-group">
+        <h3 data-i18n="relatedTitle">Related Areas</h3>
+        <span class="tag" data-i18n="skillManufacturing">Manufacturing</span>
+        <span class="tag" data-i18n="skillAutomation">Automation</span>
+        <span class="tag" data-i18n="skillRobotics">Robotics</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 data-i18n="contactTitle">Resume / LinkedIn / Contact</h2>
+      <p><strong data-i18n="resumeLabel">Resume:</strong> <a href="Taylan-Daldal-Resume.pdf" target="_blank">Taylan Daldal</a></p>
+      <p><strong data-i18n="linkedinLabel">LinkedIn:</strong> <a href="https://www.linkedin.com/in/taylandaldal/" target="_blank">linkedin.com/in/taylandaldal</a></p>
+      <p><strong data-i18n="emailLabel">Email:</strong> daldaltaylan@gmail.com</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Taylan Daldal
+  </footer>
+
+  <script src="script.js?v=28"></script>
+</body>
+</html>
